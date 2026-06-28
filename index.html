@@ -1,348 +1,251 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="天堂2盟约攻略站 - 亚丁大陆最全面的冒险指南，涵盖职业攻略、装备图鉴、副本攻略、血盟PVP、搬砖指南等核心内容。">
-  <meta name="keywords" content="天堂2盟约,天堂2盟约攻略,天堂2职业推荐,天堂2副本,天堂2装备,天堂2搬砖,血盟攻城">
-  <title>天堂2盟约攻略站 | 亚丁大陆最全面的冒险指南</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "天堂2盟约攻略站",
-    "description": "亚丁大陆最全面的冒险指南",
-    "url": "https://l2covenant.guide"
-  }
-  </script>
-  <style>
-    :root {
-      --bg: #06080f;
-      --bg-deep: #0a0e1a;
-      --bg-mid: #0f1525;
-      --bg-card: #1a2235;
-      --bg-card-hover: #1f2940;
-      --border: rgba(201,168,76,0.12);
-      --border-hover: rgba(201,168,76,0.35);
-      --gold: #c9a84c;
-      --gold-light: #e8d5a3;
-      --gold-dark: #8a7330;
-      --crimson: #8b2635;
-      --crimson-light: #b8394d;
-      --frost: #7eb8d0;
-      --mist: #a0aec0;
-      --text: #d4d4d8;
-      --text-dim: #71717a;
-      --text-muted: #52525b;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--text); font-family: 'Noto Serif SC', 'Crimson Text', serif; line-height: 1.6; overflow-x: hidden; }
-    ::selection { background: rgba(201,168,76,0.3); color: var(--gold-light); }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--bg-card); border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--gold-dark); }
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; }
-    .font-display { font-family: 'Cinzel', 'Noto Serif SC', serif; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="天堂2盟约攻略站 - 亚丁大陆最全面的冒险指南，涵盖职业攻略、装备图鉴、副本攻略、血盟PVP、搬砖指南等核心内容。">
+<meta name="keywords" content="天堂2盟约,天堂2盟约攻略,天堂2职业推荐,天堂2副本,天堂2装备,天堂2搬砖,血盟攻城">
+<title>天堂2盟约攻略站 | 亚丁大陆最全面的冒险指南</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"天堂2盟约攻略站","description":"亚丁大陆最全面的冒险指南","url":"https://wsw0408.github.io/l2covenant-guide/"}
+</script>
+<style>
+:root{--bg:#06080f;--bg-deep:#0a0e1a;--bg-mid:#0f1525;--bg-card:#1a2235;--border:rgba(201,168,76,0.12);--border-hover:rgba(201,168,76,0.35);--gold:#c9a84c;--gold-light:#e8d5a3;--gold-dark:#8a7330;--crimson:#8b2635;--crimson-light:#b8394d;--frost:#7eb8d0;--mist:#a0aec0;--text:#d4d4d8;--text-dim:#71717a;--text-muted:#52525b;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Noto Serif SC','Crimson Text',serif;line-height:1.6;overflow-x:hidden}
+::selection{background:rgba(201,168,76,0.3);color:var(--gold-light)}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--bg-card);border-radius:3px}
+a{color:inherit;text-decoration:none}
+.container{max-width:1280px;margin:0 auto;padding:0 20px}
+@media(min-width:768px){.container{padding:0 32px}}
+.grid-2{display:grid;grid-template-columns:1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:1fr;gap:16px}
+.grid-4{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0);opacity:0.4}50%{transform:translateY(-8px);opacity:0.7}}
+.anim-reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.anim-reveal.visible{opacity:1;transform:translateY(0)}
+.orn{position:absolute;width:14px;height:14px;border:1px solid rgba(201,168,76,0.25);pointer-events:none}
+.orn-tl{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.orn-tr{top:-1px;right:-1px;border-left:none;border-bottom:none}
+.orn-bl{bottom:-1px;left:-1px;border-right:none;border-top:none}
+.orn-br{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.card{background:rgba(15,21,37,0.5);border:1px solid var(--border);position:relative;transition:all .35s ease}
+.card:hover{border-color:var(--border-hover);transform:translateY(-3px);box-shadow:0 16px 48px rgba(0,0,0,0.4),0 0 24px rgba(201,168,76,0.06)}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:2px;letter-spacing:.02em}
+.tag-hot{background:rgba(201,168,76,0.12);color:var(--gold-light);border:1px solid rgba(201,168,76,0.2)}
+.tag-new{background:rgba(139,38,53,0.15);color:#e87986;border:1px solid rgba(139,38,53,0.25)}
+.tag-guide{background:rgba(126,184,208,0.12);color:#a0d4e8;border:1px solid rgba(126,184,208,0.2)}
+.tag-wiki{background:rgba(126,90,208,0.12);color:#b794f6;border:1px solid rgba(126,90,208,0.2)}
+.tag-video{background:rgba(236,72,153,0.12);color:#f9a8d4;border:1px solid rgba(236,72,153,0.2)}
+.section-head{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.section-head .line{width:48px;height:1px;background:rgba(201,168,76,0.35)}
+.section-head .label{color:var(--gold);font-size:11px;letter-spacing:.25em;text-transform:uppercase;font-family:'Cinzel',serif}
+.section-title{font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);margin-bottom:8px}
+.section-desc{color:var(--text-dim);font-size:14px;max-width:600px}
+#progressBar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold-dark),var(--gold));z-index:9999;transition:width .15s;width:0%}
+.back-top{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border:1px solid var(--border);background:rgba(6,8,15,0.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:all .3s;z-index:50}
+.back-top.visible{opacity:1;pointer-events:auto}
+.back-top:hover{border-color:var(--border-hover)}
+.back-top svg{width:16px;height:16px;stroke:var(--gold);fill:none}
 
-    /* Utility */
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
-    @media(min-width:768px) { .container { padding: 0 32px; } }
-    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,8,15,0.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:32px;height:32px;border:1px solid rgba(201,168,76,0.35);display:flex;align-items:center;justify-content:center;transform:rotate(45deg)}
+.nav-logo-icon span{transform:rotate(-45deg);color:var(--gold);font-size:10px;font-family:'Cinzel',serif;font-weight:700}
+.nav-logo-text{color:var(--gold);font-family:'Cinzel','Noto Serif SC',serif;font-size:16px;letter-spacing:.08em}
+.nav-links{display:none;gap:28px}
+@media(min-width:1024px){.nav-links{display:flex}}
+.nav-link{color:var(--mist);font-size:13px;letter-spacing:.04em;transition:color .2s;position:relative}
+.nav-link:hover{color:var(--gold-light)}
+.nav-link::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width .25s}
+.nav-link:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:12px}
+.mobile-toggle{display:flex;background:none;border:none;color:var(--gold);cursor:pointer;padding:4px}
+@media(min-width:1024px){.mobile-toggle{display:none}}
+.mobile-menu{display:none;background:var(--bg-mid);border-top:1px solid var(--border);padding:12px 20px}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;color:var(--mist);padding:8px 0;font-size:14px;transition:color .2s}
+.mobile-menu a:hover{color:var(--gold-light)}
 
-    /* Grid */
-    .grid-2 { display: grid; grid-template-columns: 1fr; gap: 16px; }
-    .grid-3 { display: grid; grid-template-columns: 1fr; gap: 16px; }
-    .grid-4 { display: grid; grid-template-columns: 1fr; gap: 16px; }
-    @media(min-width:640px) { .grid-2 { grid-template-columns: repeat(2,1fr); } .grid-3 { grid-template-columns: repeat(2,1fr); } .grid-4 { grid-template-columns: repeat(2,1fr); } }
-    @media(min-width:1024px) { .grid-3 { grid-template-columns: repeat(3,1fr); } .grid-4 { grid-template-columns: repeat(4,1fr); } }
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:80px 20px 40px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 25% 40%,rgba(139,38,53,0.1) 0%,transparent 50%),radial-gradient(ellipse at 75% 25%,rgba(201,168,76,0.06) 0%,transparent 45%),radial-gradient(ellipse at 50% 100%,var(--bg-deep) 0%,var(--bg) 100%),url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23c9a84c' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero-float{position:absolute;border-radius:50%;pointer-events:none}
+.hero-float-1{top:20%;left:15%;width:200px;height:200px;background:rgba(139,38,53,0.06);filter:blur(60px);animation:float 7s ease-in-out infinite}
+.hero-float-2{bottom:25%;right:20%;width:280px;height:280px;background:rgba(201,168,76,0.04);filter:blur(80px);animation:float 9s ease-in-out infinite 1.5s}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:800px}
+.hero-badge{display:inline-block;padding:6px 16px;border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-family:'Cinzel',serif;margin-bottom:24px;animation:fadeUp .6s ease-out both}
+.hero h1{font-family:'Cinzel','Noto Serif SC',serif;font-size:clamp(36px,7vw,72px);font-weight:700;background:linear-gradient(135deg,#e8d5a3,#c9a84c,#8a7330);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;animation:fadeUp .6s ease-out .1s both}
+.hero-sub{color:var(--mist);font-size:clamp(16px,2.5vw,22px);letter-spacing:.1em;margin-bottom:12px;animation:fadeUp .6s ease-out .2s both}
+.hero-desc{color:var(--text-dim);font-size:14px;max-width:540px;margin:0 auto 32px;line-height:1.8;animation:fadeUp .6s ease-out .3s both}
+.hero-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;animation:fadeUp .6s ease-out .4s both}
+.btn-primary{padding:12px 32px;background:linear-gradient(135deg,rgba(138,115,48,0.8),rgba(201,168,76,0.8));color:var(--bg);font-weight:600;font-size:13px;letter-spacing:.08em;clip-path:polygon(8% 0,100% 0,92% 100%,0% 100%);transition:all .3s;cursor:pointer;border:none;font-family:'Noto Serif SC',serif}
+.btn-primary:hover{background:linear-gradient(135deg,var(--gold),var(--gold-light))}
+.btn-outline{padding:12px 32px;border:1px solid rgba(201,168,76,0.3);color:var(--gold);font-size:13px;letter-spacing:.08em;clip-path:polygon(8% 0,100% 0,92% 100%,0% 100%);transition:all .3s;background:transparent;cursor:pointer;font-family:'Noto Serif SC',serif}
+.btn-outline:hover{border-color:rgba(201,168,76,0.6);background:rgba(201,168,76,0.08)}
 
-    /* Animations */
-    @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
-    @keyframes float { 0%,100% { transform:translateY(0); opacity:0.4; } 50% { transform:translateY(-8px); opacity:0.7; } }
-    @keyframes shimmer { 0%,100% { opacity:0.5; } 50% { opacity:1; } }
-    .anim-reveal { opacity:0; transform:translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .anim-reveal.visible { opacity:1; transform:translateY(0); }
+/* TICKER */
+.ticker{background:rgba(139,38,53,0.08);border-top:1px solid rgba(139,38,53,0.15);border-bottom:1px solid rgba(139,38,53,0.15);padding:10px 0;overflow:hidden}
+.ticker-inner{display:flex;align-items:center;gap:16px}
+.ticker-label{flex-shrink:0;background:var(--crimson);color:#fff;font-size:11px;padding:3px 10px;letter-spacing:.05em}
+.ticker-content{overflow:hidden;flex:1}
+.ticker-track{display:flex;animation:ticker-scroll 40s linear infinite;white-space:nowrap}
+@keyframes ticker-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{color:var(--mist);font-size:13px;margin-right:60px;flex-shrink:0}
+.ticker-item strong{color:var(--gold-light);margin-right:6px}
 
-    /* Ornament */
-    .orn { position:absolute; width:14px; height:14px; border:1px solid rgba(201,168,76,0.25); pointer-events:none; }
-    .orn-tl { top:-1px; left:-1px; border-right:none; border-bottom:none; }
-    .orn-tr { top:-1px; right:-1px; border-left:none; border-bottom:none; }
-    .orn-bl { bottom:-1px; left:-1px; border-right:none; border-top:none; }
-    .orn-br { bottom:-1px; right:-1px; border-left:none; border-top:none; }
+/* SECTION COMMON */
+.section{padding:64px 0}
+.section-alt{background:radial-gradient(ellipse at 30% 50%,rgba(139,38,53,0.04) 0%,transparent 50%),radial-gradient(ellipse at 80% 30%,rgba(201,168,76,0.03) 0%,transparent 50%)}
 
-    /* Card */
-    .card { background: rgba(15,21,37,0.5); border:1px solid var(--border); position:relative; transition: all 0.35s ease; }
-    .card:hover { border-color: var(--border-hover); transform:translateY(-3px); box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 24px rgba(201,168,76,0.06); }
+/* NEWS */
+.news-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:768px){.news-grid{grid-template-columns:2fr 1fr}}
+.news-featured-img{width:100%;height:200px;background:linear-gradient(135deg,var(--bg-card),var(--bg-mid));display:flex;align-items:center;justify-content:center;position:relative}
+.news-featured-img::after{content:'V2.0 大版本更新';position:absolute;color:var(--gold);font-family:'Cinzel',serif;font-size:20px;font-weight:700;letter-spacing:.1em;text-align:center}
+.news-featured-body{padding:20px}
+.news-featured-body h3{font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:18px;margin-bottom:8px;line-height:1.4}
+.news-featured-body p{color:var(--text-dim);font-size:13px;line-height:1.7}
+.news-list-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(201,168,76,0.06);cursor:pointer;transition:all .2s}
+.news-list-item:hover{padding-left:4px}
+.news-list-item:hover .news-list-title{color:var(--gold-light)}
+.news-list-date{flex-shrink:0;color:var(--text-muted);font-size:11px;padding-top:2px;min-width:72px}
+.news-list-title{color:var(--mist);font-size:13px;line-height:1.5;transition:color .2s}
 
-    /* Tag */
-    .tag { display:inline-block; font-size:11px; padding:2px 8px; border-radius:2px; letter-spacing:0.02em; }
-    .tag-hot { background:rgba(201,168,76,0.12); color:var(--gold-light); border:1px solid rgba(201,168,76,0.2); }
-    .tag-new { background:rgba(139,38,53,0.15); color:#e87986; border:1px solid rgba(139,38,53,0.25); }
-    .tag-guide { background:rgba(126,184,208,0.12); color:#a0d4e8; border:1px solid rgba(126,184,208,0.2); }
-    .tag-wiki { background:rgba(126,90,208,0.12); color:#b794f6; border:1px solid rgba(126,90,208,0.2); }
-    .tag-video { background:rgba(236,72,153,0.12); color:#f9a8d4; border:1px solid rgba(236,72,153,0.2); }
-    .tag-community { background:rgba(52,211,153,0.12); color:#6ee7b7; border:1px solid rgba(52,211,153,0.2); }
+/* GUIDE CARDS - clickable */
+.guide-card{padding:24px;cursor:pointer}
+.guide-card-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
+.guide-card-icon{width:48px;height:48px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:border-color .3s}
+.card:hover .guide-card-icon{border-color:var(--border-hover)}
+.guide-card-icon svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round}
+.guide-card h3{font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:17px;margin-bottom:2px}
+.guide-card p{color:var(--text-dim);font-size:13px;line-height:1.7}
+.guide-card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.guide-card-tags span{font-size:11px;padding:3px 10px;border:1px solid var(--border);color:var(--gold);background:rgba(6,8,15,0.5)}
+.guide-card-arrow{margin-left:auto;color:var(--text-muted);font-size:12px;transition:all .2s}
+.card:hover .guide-card-arrow{color:var(--gold);transform:translateX(4px)}
 
-    /* Section heading */
-    .section-head { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
-    .section-head .line { width:48px; height:1px; background:rgba(201,168,76,0.35); }
-    .section-head .label { color:var(--gold); font-size:11px; letter-spacing:0.25em; text-transform:uppercase; font-family:'Cinzel',serif; }
-    .section-title { font-family:'Cinzel','Noto Serif SC',serif; color:var(--gold-light); margin-bottom:8px; }
-    .section-desc { color:var(--text-dim); font-size:14px; max-width:600px; }
+/* GUIDE DETAIL SECTIONS */
+.guide-detail{margin-top:32px;display:none}
+.guide-detail.active{display:block;animation:fadeUp .5s ease-out}
+.guide-detail .card{padding:32px}
+.guide-detail h2{font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:22px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.guide-detail h3{font-family:'Noto Serif SC',serif;color:var(--gold-light);font-size:17px;margin:24px 0 10px}
+.guide-detail p{color:var(--mist);font-size:14px;line-height:1.9;margin-bottom:14px}
+.guide-detail .highlight{color:var(--gold-light);font-weight:500}
+.guide-detail .tip-box{background:rgba(201,168,76,0.06);border-left:3px solid var(--gold);padding:14px 18px;margin:14px 0;font-size:13px;color:var(--mist)}
+.guide-detail .warn-box{background:rgba(139,38,53,0.08);border-left:3px solid var(--crimson);padding:14px 18px;margin:14px 0;font-size:13px;color:var(--mist)}
+.guide-detail ul{margin:10px 0 10px 20px}
+.guide-detail ul li{color:var(--mist);font-size:13px;line-height:1.9;margin-bottom:4px}
+.guide-detail .back-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border:1px solid var(--border);color:var(--mist);font-size:13px;cursor:pointer;transition:all .2s;background:transparent;margin-bottom:16px;font-family:'Noto Serif SC',serif}
+.guide-detail .back-btn:hover{border-color:var(--border-hover);color:var(--gold-light)}
+.data-table{width:100%;border-collapse:collapse;font-size:13px;margin:14px 0}
+.data-table th{text-align:left;padding:10px 12px;color:var(--gold);font-size:12px;letter-spacing:.05em;border-bottom:1px solid var(--border-hover);font-weight:500}
+.data-table td{padding:10px 12px;border-bottom:1px solid rgba(201,168,76,0.06);color:var(--mist)}
+.data-table tr:hover td{background:rgba(201,168,76,0.03)}
+.data-table .name{color:var(--gold-light);font-weight:500}
+.data-table .s{color:var(--gold);font-weight:600}
+.data-table .a{color:var(--frost)}
+.data-table .b{color:var(--mist)}
+.data-table .c{color:var(--text-muted)}
 
-    /* Divider */
-    .divider { height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent); margin:0 auto; position:relative; }
-    .divider::after { content:'◆'; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); color:var(--gold); font-size:8px; background:var(--bg); padding:0 10px; }
+/* WIKI */
+.wiki-tabs{display:flex;gap:4px;margin-bottom:24px;flex-wrap:wrap}
+.wiki-tab{padding:8px 20px;font-size:13px;color:var(--mist);border:1px solid var(--border);background:transparent;cursor:pointer;transition:all .2s;font-family:'Noto Serif SC',serif}
+.wiki-tab:hover{border-color:var(--border-hover);color:var(--gold-light)}
+.wiki-tab.active{background:rgba(201,168,76,0.1);border-color:var(--border-hover);color:var(--gold)}
+.wiki-panel{display:none}
+.wiki-panel.active{display:block}
+.wiki-search{display:flex;gap:8px;margin-bottom:20px}
+.wiki-search input{flex:1;background:var(--bg-card);border:1px solid var(--border);color:var(--gold-light);padding:10px 16px;font-size:13px;font-family:'Noto Serif SC',serif;outline:none}
+.wiki-search input::placeholder{color:var(--text-muted)}
+.wiki-search input:focus{border-color:var(--border-hover)}
+.wiki-search button{padding:10px 20px;background:rgba(201,168,76,0.12);border:1px solid var(--border);color:var(--gold);font-size:13px;cursor:pointer;transition:all .2s;font-family:'Noto Serif SC',serif}
+.wiki-search button:hover{background:rgba(201,168,76,0.2);border-color:var(--border-hover)}
+.wiki-card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+.wiki-item-card{background:var(--bg-card);border:1px solid var(--border);padding:12px;text-align:center;cursor:pointer;transition:all .25s}
+.wiki-item-card:hover{border-color:var(--border-hover);transform:translateY(-2px)}
+.wiki-item-card .icon{width:48px;height:48px;margin:0 auto 8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:20px}
+.wiki-item-card .name{color:var(--gold-light);font-size:12px}
+.wiki-item-card .type{color:var(--text-muted);font-size:10px;margin-top:2px}
 
-    /* Progress bar top */
-    #progressBar { position:fixed; top:0; left:0; height:2px; background:linear-gradient(90deg, var(--gold-dark), var(--gold)); z-index:9999; transition:width 0.15s; width:0%; }
+/* RANKING */
+.rank-row{display:flex;align-items:center;gap:16px;padding:14px 16px;border-bottom:1px solid rgba(201,168,76,0.06);transition:all .2s}
+.rank-row:hover{background:rgba(201,168,76,0.03);padding-left:20px}
+.rank-num{width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:13px;font-weight:700;flex-shrink:0}
+.rank-num.top-1{color:var(--gold);background:rgba(201,168,76,0.15);border:1px solid rgba(201,168,76,0.3)}
+.rank-num.top-2{color:#c0c0c0;background:rgba(192,192,192,0.1);border:1px solid rgba(192,192,192,0.2)}
+.rank-num.top-3{color:#cd7f32;background:rgba(205,127,50,0.1);border:1px solid rgba(205,127,50,0.2)}
+.rank-num.normal{color:var(--text-muted)}
+.rank-avatar{width:36px;height:36px;border:1px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px}
+.rank-info{flex:1;min-width:0}
+.rank-name{color:var(--gold-light);font-size:14px;font-weight:500}
+.rank-desc{color:var(--text-muted);font-size:11px;margin-top:1px}
+.rank-score{color:var(--gold);font-family:'Cinzel',serif;font-size:14px;font-weight:600;flex-shrink:0}
 
-    /* ========== NAV ========== */
-    .nav { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(6,8,15,0.88); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
-    .nav-inner { display:flex; align-items:center; justify-content:space-between; height:56px; }
-    .nav-logo { display:flex; align-items:center; gap:10px; }
-    .nav-logo-icon { width:32px; height:32px; border:1px solid rgba(201,168,76,0.35); display:flex; align-items:center; justify-content:center; transform:rotate(45deg); }
-    .nav-logo-icon span { transform:rotate(-45deg); color:var(--gold); font-size:10px; font-family:'Cinzel',serif; font-weight:700; }
-    .nav-logo-text { color:var(--gold); font-family:'Cinzel','Noto Serif SC',serif; font-size:16px; letter-spacing:0.08em; }
-    .nav-links { display:none; gap:28px; }
-    @media(min-width:1024px) { .nav-links { display:flex; } }
-    .nav-link { color:var(--mist); font-size:13px; letter-spacing:0.04em; transition:color 0.2s; position:relative; }
-    .nav-link:hover { color:var(--gold-light); }
-    .nav-link::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--gold); transition:width 0.25s; }
-    .nav-link:hover::after { width:100%; }
-    .nav-right { display:flex; align-items:center; gap:12px; }
-    .search-btn { width:36px; height:36px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--mist); cursor:pointer; transition:all 0.2s; background:transparent; }
-    .search-btn:hover { border-color:var(--border-hover); color:var(--gold); }
-    .mobile-toggle { display:flex; background:none; border:none; color:var(--gold); cursor:pointer; padding:4px; }
-    @media(min-width:1024px) { .mobile-toggle { display:none; } }
-    .mobile-menu { display:none; background:var(--bg-mid); border-top:1px solid var(--border); padding:12px 20px; }
-    .mobile-menu.open { display:block; }
-    .mobile-menu a { display:block; color:var(--mist); padding:8px 0; font-size:14px; transition:color 0.2s; }
-    .mobile-menu a:hover { color:var(--gold-light); }
+/* COMMUNITY */
+.post-card{padding:20px}
+.post-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.post-avatar{width:36px;height:36px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;background:var(--bg-card)}
+.post-meta{flex:1}
+.post-author{color:var(--gold-light);font-size:13px;font-weight:500}
+.post-time{color:var(--text-muted);font-size:11px}
+.post-body{color:var(--mist);font-size:13px;line-height:1.7;margin-bottom:12px}
+.post-actions{display:flex;gap:20px}
+.post-action{color:var(--text-muted);font-size:12px;cursor:pointer;transition:color .2s;display:flex;align-items:center;gap:4px}
+.post-action:hover{color:var(--gold)}
 
-    /* Search overlay */
-    .search-overlay { position:fixed; inset:0; z-index:200; background:rgba(6,8,15,0.92); backdrop-filter:blur(20px); display:none; align-items:flex-start; justify-content:center; padding-top:120px; }
-    .search-overlay.open { display:flex; }
-    .search-box { width:100%; max-width:640px; }
-    .search-box input { width:100%; background:var(--bg-card); border:1px solid var(--border-hover); color:var(--gold-light); font-family:'Noto Serif SC',serif; font-size:18px; padding:16px 20px; outline:none; }
-    .search-box input::placeholder { color:var(--text-muted); }
-    .search-hints { margin-top:12px; display:flex; flex-wrap:wrap; gap:8px; }
-    .search-hint { font-size:12px; color:var(--text-dim); padding:4px 12px; border:1px solid var(--border); cursor:pointer; transition:all 0.2s; }
-    .search-hint:hover { border-color:var(--border-hover); color:var(--gold-light); }
+/* VIDEO */
+.video-card{position:relative;overflow:hidden}
+.video-thumb{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--bg-card),var(--bg-mid));display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer}
+.video-thumb::after{content:'';position:absolute;width:48px;height:48px;border:2px solid rgba(255,255,255,0.8);border-radius:50%}
+.video-thumb::before{content:'';position:absolute;width:0;height:0;border-left:18px solid rgba(255,255,255,0.9);border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px;z-index:1}
+.video-duration{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,0.7);color:#fff;font-size:11px;padding:2px 6px}
+.video-info{padding:14px}
+.video-info h4{color:var(--gold-light);font-size:14px;margin-bottom:4px;line-height:1.4}
+.video-info p{color:var(--text-muted);font-size:12px}
 
-    /* ========== HERO ========== */
-    .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; padding:80px 20px 40px; }
-    .hero-bg { position:absolute; inset:0; background: radial-gradient(ellipse at 25% 40%, rgba(139,38,53,0.1) 0%, transparent 50%), radial-gradient(ellipse at 75% 25%, rgba(201,168,76,0.06) 0%, transparent 45%), radial-gradient(ellipse at 50% 100%, var(--bg-deep) 0%, var(--bg) 100%), url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23c9a84c' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); pointer-events:none; }
-    .hero-float { position:absolute; border-radius:50%; pointer-events:none; }
-    .hero-float-1 { top:20%; left:15%; width:200px; height:200px; background:rgba(139,38,53,0.06); filter:blur(60px); animation:float 7s ease-in-out infinite; }
-    .hero-float-2 { bottom:25%; right:20%; width:280px; height:280px; background:rgba(201,168,76,0.04); filter:blur(80px); animation:float 9s ease-in-out infinite 1.5s; }
-    .hero-content { position:relative; z-index:2; text-align:center; max-width:800px; }
-    .hero-badge { display:inline-block; padding:6px 16px; border:1px solid rgba(201,168,76,0.25); color:var(--gold); font-size:11px; letter-spacing:0.3em; text-transform:uppercase; font-family:'Cinzel',serif; margin-bottom:24px; animation:fadeUp 0.6s ease-out both; }
-    .hero h1 { font-family:'Cinzel','Noto Serif SC',serif; font-size:clamp(36px,7vw,72px); font-weight:700; background:linear-gradient(135deg,#e8d5a3,#c9a84c,#8a7330); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:8px; animation:fadeUp 0.6s ease-out 0.1s both; }
-    .hero-sub { color:var(--mist); font-size:clamp(16px,2.5vw,22px); letter-spacing:0.1em; margin-bottom:12px; animation:fadeUp 0.6s ease-out 0.2s both; }
-    .hero-desc { color:var(--text-dim); font-size:14px; max-width:540px; margin:0 auto 32px; line-height:1.8; animation:fadeUp 0.6s ease-out 0.3s both; }
-    .hero-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; animation:fadeUp 0.6s ease-out 0.4s both; }
-    .btn-primary { padding:12px 32px; background:linear-gradient(135deg,rgba(138,115,48,0.8),rgba(201,168,76,0.8)); color:var(--bg); font-weight:600; font-size:13px; letter-spacing:0.08em; clip-path:polygon(8% 0,100% 0,92% 100%,0% 100%); transition:all 0.3s; cursor:pointer; border:none; font-family:'Noto Serif SC',serif; }
-    .btn-primary:hover { background:linear-gradient(135deg,var(--gold),var(--gold-light)); }
-    .btn-outline { padding:12px 32px; border:1px solid rgba(201,168,76,0.3); color:var(--gold); font-size:13px; letter-spacing:0.08em; clip-path:polygon(8% 0,100% 0,92% 100%,0% 100%); transition:all 0.3s; background:transparent; cursor:pointer; font-family:'Noto Serif SC',serif; }
-    .btn-outline:hover { border-color:rgba(201,168,76,0.6); background:rgba(201,168,76,0.08); }
-    .hero-scroll { position:absolute; bottom:32px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:6px; color:rgba(201,168,76,0.4); animation:fadeUp 0.6s ease-out 0.5s both; }
-    .hero-scroll span { font-size:10px; letter-spacing:0.2em; }
-    .hero-scroll .line-v { width:1px; height:28px; background:linear-gradient(to bottom, rgba(201,168,76,0.4), transparent); }
+/* FOOTER */
+.footer{border-top:1px solid var(--border);padding:40px 0}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:32px}
+@media(min-width:768px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+.footer h5{font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold);font-size:13px;margin-bottom:12px;letter-spacing:.05em}
+.footer a{display:block;color:var(--text-dim);font-size:12px;padding:3px 0;transition:color .2s}
+.footer a:hover{color:var(--gold-light)}
+.footer-bottom{margin-top:24px;padding-top:20px;border-top:1px solid rgba(201,168,76,0.06);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:11px;color:var(--text-muted)}
 
-    /* ========== NEWS TICKER ========== */
-    .ticker { background:rgba(139,38,53,0.08); border-top:1px solid rgba(139,38,53,0.15); border-bottom:1px solid rgba(139,38,53,0.15); padding:10px 0; overflow:hidden; }
-    .ticker-inner { display:flex; align-items:center; gap:16px; }
-    .ticker-label { flex-shrink:0; background:var(--crimson); color:#fff; font-size:11px; padding:3px 10px; letter-spacing:0.05em; }
-    .ticker-content { overflow:hidden; flex:1; }
-    .ticker-track { display:flex; animation: ticker-scroll 40s linear infinite; white-space:nowrap; }
-    @keyframes ticker-scroll { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
-    .ticker-item { color:var(--mist); font-size:13px; margin-right:60px; flex-shrink:0; }
-    .ticker-item strong { color:var(--gold-light); margin-right:6px; }
+/* BREADCRUMB */
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted);margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:var(--mist);transition:color .2s}
+.breadcrumb a:hover{color:var(--gold-light)}
+.breadcrumb span{color:var(--text-muted)}
+.breadcrumb .current{color:var(--gold)}
 
-    /* ========== SECTION COMMON ========== */
-    .section { padding:64px 0; }
-    .section-alt { background: radial-gradient(ellipse at 30% 50%, rgba(139,38,53,0.04) 0%, transparent 50%), radial-gradient(ellipse at 80% 30%, rgba(201,168,76,0.03) 0%, transparent 50%); }
-
-    /* ========== NEWS SECTION ========== */
-    .news-grid { display:grid; grid-template-columns:1fr; gap:16px; }
-    @media(min-width:768px) { .news-grid { grid-template-columns:2fr 1fr; } }
-    .news-featured { position:relative; overflow:hidden; }
-    .news-featured-img { width:100%; height:280px; background:linear-gradient(135deg,var(--bg-card),var(--bg-mid)); display:flex; align-items:center; justify-content:center; position:relative; }
-    .news-featured-img::after { content:'V2.0 大版本更新'; position:absolute; color:var(--gold); font-family:'Cinzel',serif; font-size:24px; font-weight:700; letter-spacing:0.1em; text-align:center; }
-    .news-featured-body { padding:20px; }
-    .news-featured-body h3 { font-family:'Cinzel','Noto Serif SC',serif; color:var(--gold-light); font-size:20px; margin-bottom:8px; line-height:1.4; }
-    .news-featured-body p { color:var(--text-dim); font-size:13px; line-height:1.7; }
-    .news-list-item { display:flex; gap:12px; padding:12px 0; border-bottom:1px solid rgba(201,168,76,0.06); cursor:pointer; transition:all 0.2s; }
-    .news-list-item:hover { padding-left:4px; }
-    .news-list-item:hover .news-list-title { color:var(--gold-light); }
-    .news-list-date { flex-shrink:0; color:var(--text-muted); font-size:11px; padding-top:2px; min-width:72px; }
-    .news-list-title { color:var(--mist); font-size:13px; line-height:1.5; transition:color 0.2s; }
-
-    /* ========== GUIDE CARDS ========== */
-    .guide-card { padding:24px; }
-    .guide-card-header { display:flex; align-items:flex-start; gap:16px; margin-bottom:16px; }
-    .guide-card-icon { width:48px; height:48px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:border-color 0.3s; }
-    .card:hover .guide-card-icon { border-color:var(--border-hover); }
-    .guide-card-icon svg { width:22px; height:22px; stroke:var(--gold); fill:none; stroke-width:1.2; stroke-linecap:round; stroke-linejoin:round; }
-    .guide-card h3 { font-family:'Cinzel','Noto Serif SC',serif; color:var(--gold-light); font-size:17px; margin-bottom:2px; }
-    .guide-card p { color:var(--text-dim); font-size:13px; line-height:1.7; }
-    .guide-card-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
-    .guide-card-tags span { font-size:11px; padding:3px 10px; border:1px solid var(--border); color:var(--gold); background:rgba(6,8,15,0.5); }
-
-    /* ========== WIKI SECTION ========== */
-    .wiki-tabs { display:flex; gap:4px; margin-bottom:24px; flex-wrap:wrap; }
-    .wiki-tab { padding:8px 20px; font-size:13px; color:var(--mist); border:1px solid var(--border); background:transparent; cursor:pointer; transition:all 0.2s; font-family:'Noto Serif SC',serif; }
-    .wiki-tab:hover { border-color:var(--border-hover); color:var(--gold-light); }
-    .wiki-tab.active { background:rgba(201,168,76,0.1); border-color:var(--border-hover); color:var(--gold); }
-    .wiki-panel { display:none; }
-    .wiki-panel.active { display:block; }
-    .wiki-table { width:100%; border-collapse:collapse; font-size:13px; }
-    .wiki-table th { text-align:left; padding:10px 12px; color:var(--gold); font-size:12px; letter-spacing:0.05em; border-bottom:1px solid var(--border-hover); font-weight:500; }
-    .wiki-table td { padding:10px 12px; border-bottom:1px solid rgba(201,168,76,0.06); color:var(--mist); }
-    .wiki-table tr:hover td { background:rgba(201,168,76,0.03); }
-    .wiki-table .rarity-common { color:var(--mist); }
-    .wiki-table .rarity-rare { color:var(--frost); }
-    .wiki-table .rarity-epic { color:#b794f6; }
-    .wiki-table .rarity-legend { color:var(--gold); }
-    .wiki-item-name { color:var(--gold-light); font-weight:500; }
-    .wiki-search { display:flex; gap:8px; margin-bottom:20px; }
-    .wiki-search input { flex:1; background:var(--bg-card); border:1px solid var(--border); color:var(--gold-light); padding:10px 16px; font-size:13px; font-family:'Noto Serif SC',serif; outline:none; }
-    .wiki-search input::placeholder { color:var(--text-muted); }
-    .wiki-search input:focus { border-color:var(--border-hover); }
-    .wiki-search button { padding:10px 20px; background:rgba(201,168,76,0.12); border:1px solid var(--border); color:var(--gold); font-size:13px; cursor:pointer; transition:all 0.2s; font-family:'Noto Serif SC',serif; }
-    .wiki-search button:hover { background:rgba(201,168,76,0.2); border-color:var(--border-hover); }
-    .wiki-card-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:12px; }
-    .wiki-item-card { background:var(--bg-card); border:1px solid var(--border); padding:12px; text-align:center; cursor:pointer; transition:all 0.25s; }
-    .wiki-item-card:hover { border-color:var(--border-hover); transform:translateY(-2px); }
-    .wiki-item-card .icon { width:48px; height:48px; margin:0 auto 8px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:20px; }
-    .wiki-item-card .name { color:var(--gold-light); font-size:12px; }
-    .wiki-item-card .type { color:var(--text-muted); font-size:10px; margin-top:2px; }
-
-    /* ========== RANKING ========== */
-    .rank-row { display:flex; align-items:center; gap:16px; padding:14px 16px; border-bottom:1px solid rgba(201,168,76,0.06); transition:all 0.2s; }
-    .rank-row:hover { background:rgba(201,168,76,0.03); padding-left:20px; }
-    .rank-num { width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-family:'Cinzel',serif; font-size:13px; font-weight:700; flex-shrink:0; }
-    .rank-num.top-1 { color:var(--gold); background:rgba(201,168,76,0.15); border:1px solid rgba(201,168,76,0.3); }
-    .rank-num.top-2 { color:#c0c0c0; background:rgba(192,192,192,0.1); border:1px solid rgba(192,192,192,0.2); }
-    .rank-num.top-3 { color:#cd7f32; background:rgba(205,127,50,0.1); border:1px solid rgba(205,127,50,0.2); }
-    .rank-num.normal { color:var(--text-muted); }
-    .rank-avatar { width:36px; height:36px; border:1px solid var(--border); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:14px; }
-    .rank-info { flex:1; min-width:0; }
-    .rank-name { color:var(--gold-light); font-size:14px; font-weight:500; }
-    .rank-desc { color:var(--text-muted); font-size:11px; margin-top:1px; }
-    .rank-score { color:var(--gold); font-family:'Cinzel',serif; font-size:14px; font-weight:600; flex-shrink:0; }
-    .rank-bars { margin-top:8px; }
-    .rank-bar-row { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
-    .rank-bar-label { font-size:11px; color:var(--mist); min-width:60px; }
-    .rank-bar-track { flex:1; height:6px; background:var(--bg-card); border-radius:3px; overflow:hidden; }
-    .rank-bar-fill { height:100%; border-radius:3px; transition:width 0.8s ease; }
-
-    /* ========== GUIDE ARTICLE DETAIL (template) ========== */
-    .breadcrumb { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--text-muted); margin-bottom:20px; flex-wrap:wrap; }
-    .breadcrumb a { color:var(--mist); transition:color 0.2s; }
-    .breadcrumb a:hover { color:var(--gold-light); }
-    .breadcrumb span { color:var(--text-muted); }
-    .article-toc { position:sticky; top:80px; }
-    .article-toc h4 { font-family:'Cinzel','Noto Serif SC',serif; color:var(--gold-light); font-size:14px; margin-bottom:12px; }
-    .article-toc ul { list-style:none; }
-    .article-toc li { margin-bottom:6px; }
-    .article-toc a { color:var(--mist); font-size:12px; padding-left:12px; border-left:1px solid var(--border); display:block; padding:4px 0 4px 12px; transition:all 0.2s; }
-    .article-toc a:hover { color:var(--gold-light); border-color:var(--border-hover); }
-    .article-body h2 { font-family:'Cinzel','Noto Serif SC',serif; color:var(--gold-light); font-size:22px; margin:32px 0 12px; padding-bottom:8px; border-bottom:1px solid var(--border); }
-    .article-body h3 { font-family:'Noto Serif SC',serif; color:var(--gold-light); font-size:17px; margin:24px 0 8px; }
-    .article-body p { color:var(--mist); font-size:14px; line-height:1.9; margin-bottom:16px; }
-    .article-body .highlight { color:var(--gold-light); font-weight:500; }
-    .article-body .tip-box { background:rgba(201,168,76,0.06); border-left:3px solid var(--gold); padding:16px 20px; margin:16px 0; font-size:13px; color:var(--mist); }
-    .article-body .warn-box { background:rgba(139,38,53,0.08); border-left:3px solid var(--crimson); padding:16px 20px; margin:16px 0; font-size:13px; color:var(--mist); }
-    .related-articles { margin-top:40px; padding-top:24px; border-top:1px solid var(--border); }
-    .related-articles h4 { font-family:'Cinzel','Noto Serif SC',serif; color:var(--gold); font-size:14px; margin-bottom:16px; }
-
-    /* ========== COMMUNITY ========== */
-    .post-card { padding:20px; }
-    .post-header { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
-    .post-avatar { width:36px; height:36px; border:1px solid var(--border); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px; background:var(--bg-card); }
-    .post-meta { flex:1; }
-    .post-author { color:var(--gold-light); font-size:13px; font-weight:500; }
-    .post-time { color:var(--text-muted); font-size:11px; }
-    .post-tag-row { display:flex; gap:4px; }
-    .post-body { color:var(--mist); font-size:13px; line-height:1.7; margin-bottom:12px; }
-    .post-actions { display:flex; gap:20px; }
-    .post-action { color:var(--text-muted); font-size:12px; cursor:pointer; transition:color 0.2s; display:flex; align-items:center; gap:4px; }
-    .post-action:hover { color:var(--gold); }
-    .post-action svg { width:14px; height:14px; }
-    .community-write-btn { padding:10px 24px; background:rgba(201,168,76,0.1); border:1px dashed var(--border-hover); color:var(--gold); font-size:13px; cursor:pointer; transition:all 0.2s; font-family:'Noto Serif SC',serif; width:100%; }
-    .community-write-btn:hover { background:rgba(201,168,76,0.15); }
-
-    /* ========== VIDEO SECTION ========== */
-    .video-card { position:relative; overflow:hidden; }
-    .video-thumb { width:100%; aspect-ratio:16/9; background:linear-gradient(135deg,var(--bg-card),var(--bg-mid)); display:flex; align-items:center; justify-content:center; position:relative; cursor:pointer; }
-    .video-thumb::after { content:''; position:absolute; width:48px; height:48px; border:2px solid rgba(255,255,255,0.8); border-radius:50%; }
-    .video-thumb::before { content:''; position:absolute; width:0; height:0; border-left:18px solid rgba(255,255,255,0.9); border-top:10px solid transparent; border-bottom:10px solid transparent; margin-left:4px; z-index:1; }
-    .video-duration { position:absolute; bottom:8px; right:8px; background:rgba(0,0,0,0.7); color:#fff; font-size:11px; padding:2px 6px; }
-    .video-info { padding:14px; }
-    .video-info h4 { color:var(--gold-light); font-size:14px; margin-bottom:4px; line-height:1.4; }
-    .video-info p { color:var(--text-muted); font-size:12px; }
-    .video-info .views { color:var(--mist); }
-
-    /* ========== CHECKLIST (sidebar) ========== */
-    .checklist { background:rgba(15,21,37,0.5); border:1px solid var(--border); padding:24px; position:sticky; top:80px; }
-    .checklist h4 { font-family:'Cinzel','Noto Serif SC',serif; color:var(--gold-light); font-size:16px; margin-bottom:16px; }
-    .checklist-item { display:flex; align-items:flex-start; gap:10px; margin-bottom:10px; cursor:pointer; }
-    .checklist-item input { margin-top:3px; accent-color:var(--gold); }
-    .checklist-item span { color:var(--mist); font-size:13px; transition:color 0.2s; }
-    .checklist-item:hover span { color:var(--gold-light); }
-    .checklist-progress { margin-top:16px; padding-top:12px; border-top:1px solid var(--border); }
-
-    /* ========== FOOTER ========== */
-    .footer { border-top:1px solid var(--border); padding:40px 0; }
-    .footer-grid { display:grid; grid-template-columns:1fr; gap:32px; }
-    @media(min-width:768px) { .footer-grid { grid-template-columns:2fr 1fr 1fr 1fr; } }
-    .footer h5 { font-family:'Cinzel','Noto Serif SC',serif; color:var(--gold); font-size:13px; margin-bottom:12px; letter-spacing:0.05em; }
-    .footer a { display:block; color:var(--text-dim); font-size:12px; padding:3px 0; transition:color 0.2s; }
-    .footer a:hover { color:var(--gold-light); }
-    .footer-bottom { margin-top:24px; padding-top:20px; border-top:1px solid rgba(201,168,76,0.06); display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-size:11px; color:var(--text-muted); }
-
-    /* ========== BACK TO TOP ========== */
-    .back-top { position:fixed; bottom:24px; right:24px; width:40px; height:40px; border:1px solid var(--border); background:rgba(6,8,15,0.85); backdrop-filter:blur(8px); display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:0; pointer-events:none; transition:all 0.3s; z-index:50; }
-    .back-top.visible { opacity:1; pointer-events:auto; }
-    .back-top:hover { border-color:var(--border-hover); }
-    .back-top svg { width:16px; height:16px; stroke:var(--gold); fill:none; }
-  </style>
+/* PROGRESS BAR */
+.progress-track{height:6px;background:var(--bg-card);border-radius:3px;overflow:hidden;margin:8px 0}
+.progress-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold-dark),var(--gold));transition:width .8s ease}
+</style>
 </head>
 <body>
 
-<!-- Progress bar -->
 <div id="progressBar"></div>
 
-<!-- Search Overlay -->
-<div class="search-overlay" id="searchOverlay">
-  <div class="search-box">
-    <input type="text" placeholder="搜索攻略、职业、装备、副本..." id="searchInput" autocomplete="off">
-    <div class="search-hints">
-      <span class="search-hint">兽人骑士</span>
-      <span class="search-hint">恶魔岛攻略</span>
-      <span class="search-hint">搬砖点</span>
-      <span class="search-hint">攻城战</span>
-      <span class="search-hint">装备强化</span>
-      <span class="search-hint">觉醒加点</span>
-      <span class="search-hint">交易所</span>
-      <span class="search-hint">精灵牧师</span>
-    </div>
-  </div>
-</div>
-
-<!-- ========== NAVIGATION ========== -->
+<!-- ========== NAV ========== -->
 <nav class="nav">
   <div class="container">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
+      <a href="#" class="nav-logo" onclick="showSection('home')">
         <div class="nav-logo-icon"><span>L2</span></div>
         <span class="nav-logo-text">盟约攻略</span>
       </a>
@@ -355,9 +258,6 @@
         <a href="#videos" class="nav-link">视频</a>
       </div>
       <div class="nav-right">
-        <button class="search-btn" id="searchBtn" aria-label="搜索">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
         <button class="mobile-toggle" id="mobileToggle" aria-label="菜单">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
         </button>
@@ -374,13 +274,16 @@
   </div>
 </nav>
 
-<!-- ========== HERO ========== -->
+<!-- ========== HOME VIEW ========== -->
+<div id="home-view">
+
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-float hero-float-1"></div>
   <div class="hero-float hero-float-2"></div>
   <div class="hero-content">
-    <div class="hero-badge">NCSOFT × 腾讯 · 正统团战续作</div>
+    <div class="hero-badge">NCSOFT x 腾讯 · 正统团战续作</div>
     <h1>天堂2 盟约</h1>
     <p class="hero-sub">亚丁大陆的冒险指南</p>
     <p class="hero-desc">3D打宝魔幻史诗MMO，千人同屏攻城，装备全靠打。从种族选择到战力巅峰，从副本攻略到血盟争霸，这里是你征服亚丁大陆的最强后盾。</p>
@@ -390,13 +293,9 @@
       <a href="#ranking" class="btn-outline">职业排行</a>
     </div>
   </div>
-  <div class="hero-scroll">
-    <span>SCROLL</span>
-    <div class="line-v"></div>
-  </div>
 </section>
 
-<!-- ========== NEWS TICKER ========== -->
+<!-- TICKER -->
 <div class="ticker">
   <div class="container">
     <div class="ticker-inner">
@@ -417,900 +316,734 @@
   </div>
 </div>
 
-<!-- ========== MODULE 1: 游戏资讯 ========== -->
+<!-- NEWS -->
 <section id="news" class="section">
   <div class="container">
     <div class="anim-reveal">
-      <div class="section-head">
-        <div class="line"></div>
-        <span class="label">News</span>
-      </div>
-      <h2 class="section-title" style="font-size:28px;">游戏资讯</h2>
+      <div class="section-head"><div class="line"></div><span class="label">News</span></div>
+      <h2 class="section-title" style="font-size:28px">游戏资讯</h2>
       <p class="section-desc">版本更新、活动公告、游戏动态，第一时间掌握亚丁大陆最新情报。</p>
     </div>
-    <div class="news-grid" style="margin-top:32px;">
+    <div class="news-grid" style="margin-top:32px">
       <div class="anim-reveal">
         <div class="card news-featured">
           <div class="orn orn-tl"></div><div class="orn orn-br"></div>
           <div class="news-featured-img"></div>
           <div class="news-featured-body">
-            <div style="display:flex; gap:6px; margin-bottom:10px;">
+            <div style="display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap">
               <span class="tag tag-new">重大更新</span>
               <span class="tag tag-hot">必看</span>
             </div>
             <h3>V2.0 大版本更新：觉醒系统全面上线，恶魔岛团本开放挑战</h3>
             <p>6月27日大型版本更新正式上线，新增觉醒二转系统、50级团队副本恶魔岛、新PVP竞技场模式。觉醒后可解锁全新技能树，职业玩法迎来重大变革。恶魔岛需要10人团队挑战，最终BOSS巴风特掉落版本毕业橙装。</p>
-            <div style="margin-top:12px; color:var(--text-muted); font-size:12px;">2026-06-27 · 12.5k 阅读 · 326 评论</div>
+            <div style="margin-top:12px;color:var(--text-muted);font-size:12px">2026-06-27 · 12.5k 阅读 · 326 评论</div>
           </div>
         </div>
       </div>
       <div class="anim-reveal">
-        <div class="card" style="padding:16px;">
+        <div class="card" style="padding:16px">
           <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-          <div style="margin-bottom:12px; font-family:'Cinzel','Noto Serif SC',serif; color:var(--gold); font-size:13px; letter-spacing:0.05em;">最新动态</div>
-          <div class="news-list-item">
-            <span class="news-list-date">06-28</span>
-            <span class="news-list-title">周末双倍经验+掉落活动，限时3天不容错过</span>
-          </div>
-          <div class="news-list-item">
-            <span class="news-list-date">06-28</span>
-            <span class="news-list-title">首届跨服攻城战报名通道已开启</span>
-          </div>
-          <div class="news-list-item">
-            <span class="news-list-date">06-27</span>
-            <span class="news-list-title">恩宠值系统调整公告：交易频率限制放宽</span>
-          </div>
-          <div class="news-list-item">
-            <span class="news-list-date">06-27</span>
-            <span class="news-list-title">新服亚丁之光开放转服功能</span>
-          </div>
-          <div class="news-list-item">
-            <span class="news-list-date">06-26</span>
-            <span class="news-list-title">全平台公测开启，首日在线突破百万</span>
-          </div>
-          <div class="news-list-item">
-            <span class="news-list-date">06-25</span>
-            <span class="news-list-title">公测前瞻：五大种族深度解析抢先看</span>
-          </div>
+          <div style="margin-bottom:12px;font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold);font-size:13px;letter-spacing:.05em">最新动态</div>
+          <div class="news-list-item"><span class="news-list-date">06-28</span><span class="news-list-title">周末双倍经验+掉落活动，限时3天不容错过</span></div>
+          <div class="news-list-item"><span class="news-list-date">06-28</span><span class="news-list-title">首届跨服攻城战报名通道已开启</span></div>
+          <div class="news-list-item"><span class="news-list-date">06-27</span><span class="news-list-title">恩宠值系统调整公告：交易频率限制放宽</span></div>
+          <div class="news-list-item"><span class="news-list-date">06-27</span><span class="news-list-title">新服亚丁之光开放转服功能</span></div>
+          <div class="news-list-item"><span class="news-list-date">06-26</span><span class="news-list-title">全平台公测开启，首日在线突破百万</span></div>
+          <div class="news-list-item"><span class="news-list-date">06-25</span><span class="news-list-title">公测前瞻：五大种族深度解析抢先看</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== MODULE 2: 攻略专区 ========== -->
+<!-- GUIDES -->
 <section id="guides" class="section section-alt">
   <div class="container">
     <div class="anim-reveal">
-      <div class="section-head">
-        <div class="line"></div>
-        <span class="label">Guides</span>
-      </div>
-      <h2 class="section-title" style="font-size:28px;">攻略专区</h2>
-      <p class="section-desc">六大核心攻略模块，从入门到精通的完整知识体系。</p>
+      <div class="section-head"><div class="line"></div><span class="label">Guides</span></div>
+      <h2 class="section-title" style="font-size:28px">攻略专区</h2>
+      <p class="section-desc">六大核心攻略模块，点击卡片查看完整攻略内容。</p>
     </div>
-    <div class="grid-3" style="margin-top:32px;">
-      <div class="card guide-card anim-reveal">
+    <div class="grid-3" style="margin-top:32px">
+
+      <div class="card guide-card anim-reveal" onclick="showGuide('newbie')">
         <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
         <div class="guide-card-header">
           <div class="guide-card-icon"><svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></div>
-          <div>
-            <div style="display:flex; align-items:center; gap:6px;">
-              <h3>新手入门</h3>
-              <span class="tag tag-new">必读</span>
-            </div>
-          </div>
+          <div style="flex:1"><div style="display:flex;align-items:center;gap:6px"><h3>新手入门</h3><span class="tag tag-new">必读</span></div></div>
+          <span class="guide-card-arrow">→</span>
         </div>
-        <p>保姆级新手指南，种族选择、成长路线、挂机设置、每日任务清单，零弯路快速上手。</p>
-        <div class="guide-card-tags">
-          <span>种族选择</span><span>成长路线</span><span>挂机设置</span>
-        </div>
+        <p>保姆级新手指南：种族选择、成长路线、挂机设置、每日任务清单，零弯路快速上手。</p>
+        <div class="guide-card-tags"><span>种族选择</span><span>成长路线</span><span>挂机设置</span></div>
       </div>
 
-      <div class="card guide-card anim-reveal">
+      <div class="card guide-card anim-reveal" onclick="showGuide('class')">
         <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
         <div class="guide-card-header">
           <div class="guide-card-icon"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-          <div>
-            <div style="display:flex; align-items:center; gap:6px;">
-              <h3>职业指南</h3>
-              <span class="tag tag-hot">热门</span>
-            </div>
-          </div>
+          <div style="flex:1"><div style="display:flex;align-items:center;gap:6px"><h3>职业指南</h3><span class="tag tag-hot">热门</span></div></div>
+          <span class="guide-card-arrow">→</span>
         </div>
-        <p>五大种族深度解析，平民/氪金职业推荐，觉醒加点方案，PVE/PVP双路线。</p>
-        <div class="guide-card-tags">
-          <span>种族解析</span><span>觉醒加点</span><span>职业排行</span>
-        </div>
+        <p>五大种族深度解析，平民/氪金职业推荐，觉醒加点方案，PVE/PVP双路线攻略。</p>
+        <div class="guide-card-tags"><span>种族解析</span><span>觉醒加点</span><span>职业排行</span></div>
       </div>
 
-      <div class="card guide-card anim-reveal">
+      <div class="card guide-card anim-reveal" onclick="showGuide('equip')">
         <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
         <div class="guide-card-header">
           <div class="guide-card-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
-          <div>
-            <div style="display:flex; align-items:center; gap:6px;">
-              <h3>装备战力</h3>
-              <span class="tag tag-guide">攻略</span>
-            </div>
-          </div>
+          <div style="flex:1"><div style="display:flex;align-items:center;gap:6px"><h3>装备战力</h3><span class="tag tag-guide">攻略</span></div></div>
+          <span class="guide-card-arrow">→</span>
         </div>
         <p>装备全靠打，强化、镶嵌、附魔系统详解。战力构成分析，资源分配策略。</p>
-        <div class="guide-card-tags">
-          <span>装备强化</span><span>宝石镶嵌</span><span>战力分析</span>
-        </div>
+        <div class="guide-card-tags"><span>装备强化</span><span>宝石镶嵌</span><span>战力分析</span></div>
       </div>
 
-      <div class="card guide-card anim-reveal">
+      <div class="card guide-card anim-reveal" onclick="showGuide('dungeon')">
         <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
         <div class="guide-card-header">
           <div class="guide-card-icon"><svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
-          <div>
-            <div style="display:flex; align-items:center; gap:6px;">
-              <h3>副本攻略</h3>
-              <span class="tag tag-hot">热门</span>
-            </div>
-          </div>
+          <div style="flex:1"><div style="display:flex;align-items:center;gap:6px"><h3>副本攻略</h3><span class="tag tag-hot">热门</span></div></div>
+          <span class="guide-card-arrow">→</span>
         </div>
         <p>各等级副本通关要点，BOSS机制详解，组队配置推荐，掉落清单汇总。</p>
-        <div class="guide-card-tags">
-          <span>BOSS机制</span><span>组队配置</span><span>掉落清单</span>
-        </div>
+        <div class="guide-card-tags"><span>BOSS机制</span><span>组队配置</span><span>掉落清单</span></div>
       </div>
 
-      <div class="card guide-card anim-reveal">
+      <div class="card guide-card anim-reveal" onclick="showGuide('clan')">
         <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
         <div class="guide-card-header">
           <div class="guide-card-icon"><svg viewBox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
-          <div>
-            <div style="display:flex; align-items:center; gap:6px;">
-              <h3>血盟PVP</h3>
-              <span class="tag tag-new">团战</span>
-            </div>
-          </div>
+          <div style="flex:1"><div style="display:flex;align-items:center;gap:6px"><h3>血盟PVP</h3><span class="tag tag-new">团战</span></div></div>
+          <span class="guide-card-arrow">→</span>
         </div>
         <p>千人同屏攻城战机制，血盟建设与管理，PVP职业搭配与战术指挥手册。</p>
-        <div class="guide-card-tags">
-          <span>攻城战</span><span>血盟建设</span><span>PVP配置</span>
-        </div>
+        <div class="guide-card-tags"><span>攻城战</span><span>血盟建设</span><span>PVP配置</span></div>
       </div>
 
-      <div class="card guide-card anim-reveal">
+      <div class="card guide-card anim-reveal" onclick="showGuide('gold')">
         <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
         <div class="guide-card-header">
           <div class="guide-card-icon"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-          <div>
-            <div style="display:flex; align-items:center; gap:6px;">
-              <h3>搬砖指南</h3>
-              <span class="tag tag-hot">必看</span>
-            </div>
-          </div>
+          <div style="flex:1"><div style="display:flex;align-items:center;gap:6px"><h3>搬砖指南</h3><span class="tag tag-hot">必看</span></div></div>
+          <span class="guide-card-arrow">→</span>
         </div>
         <p>自由交易系统深度解析，搬砖点盘点，收益最大化策略，风险规避提醒。</p>
-        <div class="guide-card-tags">
-          <span>交易系统</span><span>搬砖点</span><span>风险提示</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Featured article template with breadcrumb, TOC, and related articles -->
-    <div style="margin-top:48px;" class="anim-reveal">
-      <div style="display:grid; grid-template-columns:1fr; gap:32px;">
-        <div style="display:grid; grid-template-columns:1fr; gap:32px;" class="article-layout">
-          <div style="display:grid; grid-template-columns:1fr; gap:32px;" id="articleGrid">
-            <!-- Main article -->
-            <div style="min-width:0;">
-              <div class="breadcrumb">
-                <a href="#">首页</a> <span>/</span>
-                <a href="#guides">攻略专区</a> <span>/</span>
-                <a href="#guides">职业指南</a> <span>/</span>
-                <span style="color:var(--gold);">平民玩家职业选择推荐</span>
-              </div>
-
-              <div class="card" style="padding:32px;">
-                <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
-                <div style="display:flex; gap:6px; margin-bottom:12px; flex-wrap:wrap;">
-                  <span class="tag tag-hot">热门</span>
-                  <span class="tag tag-guide">攻略</span>
-                </div>
-                <h1 style="font-family:'Cinzel','Noto Serif SC',serif; color:var(--gold-light); font-size:24px; margin-bottom:8px; line-height:1.4;">平民玩家职业选择推荐：零氪/月卡党最优解</h1>
-                <div style="display:flex; gap:16px; color:var(--text-muted); font-size:12px; margin-bottom:24px; flex-wrap:wrap;">
-                  <span>作者：亚丁旅人</span>
-                  <span>2026-06-27</span>
-                  <span>3.2k 阅读</span>
-                  <span>128 评论</span>
-                </div>
-
-                <div class="article-body">
-                  <h2 id="a-sec1">一、为什么职业选择如此重要</h2>
-                  <p>在《天堂2：盟约》中，职业选择几乎决定了你前中期的全部游戏体验。<span class="highlight">选对职业</span>意味着更快的升级速度、更高的副本通过率、更稳定的搬砖收益。选错职业则可能陷入"删号重练"的窘境，浪费大量时间。</p>
-
-                  <div class="tip-box">
-                    <strong style="color:var(--gold);">核心原则：</strong>平民玩家优先选择<span class="highlight">高生存、低操作依赖、组队价值高</span>的职业。不要盲目追求DPS，生存力才是零氪玩家的第一属性。
-                  </div>
-
-                  <h2 id="a-sec2">二、T0 推荐：兽人骑士</h2>
-                  <p>零氪玩家的不二之选。兽人骑士凭借<span class="highlight">单手剑+盾</span>的搭配，拥有全职业最高的生存能力。挂机不易暴毙，单人副本也能稳扎稳打通关。</p>
-                  <h3>优势分析</h3>
-                  <p>高防御、高HP、自带减伤技能，30级之前几乎可以无药水单刷同级怪物。城战时是前排抗伤核心，任何血盟都需要骑士。</p>
-
-                  <h2 id="a-sec3">三、T1 推荐：精灵牧师</h2>
-                  <p>组队刚需职业。副本中牧师的地位无可替代，<span class="highlight">永远不愁找不到队伍</span>。虽然 solo 能力较弱，但通过组队可以获得更高效的升级体验。</p>
-
-                  <div class="warn-box">
-                    <strong style="color:var(--crimson-light);">注意：</strong>牧师 solo 效率较低，如果你经常独自上线、无法固定组队，不建议作为主号。可以考虑作为副号练级。
-                  </div>
-
-                  <h2 id="a-sec4">四、T1 推荐：人类双手剑</h2>
-                  <p>攻守均衡的万金油选择。人类的基础属性最为均衡，双手剑流派的输出在中后期成长空间大。<span class="highlight">适合月卡党</span>，有一定经济基础后装备跟上，DPS表现可圈可点。</p>
-
-                  <h2 id="a-sec5">五、各职业对比总览</h2>
-                  <div style="overflow-x:auto;">
-                    <table class="wiki-table" style="margin-bottom:24px;">
-                      <thead><tr><th>职业</th><th>生存</th><th>输出</th><th>组队需求</th><th>搬砖能力</th><th>推荐度</th></tr></thead>
-                      <tbody>
-                        <tr><td class="wiki-item-name">兽人骑士</td><td style="color:var(--gold);">★★★★★</td><td>★★★</td><td style="color:var(--gold);">★★★★★</td><td>★★★★</td><td style="color:var(--gold);">T0</td></tr>
-                        <tr><td class="wiki-item-name">精灵牧师</td><td>★★★</td><td>★★</td><td style="color:var(--gold);">★★★★★</td><td>★★★</td><td style="color:var(--gold);">T1</td></tr>
-                        <tr><td class="wiki-item-name">人类双手剑</td><td>★★★★</td><td>★★★★</td><td>★★★★</td><td>★★★★</td><td style="color:var(--gold);">T1</td></tr>
-                        <tr><td class="wiki-item-name">精灵弓手</td><td>★★★</td><td>★★★★</td><td>★★★★</td><td>★★★</td><td style="color:var(--frost);">T2</td></tr>
-                        <tr><td class="wiki-item-name">黑暗精灵刺客</td><td>★★</td><td style="color:var(--gold);">★★★★★</td><td>★★★</td><td>★★★</td><td style="color:var(--frost);">T2</td></tr>
-                        <tr><td class="wiki-item-name">矮人工匠</td><td>★★★★</td><td>★★</td><td>★★★</td><td style="color:var(--gold);">★★★★★</td><td style="color:var(--frost);">T2</td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-
-                <!-- Related articles -->
-                <div class="related-articles">
-                  <h4>相关攻略</h4>
-                  <div style="display:grid; grid-template-columns:1fr; gap:12px;">
-                    <div style="display:flex; gap:12px; padding:10px; border:1px solid var(--border); cursor:pointer; transition:all 0.2s;" onmouseover="this.style.borderColor='var(--border-hover)'" onmouseout="this.style.borderColor='var(--border)'">
-                      <span class="tag tag-guide" style="flex-shrink:0; align-self:flex-start;">攻略</span>
-                      <div>
-                        <div style="color:var(--gold-light); font-size:13px; margin-bottom:2px;">全职业觉醒技能加点推荐（PVE/PVP双路线）</div>
-                        <div style="color:var(--text-muted); font-size:11px;">1.8k 阅读 · 1天前</div>
-                      </div>
-                    </div>
-                    <div style="display:flex; gap:12px; padding:10px; border:1px solid var(--border); cursor:pointer; transition:all 0.2s;" onmouseover="this.style.borderColor='var(--border-hover)'" onmouseout="this.style.borderColor='var(--border)'">
-                      <span class="tag tag-hot" style="flex-shrink:0; align-self:flex-start;">热门</span>
-                      <div>
-                        <div style="color:var(--gold-light); font-size:13px; margin-bottom:2px;">平民玩家30天冲级路线规划</div>
-                        <div style="color:var(--text-muted); font-size:11px;">2.3k 阅读 · 3天前</div>
-                      </div>
-                    </div>
-                    <div style="display:flex; gap:12px; padding:10px; border:1px solid var(--border); cursor:pointer; transition:all 0.2s;" onmouseover="this.style.borderColor='var(--border-hover)'" onmouseout="this.style.borderColor='var(--border)'">
-                      <span class="tag tag-new" style="flex-shrink:0; align-self:flex-start;">最新</span>
-                      <div>
-                        <div style="color:var(--gold-light); font-size:13px; margin-bottom:2px;">觉醒二转全种族分支路线图</div>
-                        <div style="color:var(--text-muted); font-size:11px;">956 阅读 · 6小时前</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sidebar: TOC + Checklist -->
-            <div>
-              <div class="article-toc card" style="padding:20px; margin-bottom:16px;">
-                <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-                <h4>文章目录</h4>
-                <ul>
-                  <li><a href="#a-sec1">为什么职业选择如此重要</a></li>
-                  <li><a href="#a-sec2">T0 推荐：兽人骑士</a></li>
-                  <li><a href="#a-sec3">T1 推荐：精灵牧师</a></li>
-                  <li><a href="#a-sec4">T1 推荐：人类双手剑</a></li>
-                  <li><a href="#a-sec5">各职业对比总览</a></li>
-                </ul>
-              </div>
-
-              <div class="checklist">
-                <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
-                <h4>新手每日清单</h4>
-                <div class="checklist-item" onclick="updateChecklist()"><input type="checkbox"><span>完成主线剧情任务</span></div>
-                <div class="checklist-item" onclick="updateChecklist()"><input type="checkbox"><span>挑战每日副本（3次）</span></div>
-                <div class="checklist-item" onclick="updateChecklist()"><input type="checkbox"><span>血盟签到与捐献</span></div>
-                <div class="checklist-item" onclick="updateChecklist()"><input type="checkbox"><span>世界BOSS定时参与</span></div>
-                <div class="checklist-item" onclick="updateChecklist()"><input type="checkbox"><span>竞技场排名挑战</span></div>
-                <div class="checklist-item" onclick="updateChecklist()"><input type="checkbox"><span>挂机刷怪（睡前设置）</span></div>
-                <div class="checklist-item" onclick="updateChecklist()"><input type="checkbox"><span>交易所浏览捡漏</span></div>
-                <div class="checklist-progress">
-                  <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:6px;">
-                    <span style="color:var(--text-muted);">今日完成度</span>
-                    <span style="color:var(--gold);" id="checkText">0 / 7</span>
-                  </div>
-                  <div style="height:4px; background:var(--bg-card); border-radius:2px; overflow:hidden;">
-                    <div id="checkBar" style="height:100%; width:0%; background:linear-gradient(90deg,var(--gold-dark),var(--gold)); transition:width 0.4s;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="guide-card-tags"><span>交易系统</span><span>搬砖点</span><span>风险提示</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== MODULE 3: 数据库Wiki ========== -->
+<!-- WIKI -->
 <section id="wiki" class="section">
   <div class="container">
     <div class="anim-reveal">
-      <div class="section-head">
-        <div class="line"></div>
-        <span class="label">Database</span>
-      </div>
-      <h2 class="section-title" style="font-size:28px;">数据库 Wiki</h2>
+      <div class="section-head"><div class="line"></div><span class="label">Database</span></div>
+      <h2 class="section-title" style="font-size:28px">数据库 Wiki</h2>
       <p class="section-desc">结构化游戏数据查询，装备图鉴、技能树、物品百科一站收录。</p>
     </div>
-
-    <div style="margin-top:32px;">
+    <div style="margin-top:32px">
       <div class="wiki-search anim-reveal">
-        <input type="text" placeholder="搜索物品名称、技能、NPC...">
-        <button>查询</button>
+        <input type="text" placeholder="搜索物品名称、技能、NPC..."><button>查询</button>
       </div>
-
       <div class="wiki-tabs anim-reveal">
         <button class="wiki-tab active" data-tab="wiki-items">装备图鉴</button>
         <button class="wiki-tab" data-tab="wiki-skills">技能百科</button>
         <button class="wiki-tab" data-tab="wiki-monsters">怪物图鉴</button>
         <button class="wiki-tab" data-tab="wiki-maps">地图导航</button>
       </div>
-
-      <!-- Equipment panel -->
-      <div class="wiki-panel active card anim-reveal" id="wiki-items" style="padding:0; overflow:hidden;">
+      <div class="wiki-panel active card anim-reveal" id="wiki-items" style="padding:0;overflow:hidden">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div style="overflow-x:auto;">
-          <table class="wiki-table">
-            <thead>
-              <tr><th>装备名称</th><th>类型</th><th>等级</th><th>品质</th><th>攻击力</th><th>特效</th><th>来源</th></tr>
-            </thead>
+        <div style="overflow-x:auto">
+          <table class="data-table">
+            <thead><tr><th>装备名称</th><th>类型</th><th>等级</th><th>品质</th><th>攻击力</th><th>特效</th><th>来源</th></tr></thead>
             <tbody>
-              <tr><td class="wiki-item-name">暴风之刃</td><td>双手剑</td><td>50</td><td class="rarity-legend">传说</td><td>2,840</td><td>暴击+15%</td><td>恶魔岛（巴风特）</td></tr>
-              <tr><td class="wiki-item-name">暗影穿刺</td><td>匕首</td><td>45</td><td class="rarity-epic">史诗</td><td>1,920</td><td>攻速+12%</td><td>蚂蚁洞穴（蚁后）</td></tr>
-              <tr><td class="wiki-item-name">守护者圣盾</td><td>盾牌</td><td>40</td><td class="rarity-epic">史诗</td><td>防御+680</td><td>格挡+20%</td><td>锻造 / 交易所</td></tr>
-              <tr><td class="wiki-item-name">精灵长弓</td><td>弓</td><td>35</td><td class="rarity-rare">稀有</td><td>1,450</td><td>射程+8%</td><td>遗忘神殿（守卫）</td></tr>
-              <tr><td class="wiki-item-name">铁壁胸甲</td><td>重甲</td><td>30</td><td class="rarity-rare">稀有</td><td>防御+520</td><td>生命+200</td><td>蚂蚁洞穴</td></tr>
-              <tr><td class="wiki-item-name">学徒法杖</td><td>法杖</td><td>20</td><td class="rarity-common">普通</td><td>680</td><td>MP+50</td><td>遗忘神殿</td></tr>
-              <tr><td class="wiki-item-name">猎人之刃</td><td>短剑</td><td>15</td><td class="rarity-common">普通</td><td>420</td><td>-</td><td>商店购买</td></tr>
+              <tr><td class="name">暴风之刃</td><td>双手剑</td><td>50</td><td class="s">传说</td><td>2,840</td><td>暴击+15%</td><td>恶魔岛（巴风特）</td></tr>
+              <tr><td class="name">暗影穿刺</td><td>匕首</td><td>45</td><td class="a">史诗</td><td>1,920</td><td>攻速+12%</td><td>蚂蚁洞穴（蚁后）</td></tr>
+              <tr><td class="name">守护者圣盾</td><td>盾牌</td><td>40</td><td class="a">史诗</td><td>防御+680</td><td>格挡+20%</td><td>锻造/交易所</td></tr>
+              <tr><td class="name">精灵长弓</td><td>弓</td><td>35</td><td class="b">稀有</td><td>1,450</td><td>射程+8%</td><td>遗忘神殿</td></tr>
+              <tr><td class="name">铁壁胸甲</td><td>重甲</td><td>30</td><td class="b">稀有</td><td>防御+520</td><td>生命+200</td><td>蚂蚁洞穴</td></tr>
+              <tr><td class="name">学徒法杖</td><td>法杖</td><td>20</td><td class="c">普通</td><td>680</td><td>MP+50</td><td>遗忘神殿</td></tr>
             </tbody>
           </table>
         </div>
       </div>
-
-      <!-- Skills panel -->
-      <div class="wiki-panel card anim-reveal" id="wiki-skills" style="padding:24px;">
+      <div class="wiki-panel card anim-reveal" id="wiki-skills" style="padding:24px">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
         <div class="wiki-card-grid">
-          <div class="wiki-item-card">
-            <div class="icon" style="border-color:rgba(201,168,76,0.3);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            </div>
-            <div class="name">雷霆斩</div>
-            <div class="type">兽人骑士 · 主动</div>
-          </div>
-          <div class="wiki-item-card">
-            <div class="icon" style="border-color:rgba(126,184,208,0.3);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7eb8d0" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            </div>
-            <div class="name">圣光治愈</div>
-            <div class="type">精灵牧师 · 主动</div>
-          </div>
-          <div class="wiki-item-card">
-            <div class="icon" style="border-color:rgba(139,38,53,0.3);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b8394d" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <div class="name">暗影突袭</div>
-            <div class="type">暗精灵刺客 · 主动</div>
-          </div>
-          <div class="wiki-item-card">
-            <div class="icon" style="border-color:rgba(52,211,153,0.3);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div class="name">铁壁防御</div>
-            <div class="type">兽人骑士 · 被动</div>
-          </div>
-          <div class="wiki-item-card">
-            <div class="icon" style="border-color:rgba(183,148,246,0.3);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b794f6" stroke-width="1.5"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-            </div>
-            <div class="name">自然之力</div>
-            <div class="type">精灵法师 · 被动</div>
-          </div>
-          <div class="wiki-item-card">
-            <div class="icon" style="border-color:rgba(201,168,76,0.3);">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            </div>
-            <div class="name">圣盾术</div>
-            <div class="type">精灵牧师 · 主动</div>
-          </div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(201,168,76,0.3)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div class="name">雷霆斩</div><div class="type">兽人骑士·主动</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(126,184,208,0.3)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7eb8d0" stroke-width="1.5"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div><div class="name">圣光治愈</div><div class="type">精灵牧师·主动</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(139,38,53,0.3)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b8394d" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="name">暗影突袭</div><div class="type">暗精灵刺客·主动</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(52,211,153,0.3)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="name">铁壁防御</div><div class="type">兽人骑士·被动</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(183,148,246,0.3)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b794f6" stroke-width="1.5"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div><div class="name">自然之力</div><div class="type">精灵法师·被动</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(201,168,76,0.3)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><div class="name">圣盾术</div><div class="type">精灵牧师·主动</div></div>
         </div>
       </div>
-
-      <!-- Monsters panel -->
-      <div class="wiki-panel card anim-reveal" id="wiki-monsters" style="padding:24px;">
+      <div class="wiki-panel card anim-reveal" id="wiki-monsters" style="padding:24px">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
         <div class="wiki-card-grid">
-          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(139,38,53,0.4); font-weight:700;">B</div><div class="name">巴风特</div><div class="type">Lv.50 · 恶魔岛BOSS</div></div>
-          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(201,168,76,0.3); font-weight:700;">Q</div><div class="name">蚁后</div><div class="type">Lv.42 · 蚂蚁洞穴BOSS</div></div>
-          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(126,184,208,0.3); font-weight:700;">G</div><div class="name">神殿守卫</div><div class="type">Lv.28 · 遗忘神殿BOSS</div></div>
-          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(183,148,246,0.3); font-weight:700;">W</div><div class="name">世界BOSS</div><div class="type">Lv.50 · 每日刷新</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(139,38,53,0.4);font-weight:700">B</div><div class="name">巴风特</div><div class="type">Lv.50·恶魔岛BOSS</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(201,168,76,0.3);font-weight:700">Q</div><div class="name">蚁后</div><div class="type">Lv.42·蚂蚁洞穴BOSS</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(126,184,208,0.3);font-weight:700">G</div><div class="name">神殿守卫</div><div class="type">Lv.28·遗忘神殿BOSS</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(183,148,246,0.3);font-weight:700">W</div><div class="name">世界BOSS</div><div class="type">Lv.50·每日刷新</div></div>
         </div>
       </div>
-
-      <!-- Maps panel -->
-      <div class="wiki-panel card anim-reveal" id="wiki-maps" style="padding:24px;">
+      <div class="wiki-panel card anim-reveal" id="wiki-maps" style="padding:24px">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
         <div class="wiki-card-grid">
-          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(201,168,76,0.3); font-weight:700;">1</div><div class="name">说话之岛</div><div class="type">1-15级 · 新手区</div></div>
-          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(126,184,208,0.3); font-weight:700;">2</div><div class="name">精灵山谷</div><div class="type">15-25级 · 精灵领地</div></div>
-          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(139,38,53,0.3); font-weight:700;">3</div><div class="name">暗精灵要塞</div><div class="type">25-35级 · 中级区域</div></div>
-          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(52,211,153,0.3); font-weight:700;">4</div><div class="name">亚丁城</div><div class="type">主城 · 交易中心</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(201,168,76,0.3);font-weight:700">1</div><div class="name">说话之岛</div><div class="type">1-15级·新手区</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(126,184,208,0.3);font-weight:700">2</div><div class="name">精灵山谷</div><div class="type">15-25级·精灵领地</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(139,38,53,0.3);font-weight:700">3</div><div class="name">暗精灵要塞</div><div class="type">25-35级·中级区域</div></div>
+          <div class="wiki-item-card"><div class="icon" style="border-color:rgba(52,211,153,0.3);font-weight:700">4</div><div class="name">亚丁城</div><div class="type">主城·交易中心</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== MODULE 4: 排行榜 ========== -->
+<!-- RANKING -->
 <section id="ranking" class="section section-alt">
   <div class="container">
     <div class="anim-reveal">
-      <div class="section-head">
-        <div class="line"></div>
-        <span class="label">Ranking</span>
-      </div>
-      <h2 class="section-title" style="font-size:28px;">排行榜</h2>
+      <div class="section-head"><div class="line"></div><span class="label">Ranking</span></div>
+      <h2 class="section-title" style="font-size:28px">排行榜</h2>
       <p class="section-desc">基于全服数据的职业强度排行、装备评分、血盟战力一览。</p>
     </div>
-
-    <div style="display:grid; grid-template-columns:1fr; gap:24px; margin-top:32px;" class="ranking-layout">
-      <!-- Left: Rankings -->
-      <div>
-        <div class="wiki-tabs anim-reveal" id="rankTabs">
-          <button class="wiki-tab active" data-tab="rank-class">职业强度榜</button>
-          <button class="wiki-tab" data-tab="rank-weapon">武器排行</button>
-          <button class="wiki-tab" data-tab="rank-clan">血盟战力榜</button>
-        </div>
-
-        <div class="card anim-reveal wiki-panel active" id="rank-class" style="padding:0; overflow:hidden;">
-          <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-          <div class="rank-row">
-            <span class="rank-num top-1">1</span>
-            <div class="rank-avatar" style="border-color:rgba(201,168,76,0.4);">⚔</div>
-            <div class="rank-info"><div class="rank-name">兽人骑士</div><div class="rank-desc">生存之王 · 城战核心 · 新手首选</div></div>
-            <span class="rank-score">98.5</span>
-          </div>
-          <div class="rank-row">
-            <span class="rank-num top-2">2</span>
-            <div class="rank-avatar" style="border-color:rgba(192,192,192,0.3);">✚</div>
-            <div class="rank-info"><div class="rank-name">精灵牧师</div><div class="rank-desc">副本刚需 · 组队永远有位置</div></div>
-            <span class="rank-score">96.2</span>
-          </div>
-          <div class="rank-row">
-            <span class="rank-num top-3">3</span>
-            <div class="rank-avatar" style="border-color:rgba(205,127,50,0.3);">🗡</div>
-            <div class="rank-info"><div class="rank-name">人类双手剑</div><div class="rank-desc">攻守均衡 · 后期成长空间大</div></div>
-            <span class="rank-score">93.8</span>
-          </div>
-          <div class="rank-row">
-            <span class="rank-num normal">4</span>
-            <div class="rank-avatar">🏹</div>
-            <div class="rank-info"><div class="rank-name">精灵弓手</div><div class="rank-desc">远程输出 · 安全距离作战</div></div>
-            <span class="rank-score">89.1</span>
-          </div>
-          <div class="rank-row">
-            <span class="rank-num normal">5</span>
-            <div class="rank-avatar">🗡️</div>
-            <div class="rank-info"><div class="rank-name">暗精灵刺客</div><div class="rank-desc">爆发极高 · 操作要求高</div></div>
-            <span class="rank-score">87.3</span>
-          </div>
-          <div class="rank-row">
-            <span class="rank-num normal">6</span>
-            <div class="rank-avatar">🔨</div>
-            <div class="rank-info"><div class="rank-name">矮人工匠</div><div class="rank-desc">搬砖王者 · 打造加成</div></div>
-            <span class="rank-score">85.0</span>
-          </div>
-        </div>
-
-        <div class="card anim-reveal wiki-panel" id="rank-weapon" style="padding:0; overflow:hidden;">
-          <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-          <div class="rank-row"><span class="rank-num top-1">1</span><div class="rank-avatar" style="border-color:rgba(201,168,76,0.4);">⚔</div><div class="rank-info"><div class="rank-name">暴风之刃</div><div class="rank-desc">双手剑 · Lv.50 · 攻击2840 · 暴击+15%</div></div><span class="rank-score">S+</span></div>
-          <div class="rank-row"><span class="rank-num top-2">2</span><div class="rank-avatar" style="border-color:rgba(192,192,192,0.3);">🗡</div><div class="rank-info"><div class="rank-name">暗影穿刺</div><div class="rank-desc">匕首 · Lv.45 · 攻击1920 · 攻速+12%</div></div><span class="rank-score">S</span></div>
-          <div class="rank-row"><span class="rank-num top-3">3</span><div class="rank-avatar" style="border-color:rgba(205,127,50,0.3);">🏹</div><div class="rank-info"><div class="rank-name">龙骨长弓</div><div class="rank-desc">弓 · Lv.48 · 攻击2360 · 穿透+10%</div></div><span class="rank-score">S</span></div>
-          <div class="rank-row"><span class="rank-num normal">4</span><div class="rank-avatar">✚</div><div class="rank-info"><div class="rank-name">大主教权杖</div><div class="rank-desc">法杖 · Lv.45 · 治疗+35% · MP回复+20%</div></div><span class="rank-score">A+</span></div>
-          <div class="rank-row"><span class="rank-num normal">5</span><div class="rank-avatar">🛡</div><div class="rank-info"><div class="rank-name">守护者圣盾</div><div class="rank-desc">盾牌 · Lv.40 · 防御680 · 格挡+20%</div></div><span class="rank-score">A</span></div>
-        </div>
-
-        <div class="card anim-reveal wiki-panel" id="rank-clan" style="padding:0; overflow:hidden;">
-          <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-          <div class="rank-row"><span class="rank-num top-1">1</span><div class="rank-avatar" style="border-color:rgba(201,168,76,0.4);">🦁</div><div class="rank-info"><div class="rank-name">皇家骑士团</div><div class="rank-desc">亚丁之光 · 成员128/150 · 攻城胜率82%</div></div><span class="rank-score">98.2k</span></div>
-          <div class="rank-row"><span class="rank-num top-2">2</span><div class="rank-avatar" style="border-color:rgba(192,192,192,0.3);">🐉</div><div class="rank-info"><div class="rank-name">龙之盟约</div><div class="rank-desc">亚丁之光 · 成员135/150 · 攻城胜率76%</div></div><span class="rank-score">95.7k</span></div>
-          <div class="rank-row"><span class="rank-num top-3">3</span><div class="rank-avatar" style="border-color:rgba(205,127,50,0.3);">🌙</div><div class="rank-info"><div class="rank-name">月影刺客</div><div class="rank-desc">黑暗深渊 · 成员96/150 · 攻城胜率71%</div></div><span class="rank-score">88.3k</span></div>
-          <div class="rank-row"><span class="rank-num normal">4</span><div class="rank-avatar">⚡</div><div class="rank-info"><div class="rank-name">雷霆战盟</div><div class="rank-desc">亚丁之光 · 成员142/150 · 攻城胜率68%</div></div><span class="rank-score">85.1k</span></div>
-        </div>
+    <div style="margin-top:32px">
+      <div class="wiki-tabs anim-reveal" id="rankTabs">
+        <button class="wiki-tab active" data-tab="rank-class">职业强度榜</button>
+        <button class="wiki-tab" data-tab="rank-weapon">武器排行</button>
+        <button class="wiki-tab" data-tab="rank-clan">血盟战力榜</button>
+      </div>
+      <div class="card anim-reveal wiki-panel active" id="rank-class" style="padding:0;overflow:hidden">
+        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
+        <div class="rank-row"><span class="rank-num top-1">1</span><div class="rank-avatar" style="border-color:rgba(201,168,76,0.4)">⚔</div><div class="rank-info"><div class="rank-name">兽人骑士</div><div class="rank-desc">生存之王·城战核心·新手首选</div></div><span class="rank-score">98.5</span></div>
+        <div class="rank-row"><span class="rank-num top-2">2</span><div class="rank-avatar" style="border-color:rgba(192,192,192,0.3)">✚</div><div class="rank-info"><div class="rank-name">精灵牧师</div><div class="rank-desc">副本刚需·组队永远有位置</div></div><span class="rank-score">96.2</span></div>
+        <div class="rank-row"><span class="rank-num top-3">3</span><div class="rank-avatar" style="border-color:rgba(205,127,50,0.3)">🗡</div><div class="rank-info"><div class="rank-name">人类双手剑</div><div class="rank-desc">攻守均衡·后期成长空间大</div></div><span class="rank-score">93.8</span></div>
+        <div class="rank-row"><span class="rank-num normal">4</span><div class="rank-avatar">🏹</div><div class="rank-info"><div class="rank-name">精灵弓手</div><div class="rank-desc">远程输出·安全距离作战</div></div><span class="rank-score">89.1</span></div>
+        <div class="rank-row"><span class="rank-num normal">5</span><div class="rank-avatar">🗡️</div><div class="rank-info"><div class="rank-name">暗精灵刺客</div><div class="rank-desc">爆发极高·操作要求高</div></div><span class="rank-score">87.3</span></div>
+        <div class="rank-row"><span class="rank-num normal">6</span><div class="rank-avatar">🔨</div><div class="rank-info"><div class="rank-name">矮人工匠</div><div class="rank-desc">搬砖王者·打造加成</div></div><span class="rank-score">85.0</span></div>
+      </div>
+      <div class="card anim-reveal wiki-panel" id="rank-weapon" style="padding:0;overflow:hidden">
+        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
+        <div class="rank-row"><span class="rank-num top-1">1</span><div class="rank-avatar" style="border-color:rgba(201,168,76,0.4)">⚔</div><div class="rank-info"><div class="rank-name">暴风之刃</div><div class="rank-desc">双手剑·Lv.50·攻击2840·暴击+15%</div></div><span class="rank-score">S+</span></div>
+        <div class="rank-row"><span class="rank-num top-2">2</span><div class="rank-avatar" style="border-color:rgba(192,192,192,0.3)">🗡</div><div class="rank-info"><div class="rank-name">暗影穿刺</div><div class="rank-desc">匕首·Lv.45·攻击1920·攻速+12%</div></div><span class="rank-score">S</span></div>
+        <div class="rank-row"><span class="rank-num top-3">3</span><div class="rank-avatar" style="border-color:rgba(205,127,50,0.3)">🏹</div><div class="rank-info"><div class="rank-name">龙骨长弓</div><div class="rank-desc">弓·Lv.48·攻击2360·穿透+10%</div></div><span class="rank-score">S</span></div>
+        <div class="rank-row"><span class="rank-num normal">4</span><div class="rank-avatar">✚</div><div class="rank-info"><div class="rank-name">大主教权杖</div><div class="rank-desc">法杖·Lv.45·治疗+35%·MP回复+20%</div></div><span class="rank-score">A+</span></div>
+        <div class="rank-row"><span class="rank-num normal">5</span><div class="rank-avatar">🛡</div><div class="rank-info"><div class="rank-name">守护者圣盾</div><div class="rank-desc">盾牌·Lv.40·防御680·格挡+20%</div></div><span class="rank-score">A</span></div>
+      </div>
+      <div class="card anim-reveal wiki-panel" id="rank-clan" style="padding:0;overflow:hidden">
+        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
+        <div class="rank-row"><span class="rank-num top-1">1</span><div class="rank-avatar" style="border-color:rgba(201,168,76,0.4)">🦁</div><div class="rank-info"><div class="rank-name">皇家骑士团</div><div class="rank-desc">亚丁之光·成员128/150·攻城胜率82%</div></div><span class="rank-score">98.2k</span></div>
+        <div class="rank-row"><span class="rank-num top-2">2</span><div class="rank-avatar" style="border-color:rgba(192,192,192,0.3)">🐉</div><div class="rank-info"><div class="rank-name">龙之盟约</div><div class="rank-desc">亚丁之光·成员135/150·攻城胜率76%</div></div><span class="rank-score">95.7k</span></div>
+        <div class="rank-row"><span class="rank-num top-3">3</span><div class="rank-avatar" style="border-color:rgba(205,127,50,0.3)">🌙</div><div class="rank-info"><div class="rank-name">月影刺客</div><div class="rank-desc">黑暗深渊·成员96/150·攻城胜率71%</div></div><span class="rank-score">88.3k</span></div>
+        <div class="rank-row"><span class="rank-num normal">4</span><div class="rank-avatar">⚡</div><div class="rank-info"><div class="rank-name">雷霆战盟</div><div class="rank-desc">亚丁之光·成员142/150·攻城胜率68%</div></div><span class="rank-score">85.1k</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== MODULE 5: 社区/论坛 ========== -->
+<!-- COMMUNITY -->
 <section id="community" class="section">
   <div class="container">
     <div class="anim-reveal">
-      <div class="section-head">
-        <div class="line"></div>
-        <span class="label">Community</span>
-      </div>
-      <h2 class="section-title" style="font-size:28px;">社区讨论</h2>
+      <div class="section-head"><div class="line"></div><span class="label">Community</span></div>
+      <h2 class="section-title" style="font-size:28px">社区讨论</h2>
       <p class="section-desc">玩家经验交流、攻略投稿、问题求助，亚丁冒险者互助社区。</p>
     </div>
-
-    <div style="display:grid; grid-template-columns:1fr; gap:24px; margin-top:32px; max-width:800px;">
-      <!-- Write post -->
-      <div class="anim-reveal">
-        <button class="community-write-btn" id="writeBtn">+ 发布帖子 / 投稿攻略</button>
-        <div id="writeForm" style="display:none; margin-top:12px;">
-          <div class="card" style="padding:20px;">
-            <input type="text" placeholder="帖子标题" style="width:100%; background:var(--bg-card); border:1px solid var(--border); color:var(--gold-light); padding:10px 14px; font-size:14px; font-family:'Noto Serif SC',serif; outline:none; margin-bottom:10px;">
-            <textarea placeholder="分享你的经验..." rows="4" style="width:100%; background:var(--bg-card); border:1px solid var(--border); color:var(--mist); padding:10px 14px; font-size:13px; font-family:'Noto Serif SC',serif; outline:none; resize:vertical; margin-bottom:10px;"></textarea>
-            <div style="display:flex; gap:8px;">
-              <button style="padding:8px 20px; background:rgba(201,168,76,0.15); border:1px solid var(--border-hover); color:var(--gold); font-size:13px; cursor:pointer; font-family:'Noto Serif SC',serif;">发布</button>
-              <button style="padding:8px 20px; background:transparent; border:1px solid var(--border); color:var(--mist); font-size:13px; cursor:pointer; font-family:'Noto Serif SC',serif;" onclick="document.getElementById('writeForm').style.display='none'">取消</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Posts -->
+    <div style="display:grid;grid-template-columns:1fr;gap:24px;margin-top:32px;max-width:800px">
       <div class="card post-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="post-header">
-          <div class="post-avatar">🗡</div>
-          <div class="post-meta">
-            <span class="post-author">剑与魔法</span>
-            <div style="display:flex; gap:8px; align-items:center;">
-              <span class="post-time">2小时前</span>
-              <div class="post-tag-row"><span class="tag tag-hot">攻略</span></div>
-            </div>
-          </div>
-        </div>
+        <div class="post-header"><div class="post-avatar">🗡</div><div class="post-meta"><span class="post-author">剑与魔法</span><div style="display:flex;gap:8px;align-items:center"><span class="post-time">2小时前</span><div><span class="tag tag-hot">攻略</span></div></div></div></div>
         <div class="post-body">恶魔岛巴风特P3阶段的即死技能可以通过打断来规避，推荐带2个骑士轮流使用打断技能。实测4个打断位足够覆盖全部即死技能窗口。</div>
-        <div class="post-actions">
-          <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg> 56</span>
-          <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> 23</span>
-          <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg> 收藏</span>
-        </div>
+        <div class="post-actions"><span class="post-action">👍 56</span><span class="post-action">💬 23</span><span class="post-action">⭐ 收藏</span></div>
       </div>
-
       <div class="card post-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="post-header">
-          <div class="post-avatar">✚</div>
-          <div class="post-meta">
-            <span class="post-author">奶妈不哭</span>
-            <div style="display:flex; gap:8px; align-items:center;">
-              <span class="post-time">5小时前</span>
-              <div class="post-tag-row"><span class="tag tag-community">求助</span></div>
-            </div>
-          </div>
-        </div>
+        <div class="post-header"><div class="post-avatar">✚</div><div class="post-meta"><span class="post-author">奶妈不哭</span><div style="display:flex;gap:8px;align-items:center"><span class="post-time">5小时前</span><div><span class="tag tag-new">求助</span></div></div></div></div>
         <div class="post-body">牧师40级之后 solo 效率太低了，主线任务打不动怪。有没有牧师玩家分享一下中期的发育思路？是硬肝还是转职？</div>
-        <div class="post-actions">
-          <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg> 18</span>
-          <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> 45</span>
-          <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg> 收藏</span>
-        </div>
+        <div class="post-actions"><span class="post-action">👍 18</span><span class="post-action">💬 45</span><span class="post-action">⭐ 收藏</span></div>
       </div>
-
       <div class="card post-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="post-header">
-          <div class="post-avatar">💰</div>
-          <div class="post-meta">
-            <span class="post-author">搬砖小王子</span>
-            <div style="display:flex; gap:8px; align-items:center;">
-              <span class="post-time">8小时前</span>
-              <div class="post-tag-row"><span class="tag tag-guide">经验</span></div>
-            </div>
-          </div>
-        </div>
+        <div class="post-header"><div class="post-avatar">💰</div><div class="post-meta"><span class="post-author">搬砖小王子</span><div style="display:flex;gap:8px;align-items:center"><span class="post-time">8小时前</span><div><span class="tag tag-guide">经验</span></div></div></div></div>
         <div class="post-body">测试了一周搬砖收益，目前最好的方式是矮人号收材料打造装备卖。一天大概能赚15-20w金币，注意控制交易频率避免恩宠值归零。</div>
-        <div class="post-actions">
-          <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg> 89</span>
-          <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> 67</span>
-          <span class="post-action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/></svg> 收藏</span>
-        </div>
+        <div class="post-actions"><span class="post-action">👍 89</span><span class="post-action">💬 67</span><span class="post-action">⭐ 收藏</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== MODULE 6: 视频攻略 ========== -->
+<!-- VIDEOS -->
 <section id="videos" class="section section-alt">
   <div class="container">
     <div class="anim-reveal">
-      <div class="section-head">
-        <div class="line"></div>
-        <span class="label">Videos</span>
-      </div>
-      <h2 class="section-title" style="font-size:28px;">视频攻略</h2>
+      <div class="section-head"><div class="line"></div><span class="label">Videos</span></div>
+      <h2 class="section-title" style="font-size:28px">视频攻略</h2>
       <p class="section-desc">实况解说、技巧演示、BOSS打法视频，更直观的攻略体验。</p>
     </div>
-
-    <div class="grid-3" style="margin-top:32px;">
+    <div class="grid-3" style="margin-top:32px">
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="video-thumb">
-          <span class="video-duration">18:32</span>
-        </div>
-        <div class="video-info">
-          <div style="margin-bottom:6px;"><span class="tag tag-video">视频</span></div>
-          <h4>恶魔岛全机制详解：巴风特三阶段打法教学</h4>
-          <p><span class="views">2.8万 播放</span> · 3天前</p>
-        </div>
+        <div class="video-thumb"><span class="video-duration">18:32</span></div>
+        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">视频</span></div><h4>恶魔岛全机制详解：巴风特三阶段打法教学</h4><p>2.8万 播放 · 3天前</p></div>
       </div>
-
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="video-thumb">
-          <span class="video-duration">12:15</span>
-        </div>
-        <div class="video-info">
-          <div style="margin-bottom:6px;"><span class="tag tag-video">视频</span></div>
-          <h4>兽人骑士从零到50：最优升级路线实操演示</h4>
-          <p><span class="views">1.5万 播放</span> · 5天前</p>
-        </div>
+        <div class="video-thumb"><span class="video-duration">12:15</span></div>
+        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">视频</span></div><h4>兽人骑士从零到50：最优升级路线实操演示</h4><p>1.5万 播放 · 5天前</p></div>
       </div>
-
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="video-thumb">
-          <span class="video-duration">25:48</span>
-        </div>
-        <div class="video-info">
-          <div style="margin-bottom:6px;"><span class="tag tag-video">视频</span></div>
-          <h4>千人攻城战实况：皇家骑士团 vs 龙之盟约</h4>
-          <p><span class="views">5.2万 播放</span> · 1周前</p>
-        </div>
+        <div class="video-thumb"><span class="video-duration">25:48</span></div>
+        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">视频</span></div><h4>千人攻城战实况：皇家骑士团 vs 龙之盟约</h4><p>5.2万 播放 · 1周前</p></div>
       </div>
-
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="video-thumb">
-          <span class="video-duration">8:42</span>
-        </div>
-        <div class="video-info">
-          <div style="margin-bottom:6px;"><span class="tag tag-video">视频</span></div>
-          <h4>搬砖实测：矮人号日均收益20万金币路线</h4>
-          <p><span class="views">3.1万 播放</span> · 4天前</p>
-        </div>
+        <div class="video-thumb"><span class="video-duration">8:42</span></div>
+        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">视频</span></div><h4>搬砖实测：矮人号日均收益20万金币路线</h4><p>3.1万 播放 · 4天前</p></div>
       </div>
-
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="video-thumb">
-          <span class="video-duration">15:20</span>
-        </div>
-        <div class="video-info">
-          <div style="margin-bottom:6px;"><span class="tag tag-video">视频</span></div>
-          <h4>觉醒系统全解析：各职业二转最优加点推荐</h4>
-          <p><span class="views">1.2万 播放</span> · 2天前</p>
-        </div>
+        <div class="video-thumb"><span class="video-duration">15:20</span></div>
+        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">视频</span></div><h4>觉醒系统全解析：各职业二转最优加点推荐</h4><p>1.2万 播放 · 2天前</p></div>
       </div>
-
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="video-thumb">
-          <span class="video-duration">10:55</span>
-        </div>
-        <div class="video-info">
-          <div style="margin-bottom:6px;"><span class="tag tag-video">视频</span></div>
-          <h4>交易所捡漏技巧：如何识别被低估的装备</h4>
-          <p><span class="views">9.8k 播放</span> · 6天前</p>
-        </div>
+        <div class="video-thumb"><span class="video-duration">10:55</span></div>
+        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">视频</span></div><h4>交易所捡漏技巧：如何识别被低估的装备</h4><p>9.8k 播放 · 6天前</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== MODULE 7: 资源下载 (tools) ========== -->
-<section id="tools" class="section">
-  <div class="container">
-    <div class="anim-reveal">
-      <div class="section-head">
-        <div class="line"></div>
-        <span class="label">Tools</span>
-      </div>
-      <h2 class="section-title" style="font-size:28px;">实用工具</h2>
-      <p class="section-desc">战力模拟器、伤害计算器、技能模拟等辅助工具。</p>
-    </div>
-
-    <div class="grid-4" style="margin-top:32px;">
-      <div class="card anim-reveal" style="padding:20px; text-align:center; cursor:pointer;">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div style="width:48px; height:48px; margin:0 auto 12px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-        </div>
-        <div style="color:var(--gold-light); font-size:14px; margin-bottom:4px;">战力模拟器</div>
-        <div style="color:var(--text-muted); font-size:11px;">输入属性模拟战力变化</div>
-      </div>
-
-      <div class="card anim-reveal" style="padding:20px; text-align:center; cursor:pointer;">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div style="width:48px; height:48px; margin:0 auto 12px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        </div>
-        <div style="color:var(--gold-light); font-size:14px; margin-bottom:4px;">伤害计算器</div>
-        <div style="color:var(--text-muted); font-size:11px;">精确计算技能伤害数值</div>
-      </div>
-
-      <div class="card anim-reveal" style="padding:20px; text-align:center; cursor:pointer;">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div style="width:48px; height:48px; margin:0 auto 12px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
-        </div>
-        <div style="color:var(--gold-light); font-size:14px; margin-bottom:4px;">技能模拟器</div>
-        <div style="color:var(--text-muted); font-size:11px;">规划觉醒技能加点方案</div>
-      </div>
-
-      <div class="card anim-reveal" style="padding:20px; text-align:center; cursor:pointer;">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div style="width:48px; height:48px; margin:0 auto 12px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.2"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        </div>
-        <div style="color:var(--gold-light); font-size:14px; margin-bottom:4px;">收益计算器</div>
-        <div style="color:var(--text-muted); font-size:11px;">搬砖收益预估与对比</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
-          <div style="width:28px; height:28px; border:1px solid rgba(201,168,76,0.35); display:flex; align-items:center; justify-content:center; transform:rotate(45deg);">
-            <span style="transform:rotate(-45deg); color:var(--gold); font-size:9px; font-family:'Cinzel',serif; font-weight:700;">L2</span>
-          </div>
-          <span class="font-display" style="color:var(--gold); font-size:14px; letter-spacing:0.08em;">盟约攻略</span>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+          <div style="width:28px;height:28px;border:1px solid rgba(201,168,76,0.35);display:flex;align-items:center;justify-content:center;transform:rotate(45deg)"><span style="transform:rotate(-45deg);color:var(--gold);font-size:9px;font-family:'Cinzel',serif;font-weight:700">L2</span></div>
+          <span style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold);font-size:14px;letter-spacing:.08em">盟约攻略</span>
         </div>
-        <p style="color:var(--text-muted); font-size:12px; line-height:1.8; max-width:300px;">
-          亚丁大陆最全面的冒险指南。非官方玩家社区，所有攻略内容仅供参考，实际游戏数据以官方公告为准。
-        </p>
+        <p style="color:var(--text-muted);font-size:12px;line-height:1.8;max-width:300px">亚丁大陆最全面的冒险指南。非官方玩家社区，所有攻略内容仅供参考，实际游戏数据以官方公告为准。</p>
       </div>
-      <div>
-        <h5>攻略专区</h5>
-        <a href="#">新手入门</a>
-        <a href="#">职业指南</a>
-        <a href="#">装备战力</a>
-        <a href="#">副本攻略</a>
-        <a href="#">血盟PVP</a>
-        <a href="#">搬砖指南</a>
-      </div>
-      <div>
-        <h5>数据库</h5>
-        <a href="#">装备图鉴</a>
-        <a href="#">技能百科</a>
-        <a href="#">怪物图鉴</a>
-        <a href="#">地图导航</a>
-        <a href="#">NPC索引</a>
-      </div>
-      <div>
-        <h5>关于</h5>
-        <a href="#">关于我们</a>
-        <a href="#">投稿指南</a>
-        <a href="#">友情链接</a>
-        <a href="#">联系我们</a>
-        <a href="#">隐私政策</a>
-      </div>
+      <div><h5>攻略专区</h5><a href="#" onclick="showGuide('newbie')">新手入门</a><a href="#" onclick="showGuide('class')">职业指南</a><a href="#" onclick="showGuide('equip')">装备战力</a><a href="#" onclick="showGuide('dungeon')">副本攻略</a><a href="#" onclick="showGuide('clan')">血盟PVP</a><a href="#" onclick="showGuide('gold')">搬砖指南</a></div>
+      <div><h5>数据库</h5><a href="#wiki">装备图鉴</a><a href="#wiki">技能百科</a><a href="#wiki">怪物图鉴</a><a href="#wiki">地图导航</a></div>
+      <div><h5>关于</h5><a href="#">关于我们</a><a href="#">投稿指南</a><a href="#">友情链接</a><a href="#">隐私政策</a></div>
     </div>
-    <div class="footer-bottom">
-      <span>《天堂2：盟约》NCSOFT原厂 · 腾讯代理 | 本站为非官方玩家社区</span>
-      <span>© 2026 亚丁冒险者公会 All Rights Reserved</span>
-    </div>
+    <div class="footer-bottom"><span>《天堂2：盟约》NCSOFT原厂 · 腾讯代理 | 本站为非官方玩家社区</span><span>© 2026 亚丁冒险者公会</span></div>
   </div>
 </footer>
 
-<!-- Back to top -->
-<button class="back-top" id="backTop" aria-label="回到顶部">
+</div><!-- end home-view -->
+
+<!-- ========== GUIDE DETAIL VIEWS ========== -->
+
+<!-- NEWBIE GUIDE -->
+<div id="guide-newbie" class="guide-detail">
+  <div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="#" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">新手入门</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-new">必读</span><span class="tag tag-guide">攻略</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">新手入门完全指南：从零开始的亚丁冒险</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：亚丁旅人</span><span>2026-06-27</span><span>5.6k 阅读</span></div>
+
+      <h2>一、种族与职业选择</h2>
+      <p>游戏提供<span class="highlight">人类、精灵、兽人、矮人、黑暗精灵</span>五大种族。种族决定基础属性倾向，职业决定战斗定位。这是你在亚丁大陆的第一个关键决策。</p>
+
+      <table class="data-table">
+        <thead><tr><th>种族</th><th>定位</th><th>新手推荐度</th><th>核心特点</th></tr></thead>
+        <tbody>
+          <tr><td class="name">人类</td><td>均衡</td><td class="a">★★★★</td><td>攻防均衡，无明显短板，万金油选择</td></tr>
+          <tr><td class="name">精灵</td><td>防御/辅助</td><td class="a">★★★★</td><td>牧师是组队刚需，副本永远有位置</td></tr>
+          <tr><td class="name">兽人</td><td>坦克</td><td class="s">★★★★★</td><td>零氪首选，高生存，挂机不易死</td></tr>
+          <tr><td class="name">矮人</td><td>工匠</td><td class="b">★★★</td><td>生活职业独特，打造装备有加成</td></tr>
+          <tr><td class="name">黑暗精灵</td><td>爆发</td><td class="b">★★★</td><td>高爆发输出，操作要求高</td></tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box"><strong style="color:var(--gold)">新手推荐：</strong>零氪首选<span class="highlight">兽人骑士</span>，高生存挂机稳定；想快速组队选<span class="highlight">精灵牧师</span>；追求均衡选<span class="highlight">人类双手剑</span>。</div>
+
+      <h2>二、战斗力提升路线</h2>
+      <p>战斗力分表面战力和实际战力。前期优先完成主线任务解锁功能，日常副本不掉队，装备强化紧跟等级。</p>
+      <ul>
+        <li><span class="highlight">1-20级：</span>跟着主线走，熟悉操作，20级开启第一个副本</li>
+        <li><span class="highlight">20-30级：</span>加入血盟，开启日常任务，装备开始强化</li>
+        <li><span class="highlight">30-40级：</span>参与世界BOSS，竞技场挑战，血盟捐献</li>
+        <li><span class="highlight">40-50级：</span>挑战高级副本，准备觉醒，参与攻城战</li>
+      </ul>
+
+      <h2>三、每日必做清单</h2>
+      <table class="data-table">
+        <thead><tr><th>任务</th><th>优先级</th><th>收益</th></tr></thead>
+        <tbody>
+          <tr><td class="name">主线剧情</td><td class="s">最高</td><td>经验、金币、功能解锁</td></tr>
+          <tr><td class="name">每日副本（3次）</td><td class="s">最高</td><td>装备、强化石、材料</td></tr>
+          <tr><td class="name">血盟签到+捐献</td><td class="a">高</td><td>血盟贡献、被动技能</td></tr>
+          <tr><td class="name">世界BOSS</td><td class="a">高</td><td>稀有装备、大量经验</td></tr>
+          <tr><td class="name">竞技场</td><td class="b">中</td><td>荣誉点数、排名奖励</td></tr>
+          <tr><td class="name">挂机刷怪</td><td class="b">中</td><td>经验、金币、材料</td></tr>
+          <tr><td class="name">交易所浏览</td><td class="c">低</td><td>捡漏、了解物价</td></tr>
+        </tbody>
+      </table>
+
+      <h2>四、挂机设置要点</h2>
+      <p>游戏支持自动挂机，合理设置挂机点至关重要。选择比自己低2-3级的怪物区域，确保生存优先于效率。</p>
+      <div class="warn-box"><strong style="color:var(--crimson-light)">注意：</strong>离线挂机记得购买经验加成道具，每晚睡前设置好自动回复药水阈值（建议HP低于30%自动使用）。</div>
+    </div>
+  </div>
+</div>
+
+<!-- CLASS GUIDE -->
+<div id="guide-class" class="guide-detail">
+  <div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="#" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">职业指南</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-hot">热门</span><span class="tag tag-guide">攻略</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">职业指南：平民玩家职业选择推荐</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：剑与魔法</span><span>2026-06-27</span><span>3.2k 阅读</span></div>
+
+      <h2>一、为什么职业选择如此重要</h2>
+      <p>在《天堂2：盟约》中，职业选择几乎决定了你前中期的全部游戏体验。<span class="highlight">选对职业</span>意味着更快的升级速度、更高的副本通过率、更稳定的搬砖收益。</p>
+
+      <div class="tip-box"><strong style="color:var(--gold)">核心原则：</strong>平民玩家优先选择<span class="highlight">高生存、低操作依赖、组队价值高</span>的职业。生存力才是零氪玩家的第一属性。</div>
+
+      <h2>二、T0 推荐：兽人骑士</h2>
+      <p>零氪玩家的不二之选。兽人骑士凭借<span class="highlight">单手剑+盾</span>的搭配，拥有全职业最高的生存能力。挂机不易暴毙，单人副本也能稳扎稳打通关。</p>
+      <ul>
+        <li><span class="highlight">优势：</span>高防御、高HP、自带减伤技能</li>
+        <li><span class="highlight">定位：</span>前排坦克、城战核心</li>
+        <li><span class="highlight">适合：</span>零氪玩家、挂机党、新手入门</li>
+      </ul>
+
+      <h2>三、T1 推荐：精灵牧师</h2>
+      <p>组队刚需职业。副本中牧师的地位无可替代，<span class="highlight">永远不愁找不到队伍</span>。虽然solo能力较弱，但通过组队可以获得更高效的升级体验。</p>
+      <div class="warn-box"><strong style="color:var(--crimson-light)">注意：</strong>牧师solo效率较低，如果你经常独自上线、无法固定组队，不建议作为主号。可以考虑作为副号练级。</div>
+
+      <h2>四、T1 推荐：人类双手剑</h2>
+      <p>攻守均衡的万金油选择。人类的基础属性最为均衡，双手剑流派的输出在中后期成长空间大。<span class="highlight">适合月卡党</span>，有一定经济基础后装备跟上，DPS表现可圈可点。</p>
+
+      <h2>五、各职业对比总览</h2>
+      <table class="data-table">
+        <thead><tr><th>职业</th><th>生存</th><th>输出</th><th>组队需求</th><th>搬砖能力</th><th>推荐度</th></tr></thead>
+        <tbody>
+          <tr><td class="name">兽人骑士</td><td class="s">★★★★★</td><td>★★★</td><td class="s">★★★★★</td><td>★★★★</td><td class="s">T0</td></tr>
+          <tr><td class="name">精灵牧师</td><td>★★★</td><td>★★</td><td class="s">★★★★★</td><td>★★★</td><td class="a">T1</td></tr>
+          <tr><td class="name">人类双手剑</td><td>★★★★</td><td>★★★★</td><td>★★★★</td><td>★★★★</td><td class="a">T1</td></tr>
+          <tr><td class="name">精灵弓手</td><td>★★★</td><td>★★★★</td><td>★★★★</td><td>★★★</td><td class="b">T2</td></tr>
+          <tr><td class="name">暗精灵刺客</td><td>★★</td><td class="s">★★★★★</td><td>★★★</td><td>★★★</td><td class="b">T2</td></tr>
+          <tr><td class="name">矮人工匠</td><td>★★★★</td><td>★★</td><td>★★★</td><td class="s">★★★★★</td><td class="b">T2</td></tr>
+        </tbody>
+      </table>
+
+      <h2>六、觉醒加点建议</h2>
+      <p>V2.0版本新增觉醒系统，50级后可进行二转，解锁全新技能树。各职业推荐路线：</p>
+      <ul>
+        <li><span class="highlight">兽人骑士：</span>防御专精 → 铁壁守护路线（强化格挡和减伤）</li>
+        <li><span class="highlight">精灵牧师：</span>治愈专精 → 圣光祝福路线（提升治疗量和群体buff）</li>
+        <li><span class="highlight">人类双手剑：</span>狂战专精 → 暴风斩击路线（最大化物理输出）</li>
+        <li><span class="highlight">暗精灵刺客：</span>暗影专精 → 致命毒刃路线（爆发+持续伤害）</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- EQUIP GUIDE -->
+<div id="guide-equip" class="guide-detail">
+  <div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="#" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">装备战力</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-guide">攻略</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">装备战力完全指南：从入门到毕业</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：装备大师</span><span>2026-06-26</span><span>2.8k 阅读</span></div>
+
+      <h2>一、装备获取途径</h2>
+      <p>《天堂2：盟约》的核心特色是<span class="highlight">装备全靠打</span>。所有顶级装备都来自副本掉落、BOSS击杀和玩家打造，没有商城直接购买。</p>
+      <table class="data-table">
+        <thead><tr><th>途径</th><th>说明</th><th>推荐度</th></tr></thead>
+        <tbody>
+          <tr><td class="name">副本掉落</td><td>各等级副本通关奖励，精英怪概率掉落稀有装备</td><td class="s">★★★★★</td></tr>
+          <tr><td class="name">世界BOSS</td><td>定时刷新世界BOSS，参与即有机会获得顶级装备</td><td class="s">★★★★★</td></tr>
+          <tr><td class="name">交易行购买</td><td>自由交易系统，金币或钻石购买其他玩家装备</td><td class="a">★★★★</td></tr>
+          <tr><td class="name">打造合成</td><td>收集材料找矮人NPC打造，或低阶装备合成高阶</td><td class="a">★★★★</td></tr>
+        </tbody>
+      </table>
+
+      <h2>二、强化优先级</h2>
+      <p>资源有限的情况下，强化需要讲究优先级：</p>
+      <ul>
+        <li><span class="highlight">最高优先级：</span>武器 — 直接影响输出能力</li>
+        <li><span class="highlight">高优先级：</span>胸甲 — 提供最多防御值</li>
+        <li><span class="highlight">中优先级：</span>头盔、护腿、饰品</li>
+        <li><span class="highlight">低优先级：</span>手套、鞋子、披风</li>
+      </ul>
+
+      <h2>三、战力构成解析</h2>
+      <div style="margin:16px 0">
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span>基础属性</span><span style="color:var(--gold)">40%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width:40%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;margin-top:8px"><span>装备强化</span><span style="color:var(--gold)">30%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width:30%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;margin-top:8px"><span>技能等级</span><span style="color:var(--gold)">15%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width:15%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;margin-top:8px"><span>宝石镶嵌</span><span style="color:var(--gold)">10%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width:10%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;margin-top:8px"><span>其他（坐骑/翅膀）</span><span style="color:var(--gold)">5%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width:5%"></div></div>
+      </div>
+
+      <h2>四、避坑指南</h2>
+      <div class="warn-box">
+        <ul style="margin:0">
+          <li>前期不要浪费强化石在低阶装备上，<span class="highlight">40级后再认真强化</span></li>
+          <li>宝石镶嵌不可逆，确认装备会长期使用再镶嵌高级宝石</li>
+          <li>交易所买装备时注意对比属性，同名装备可能词条差异巨大</li>
+          <li>强化+7以上有失败风险，建议使用保护券</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DUNGEON GUIDE -->
+<div id="guide-dungeon" class="guide-detail">
+  <div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="#" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">副本攻略</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-hot">热门</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">副本攻略大全：BOSS机制与通关要点</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：副本通</span><span>2026-06-26</span><span>4.1k 阅读</span></div>
+
+      <h2>一、遗忘神殿（Lv.20-30）</h2>
+      <p>第一个多人副本，主要产出20-25级蓝装和大量经验。BOSS<span class="highlight">神殿守卫</span>会在血量50%时召唤小怪，优先清理小怪再集火BOSS。</p>
+      <table class="data-table">
+        <thead><tr><th>项目</th><th>详情</th></tr></thead>
+        <tbody>
+          <tr><td class="name">推荐等级</td><td>20-30级</td></tr>
+          <tr><td class="name">组队人数</td><td>3-5人</td></tr>
+          <tr><td class="name">推荐配置</td><td>1骑士+1牧师+2-3输出</td></tr>
+          <tr><td class="name">核心机制</td><td>BOSS血量50%召唤小怪群</td></tr>
+          <tr><td class="name">主要掉落</td><td>蓝色武器、防具强化石、经验卷轴</td></tr>
+        </tbody>
+      </table>
+
+      <h2>二、蚂蚁洞穴（Lv.35-45）</h2>
+      <p>35级核心装备本，产出大量30-40级紫装材料。蚁后BOSS有全屏毒雾技能，看到地面红圈立刻远离。</p>
+      <table class="data-table">
+        <thead><tr><th>项目</th><th>详情</th></tr></thead>
+        <tbody>
+          <tr><td class="name">推荐等级</td><td>35-45级</td></tr>
+          <tr><td class="name">组队人数</td><td>5人</td></tr>
+          <tr><td class="name">推荐配置</td><td>1骑士+1牧师+1弓手+2近战</td></tr>
+          <tr><td class="name">核心机制</td><td>全屏毒雾，地面红圈预警</td></tr>
+          <tr><td class="name">主要掉落</td><td>紫色装备图纸、高级强化石、稀有宝石</td></tr>
+        </tbody>
+      </table>
+
+      <h2>三、恶魔岛（Lv.50+）</h2>
+      <p>当前版本最高难度团队副本，需要血盟组织10人团队挑战。最终BOSS<span class="highlight">巴风特</span>拥有多阶段变身机制。</p>
+      <div class="tip-box"><strong style="color:var(--gold)">P1阶段：</strong>正常输出，注意躲避地面AOE。<br><strong style="color:var(--gold)">P2阶段：</strong>BOSS召唤分身，优先击杀真身（头顶有标记）。<br><strong style="color:var(--gold)">P3阶段：</strong>释放即死技能，必须打断！建议带2个骑士轮流打断。</div>
+      <table class="data-table">
+        <thead><tr><th>项目</th><th>详情</th></tr></thead>
+        <tbody>
+          <tr><td class="name">推荐等级</td><td>50级以上</td></tr>
+          <tr><td class="name">组队人数</td><td>10人团队</td></tr>
+          <tr><td class="name">推荐配置</td><td>2骑士+2牧师+3远程+3近战</td></tr>
+          <tr><td class="name">核心机制</td><td>三阶段变身，P3即死技能需打断</td></tr>
+          <tr><td class="name">主要掉落</td><td>橙色传说装备、传说强化石、坐骑碎片</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- CLAN GUIDE -->
+<div id="guide-clan" class="guide-detail">
+  <div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="#" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">血盟PVP</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-new">团战</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">血盟与PVP完全指南</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：战盟指挥官</span><span>2026-06-25</span><span>3.5k 阅读</span></div>
+
+      <h2>一、血盟建设要点</h2>
+      <p>血盟是你在亚丁大陆最坚实的后盾。一个强大的血盟不仅能提供属性加成，更是攻城战获胜的关键。</p>
+      <ul>
+        <li><span class="highlight">加入 vs 创建：</span>新手建议加入活跃血盟，享受资源福利和团队保护；有一定基础后可考虑创建血盟</li>
+        <li><span class="highlight">每日贡献：</span>签到、捐献资源、完成血盟任务可提升个人贡献度，在血盟商店兑换稀有道具</li>
+        <li><span class="highlight">血盟技能：</span>优先升级攻击力和生命值加成，全体成员享受属性加成</li>
+      </ul>
+
+      <h2>二、攻城战机制</h2>
+      <table class="data-table">
+        <thead><tr><th>阶段</th><th>说明</th><th>要点</th></tr></thead>
+        <tbody>
+          <tr><td class="name">报名阶段</td><td>每周三、六开放报名</td><td>血盟盟主或副盟主提交申请</td></tr>
+          <tr><td class="name">外城门攻防</td><td>攻城方破坏外城门</td><td>防守方可使用城防器械反击</td></tr>
+          <tr><td class="name">内城推进</td><td>攻破城门后进入内城</td><td>注意保护己方输出职业</td></tr>
+          <tr><td class="name">王座争夺</td><td>占领王座即可获胜</td><td>千人同屏激战，需密切配合</td></tr>
+        </tbody>
+      </table>
+
+      <h2>三、PVP职业搭配建议</h2>
+      <div class="tip-box">
+        <strong style="color:var(--gold)">城战推荐配置：</strong><br>
+        3骑士前排抗伤 + 2牧师持续治疗 + 4输出（2近战+2远程）+ 1刺客切后排<br><br>
+        <strong style="color:var(--gold)">战术要点：</strong><br>
+        远程职业站在城墙上输出，近战保护弓箭手和法师。记得携带足够的回复药水和复活卷轴。
+      </div>
+
+      <h2>四、竞技场技巧</h2>
+      <p>竞技场是检验个人实力的最佳场所，每日挑战可获得荣誉点数兑换稀有装备。</p>
+      <ul>
+        <li>每日免费挑战次数：5次</li>
+        <li>挑战前查看对手职业，针对性调整技能搭配</li>
+        <li>牧师在竞技场中非常强势，持久战后优势巨大</li>
+        <li>刺客需要先手爆发，一套带走对手</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- GOLD GUIDE -->
+<div id="guide-gold" class="guide-detail">
+  <div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="#" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">搬砖指南</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-hot">必看</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">搬砖指南：自由交易下的收益最大化</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：搬砖小王子</span><span>2026-06-24</span><span>6.2k 阅读</span></div>
+
+      <h2>一、搬砖方式盘点</h2>
+      <table class="data-table">
+        <thead><tr><th>方式</th><th>日收益</th><th>门槛</th><th>风险</th></tr></thead>
+        <tbody>
+          <tr><td class="name">矮人打造装备</td><td class="s">15-20w金币</td><td>矮人号+材料</td><td>低</td></tr>
+          <tr><td class="name">材料倒卖</td><td class="a">8-15w金币</td><td>启动资金</td><td>中</td></tr>
+          <tr><td class="name">副本代刷</td><td class="a">10-12w金币</td><td>高战力角色</td><td>低</td></tr>
+          <tr><td class="name">代练服务</td><td class="b">5-10w金币</td><td>时间充裕</td><td>中</td></tr>
+        </tbody>
+      </table>
+
+      <h2>二、矮人打造详细流程</h2>
+      <p>目前最稳定的搬砖方式，适合有耐心的玩家：</p>
+      <ul>
+        <li><span class="highlight">第一步：</span>创建矮人角色，优先提升工匠技能等级</li>
+        <li><span class="highlight">第二步：</span>通过交易所低价收购强化石、皮革、矿石等原材料</li>
+        <li><span class="highlight">第三步：</span>使用工匠技能打造紫色品质装备</li>
+        <li><span class="highlight">第四步：</span>将成品装备挂交易所出售，利润率约30-50%</li>
+      </ul>
+      <div class="tip-box"><strong style="color:var(--gold)">技巧：</strong>周末活动前材料价格会上涨，提前囤货可以赚取差价。关注官方公告，版本更新前的新装备需求会大幅提升。</div>
+
+      <h2>三、恩宠值系统详解</h2>
+      <p>恩宠值是《天堂2：盟约》控制经济的核心机制。频繁交易会导致恩宠值下降，影响掉落率。</p>
+      <ul>
+        <li>恩宠值初始为100，每日自动恢复5点</li>
+        <li>每次交易扣除1-3点恩宠值</li>
+        <li>恩宠值低于50时，怪物掉落率下降30%</li>
+        <li>恩宠值归零后，当日无法获得任何掉落</li>
+      </ul>
+      <div class="warn-box"><strong style="color:var(--crimson-light)">重要提醒：</strong>控制每日交易次数，建议分散在多个角色上进行交易操作。恩宠值归零后需要等待次日恢复，期间建议做主线任务或挂机练级。</div>
+
+      <h2>四、搬砖风险提示</h2>
+      <ul>
+        <li>官方打击工作室行为，多开脚本有封号风险</li>
+        <li>游戏经济环境会随版本变化，搬砖收益不保证稳定</li>
+        <li>建议以游戏体验为主，搬砖为辅</li>
+        <li>大额交易注意防骗，优先使用交易所系统</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" aria-label="回到顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
 
 <script>
-  // Progress bar
-  const progressBar = document.getElementById('progressBar');
-  const backTop = document.getElementById('backTop');
-  window.addEventListener('scroll', () => {
-    const s = document.documentElement.scrollTop;
-    const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    progressBar.style.width = (s / h * 100) + '%';
-    backTop.classList.toggle('visible', s > 600);
-  });
-  backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+// Progress bar
+const progressBar=document.getElementById('progressBar');
+const backTop=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{
+  const s=document.documentElement.scrollTop;
+  const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  progressBar.style.width=(s/h*100)+'%';
+  backTop.classList.toggle('visible',s>600);
+});
 
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.anim-reveal').forEach(el => observer.observe(el));
+// Scroll reveal
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.anim-reveal').forEach(el=>observer.observe(el));
 
-  // Mobile menu
-  document.getElementById('mobileToggle').addEventListener('click', () => {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  });
+// Mobile menu
+document.getElementById('mobileToggle').addEventListener('click',()=>{
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
 
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function(e) {
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    const href=this.getAttribute('href');
+    if(href.length>1){
       e.preventDefault();
-      const t = document.querySelector(this.getAttribute('href'));
-      if (t) { t.scrollIntoView({ behavior:'smooth', block:'start' }); document.getElementById('mobileMenu').classList.remove('open'); }
-    });
-  });
-
-  // Search overlay
-  const searchOverlay = document.getElementById('searchOverlay');
-  document.getElementById('searchBtn').addEventListener('click', () => { searchOverlay.classList.add('open'); document.getElementById('searchInput').focus(); });
-  searchOverlay.addEventListener('click', (e) => { if (e.target === searchOverlay) searchOverlay.classList.remove('open'); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') searchOverlay.classList.remove('open'); });
-  document.querySelectorAll('.search-hint').forEach(h => {
-    h.addEventListener('click', () => { document.getElementById('searchInput').value = h.textContent; });
-  });
-
-  // Tab switching (Wiki + Ranking)
-  function initTabs(container) {
-    const tabs = container.querySelectorAll('.wiki-tab');
-    const parent = container.parentElement;
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        const target = tab.getAttribute('data-tab');
-        parent.querySelectorAll('.wiki-panel').forEach(p => p.classList.remove('active'));
-        const panel = document.getElementById(target);
-        if (panel) panel.classList.add('active');
-      });
-    });
-  }
-  initTabs(document.getElementById('wiki') || document.querySelector('.wiki-tabs'));
-  initTabs(document.getElementById('rankTabs') || document.querySelector('#rankTabs'));
-
-  // Checklist
-  function updateChecklist() {
-    setTimeout(() => {
-      const items = document.querySelectorAll('.checklist-item input[type="checkbox"]');
-      const checked = Array.from(items).filter(i => i.checked).length;
-      const total = items.length;
-      document.getElementById('checkText').textContent = checked + ' / ' + total;
-      document.getElementById('checkBar').style.width = (checked / total * 100) + '%';
-    }, 10);
-  }
-  document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(cb => {
-    cb.addEventListener('change', updateChecklist);
-  });
-
-  // Community write
-  document.getElementById('writeBtn').addEventListener('click', () => {
-    const form = document.getElementById('writeForm');
-    form.style.display = form.style.display === 'none' ? 'block' : 'none';
-  });
-
-  // Responsive article layout
-  function handleResize() {
-    const grid = document.getElementById('articleGrid');
-    if (grid) {
-      if (window.innerWidth >= 1024) {
-        grid.style.gridTemplateColumns = '1fr 300px';
-      } else {
-        grid.style.gridTemplateColumns = '1fr';
-      }
+      const t=document.querySelector(href);
+      if(t){t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('mobileMenu').classList.remove('open');}
     }
+  });
+});
+
+// Tab switching
+function initTabs(container){
+  const tabs=container.querySelectorAll('.wiki-tab');
+  const parent=container.closest('section')||container.parentElement;
+  tabs.forEach(tab=>{
+    tab.addEventListener('click',()=>{
+      tabs.forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      const target=tab.getAttribute('data-tab');
+      parent.querySelectorAll('.wiki-panel').forEach(p=>p.classList.remove('active'));
+      const panel=document.getElementById(target);
+      if(panel)panel.classList.add('active');
+    });
+  });
+}
+document.querySelectorAll('.wiki-tabs').forEach(tabs=>initTabs(tabs));
+
+// Show/hide guide details
+function showGuide(id){
+  document.getElementById('home-view').style.display='none';
+  document.querySelectorAll('.guide-detail').forEach(el=>el.classList.remove('active'));
+  const guide=document.getElementById('guide-'+id);
+  if(guide){
+    guide.classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
   }
-  window.addEventListener('resize', handleResize);
-  handleResize();
+}
+
+function showSection(section){
+  if(section==='home'){
+    document.getElementById('home-view').style.display='block';
+    document.querySelectorAll('.guide-detail').forEach(el=>el.classList.remove('active'));
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+}
 </script>
 </body>
 </html>
