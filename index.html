@@ -169,6 +169,11 @@ a{color:inherit;text-decoration:none}
 .data-table .a{color:var(--frost)}
 .data-table .b{color:var(--mist)}
 .data-table .c{color:var(--text-muted)}
+@media(max-width:768px){
+  .data-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .data-table thead,.data-table tbody,.data-table tr{display:table;width:100%}
+  .data-table th,.data-table td{white-space:nowrap}
+}
 
 /* WIKI */
 .wiki-tabs{display:flex;gap:4px;margin-bottom:24px;flex-wrap:wrap}
