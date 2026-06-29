@@ -241,6 +241,8 @@ a{color:inherit;text-decoration:none}
 .breadcrumb a:hover{color:var(--gold-light)}
 .breadcrumb span{color:var(--text-muted)}
 .breadcrumb .current{color:var(--gold)}
+.update-time{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted);margin-top:8px;margin-bottom:4px}
+.update-time::before{content:'🔄'}
 
 /* PROGRESS BAR */
 .progress-track{height:6px;background:var(--bg-card);border-radius:3px;overflow:hidden;margin:8px 0}
@@ -1855,6 +1857,18 @@ document.querySelectorAll('.wiki-item-card').forEach(card=>{
   card.style.cursor='pointer';
   card.addEventListener('click',()=>openWikiModal(card));
 });
+
+(function addUpdateTimes(){
+  const today=new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit'}).replace(/\//g,'-');
+  document.querySelectorAll('.guide-detail h1').forEach(h1=>{
+    if(!h1.parentElement.querySelector('.update-time')){
+      const timeEl=document.createElement('div');
+      timeEl.className='update-time';
+      timeEl.textContent='最后更新于 '+today+' | 适配当前版本';
+      h1.insertAdjacentElement('afterend',timeEl);
+    }
+  });
+})();
 
 function openWikiModal(el){
   const name=el.querySelector('.name').textContent;
