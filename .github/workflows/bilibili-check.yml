@@ -1,0 +1,156 @@
+name: B站天堂2盟约攻略视频巡检
+
+on:
+  schedule:
+    - cron: '0 10 */3 * *'
+  workflow_dispatch:
+    inputs:
+      keyword:
+        description: '搜索关键词（可选）'
+        required: false
+        default: '天堂2盟约 攻略'
+
+jobs:
+  check-bilibili:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Search Bilibili videos
+        id: search
+        run: |
+          python3 << 'PYEOF'
+          import urllib.request
+          import urllib.parse
+          import json
+          import re
+          import os
+          import sys
+
+          # 当前已知的视频BV号（网站已嵌入的视频）
+          KNOWN_BVIDS = {
+              "BV1K2jczCEAs",  # 职业攻略
+              "BV1a4jczSEWj",  # 搬砖攻略
+              "BV1NNjczCEAY",  # 新手开荒
+              "BV1jPjczqEMj",  # 装备攻略
+              "BV1pYjczZEuG",  # 职业推荐
+              "BV1Mp7ezGE6S",  # 搬砖实测
+          }
+
+          KEYWORDS = ["天堂2盟约 攻略", "天堂2盟约 搬砖", "Lineage2 盟约"]
+          HEADERS = {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+              "Referer": "https://search.bilibili.com/",
+          }
+
+          def search_bilibili(keyword):
+              url = f"https://api.bilibili.com/x/web-interface/search/type?keyword={urllib.parse.quote(keyword)}&search_type=video&order=pubdate&page=1"
+              req = urllib.request.Request(url, headers=HEADERS)
+              try:
+                  with urllib.request.urlopen(req, timeout=15) as resp:
+                      data = json.loads(resp.read().decode('utf-8'))
+                      if data.get("data", {}).get("result", []):
+                          return data["data"]["result"]
+              except Exception as e:
+                  print(f"搜索失败 {keyword}: {e}", file=sys.stderr)
+              return []
+
+          all_results = []
+          seen_bvids = set()
+          for kw in KEYWORDS:
+              results = search_bilibili(kw)
+              for item in results:
+                  bvid = item.get("bvid", "")
+                  if bvid and bvid not in seen_bvids:
+                      seen_bvids.add(bvid)
+                      all_results.append(item)
+
+          # 过滤：排除已知视频，且发布时间不超过7天
+          new_videos = []
+          for item in all_results:
+              bvid = item.get("bvid", "")
+              if bvid in KNOWN_BVIDS:
+                  continue
+              # pubdate 是 unix timestamp
+              pubdate = item.get("pubdate", 0)
+              # 只保留7天内发布的
+              import time
+              if pubdate and (time.time() - pubdate) <= 7 * 24 * 3600:
+                  new_videos.append(item)
+
+          # 按发布时间排序
+          new_videos.sort(key=lambda x: x.get("pubdate", 0), reverse=True)
+
+          if not new_videos:
+              print("NO_NEW_VIDEOS")
+              sys.exit(0)
+
+          # 生成报告
+          lines = ["## 🔍 发现新的B站攻略视频", ""]
+          lines.append(f"巡检时间：{time.strftime('%Y-%m-%d %H:%M')}")
+          lines.append(f"发现新视频数量：**{len(new_videos)}**")
+          lines.append("")
+
+          for idx, v in enumerate(new_videos, 1):
+              bvid = v.get("bvid", "")
+              title = v.get("title", "").replace("<em class=\"keyword\">", "").replace("</em>", "")
+              author = v.get("author", "")
+              pubdate = time.strftime("%Y-%m-%d", time.localtime(v.get("pubdate", 0)))
+              desc = v.get("description", "")[:80]
+              url = f"https://www.bilibili.com/video/{bvid}"
+              iframe = f'<iframe src="//player.bilibili.com/player.html?bvid={bvid}&page=1" width="100%" height="400" frameborder="0" allowfullscreen></iframe>'
+
+              lines.append(f"### {idx}. {title}")
+              lines.append(f"- **UP主**：{author}")
+              lines.append(f"- **发布日期**：{pubdate}")
+              lines.append(f"- **链接**：{url}")
+              lines.append(f"- **简介**：{desc}...")
+              lines.append(f"- **嵌入代码**：")
+              lines.append(f"  ```html")
+              lines.append(f"  {iframe}")
+              lines.append(f"  ```")
+              lines.append("")
+
+          lines.append("---")
+          lines.append("### 📋 操作指引")
+          lines.append("1. 打开 `index.html`")
+          lines.append("2. 在「视频攻略」板块添加新的 `<div class=\"video-card\">...</div>`")
+          lines.append("3. 将上述嵌入代码复制进去")
+          lines.append("4. 提交并推送到 `main` 分支")
+          lines.append("")
+
+          report = "\n".join(lines)
+          # 输出到文件并设置 GitHub Actions 输出
+          with open(os.environ.get("GITHUB_OUTPUT", "/dev/null"), "a") as f:
+              f.write("has_new=true\n")
+              f.write(f"count={len(new_videos)}\n")
+          with open("report.md", "w", encoding="utf-8") as f:
+              f.write(report)
+          print(report)
+          PYEOF
+
+      - name: Create GitHub Issue
+        if: steps.search.outputs.has_new == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('report.md', 'utf-8');
+            const count = '${{ steps.search.outputs.count }}';
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🎬 发现 ${count} 个新的B站天堂2盟约攻略视频（${new Date().toLocaleDateString('zh-CN')}）`,
+              body: report,
+              labels: ['bilibili', 'content-update', 'automated']
+            });
+            console.log(`已创建 Issue，发现 ${count} 个新视频`);
