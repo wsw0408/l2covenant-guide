@@ -233,11 +233,13 @@ a{color:inherit;text-decoration:none}
 
 /* FOOTER */
 .footer{border-top:1px solid var(--border);padding:40px 0}
-.footer-grid{display:grid;grid-template-columns:1fr;gap:32px}
-@media(min-width:768px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:32px;align-items:stretch}
+@media(min-width:768px){.footer-grid{grid-template-columns:1.2fr 2fr 1fr 1fr;gap:24px}}
 .footer h5{font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold);font-size:13px;margin-bottom:12px;letter-spacing:.05em}
 .footer a{display:block;color:var(--text-dim);font-size:12px;padding:3px 0;transition:color .2s}
 .footer a:hover{color:var(--gold-light)}
+.footer-col-brand{display:flex;flex-direction:column;gap:20px}
+.footer-links-multi{display:grid;grid-template-columns:1fr 1fr;gap:4px 20px}
 .footer-bottom{margin-top:24px;padding-top:20px;border-top:1px solid rgba(201,168,76,0.06);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:11px;color:var(--text-muted)}
 
 /* BREADCRUMB */
@@ -749,18 +751,47 @@ a{color:inherit;text-decoration:none}
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
-          <div style="width:28px;height:28px;border:1px solid rgba(201,168,76,0.35);display:flex;align-items:center;justify-content:center;transform:rotate(45deg)"><span style="transform:rotate(-45deg);color:var(--gold);font-size:9px;font-family:'Cinzel',serif;font-weight:700">L2</span></div>
-          <span style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold);font-size:14px;letter-spacing:.08em">盟约攻略</span>
+      <div class="footer-col-brand">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+            <div style="width:28px;height:28px;border:1px solid rgba(201,168,76,0.35);display:flex;align-items:center;justify-content:center;transform:rotate(45deg)"><span style="transform:rotate(-45deg);color:var(--gold);font-size:9px;font-family:'Cinzel',serif;font-weight:700">L2</span></div>
+            <span style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold);font-size:14px;letter-spacing:.08em">盟约攻略</span>
+          </div>
+          <p style="color:var(--text-muted);font-size:12px;line-height:1.8">亚丁大陆最全面的冒险指南。非官方玩家社区，所有攻略内容仅供参考，实际游戏数据以官方公告为准。</p>
         </div>
-        <p style="color:var(--text-muted);font-size:12px;line-height:1.8;max-width:300px">亚丁大陆最全面的冒险指南。非官方玩家社区，所有攻略内容仅供参考，实际游戏数据以官方公告为准。</p>
+        <div>
+          <h5>联系方式</h5>
+          <span style="color:var(--text-muted);font-size:12px;display:block;margin-bottom:6px">邮箱：17839556263@163.com</span>
+          <span style="color:var(--text-muted);font-size:12px;display:block;margin-bottom:6px">微信：17839556263</span>
+          <span style="color:var(--text-muted);font-size:12px;display:block;margin-bottom:6px">电话：17839556263</span>
+        </div>
+        <div>
+          <h5>友情链接</h5>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener">天堂2盟约官网</a>
+          <a href="https://l2m.qq.com/cp/guidebook/index.html" target="_blank" rel="noopener">官方资料站</a>
+        </div>
       </div>
-      <div><h5>攻略专区</h5><a href="#" onclick="showGuide('newbie')">新手入门</a><a href="#" onclick="showGuide('class')">职业指南</a><a href="#" onclick="showGuide('equip')">装备战力</a><a href="#" onclick="showGuide('dungeon')">副本攻略</a><a href="#" onclick="showGuide('clan')">血盟PVP</a><a href="#" onclick="showGuide('gold')">搬砖指南</a><a href="#" onclick="showGuide('knight')">骑士攻略</a><a href="#" onclick="showGuide('dual')">斗士攻略</a><a href="#" onclick="showGuide('dagger')">突袭者攻略</a><a href="#" onclick="showGuide('bow')">弓手攻略</a><a href="#" onclick="showGuide('staff')">巫师攻略</a><a href="#" onclick="showGuide('orb')">牧师攻略</a><a href="#" onclick="showGuide('day1')">开区第一天</a><a href="#" onclick="showGuide('cards')">卡牌系统</a></div>
+      <div>
+        <h5>攻略专区</h5>
+        <div class="footer-links-multi">
+          <a href="#" onclick="showGuide('newbie')">新手入门</a>
+          <a href="#" onclick="showGuide('class')">职业指南</a>
+          <a href="#" onclick="showGuide('equip')">装备战力</a>
+          <a href="#" onclick="showGuide('dungeon')">副本攻略</a>
+          <a href="#" onclick="showGuide('clan')">血盟PVP</a>
+          <a href="#" onclick="showGuide('gold')">搬砖指南</a>
+          <a href="#" onclick="showGuide('knight')">骑士攻略</a>
+          <a href="#" onclick="showGuide('dual')">斗士攻略</a>
+          <a href="#" onclick="showGuide('dagger')">突袭者攻略</a>
+          <a href="#" onclick="showGuide('bow')">弓手攻略</a>
+          <a href="#" onclick="showGuide('staff')">巫师攻略</a>
+          <a href="#" onclick="showGuide('orb')">牧师攻略</a>
+          <a href="#" onclick="showGuide('day1')">开区第一天</a>
+          <a href="#" onclick="showGuide('cards')">卡牌系统</a>
+        </div>
+      </div>
       <div><h5>数据库</h5><a href="#wiki">装备图鉴</a><a href="#wiki">技能百科</a><a href="#wiki">怪物图鉴</a><a href="#wiki">地图导航</a></div>
       <div><h5>关于</h5><a href="#" onclick="showGuide('page-about')">关于我们</a><a href="#" onclick="showGuide('page-submit')">投稿指南</a><a href="#" onclick="showGuide('page-privacy')">隐私政策</a></div>
-      <div><h5>联系方式</h5><span style="color:var(--text-muted);font-size:12px;display:block;margin-bottom:6px">邮箱：17839556263@163.com</span><span style="color:var(--text-muted);font-size:12px;display:block;margin-bottom:6px">微信：17839556263</span><span style="color:var(--text-muted);font-size:12px;display:block;margin-bottom:6px">电话：17839556263</span></div>
-      <div><h5>友情链接</h5><a href="https://l2m.qq.com/" target="_blank" rel="noopener">天堂2盟约官网</a><a href="https://l2m.qq.com/cp/guidebook/index.html" target="_blank" rel="noopener">官方资料站</a></div>
     </div>
     <div class="footer-bottom"><span>《天堂2：盟约》NCSOFT原厂 · 腾讯代理 | 本站为非官方玩家社区</span><span>备案号：待申请（国内域名备案后更新）</span><span>© 2026 亚丁冒险者公会</span></div>
   </div>
@@ -1873,15 +1904,29 @@ a{color:inherit;text-decoration:none}
       <p>《天堂2：盟约》冒险者公会是一个由玩家自发创建的非官方攻略社区，致力于为亚丁大陆的冒险者们提供全面、及时、实用的游戏攻略。</p>
       <p>本站内容涵盖<strong>职业指南、装备战力、副本攻略、血盟PVP、搬砖指南、数据库Wiki、视频攻略</strong>等多个板块，力求成为每一位盟约玩家出征前的最佳准备站。</p>
 
-      <h2>内容来源</h2>
+      <h2>网站理念</h2>
+      <p>我们坚信优质的攻略来源于真实的游戏体验。本站所有核心数据均经过实机验证，拒绝云评测与复制粘贴。我们的目标是打造一个<strong>玩家帮助玩家</strong>的开放式知识库，让每一位冒险者都能在这里找到解决问题的方法，也能将自己的经验回馈给社区。</p>
+
+      <h2>内容来源与审核</h2>
+      <p>本站内容来自多种渠道，并经过编辑团队的筛选与校验：</p>
       <ul>
-        <li>官方游戏资料与版本公告</li>
-        <li>微信公众号优质攻略文章</li>
-        <li>Bilibili 热门攻略视频</li>
-        <li>玩家社区实测数据与经验分享</li>
+        <li><strong>官方资料：</strong>实时同步游戏版本公告与官方资料站数据</li>
+        <li><strong>原创攻略：</strong>资深玩家撰写的实测攻略与深度解析</li>
+        <li><strong>社区精选：</strong>微信公众号、Bilibili、NGA 等平台的优质内容授权转载</li>
+        <li><strong>数据验证：</strong>装备数值、技能效果等硬核数据由多名玩家交叉验证</li>
+      </ul>
+      <p>我们承诺：所有转载内容均已注明出处，所有原创攻略均经过至少一轮事实核查。如发现数据错误或内容过时，欢迎随时反馈，我们将在 48 小时内核实更新。</p>
+
+      <h2>更新频率</h2>
+      <ul>
+        <li><strong>版本更新：</strong>游戏大版本上线后 24 小时内发布配套攻略</li>
+        <li><strong>数据维护：</strong>装备、技能等数据库每周例行巡检修正</li>
+        <li><strong>视频板块：</strong>每 3 天自动检索 B 站新发布的优质攻略视频</li>
+        <li><strong>日常优化：</strong>根据玩家反馈持续迭代页面体验与内容结构</li>
       </ul>
 
       <h2>联系我们</h2>
+      <p>无论是攻略纠错、内容投稿、商务合作还是技术反馈，我们都欢迎你的来信。通常在 1-2 个工作日内回复。</p>
       <table class="data-table">
         <thead><tr><th>方式</th><th>联系方式</th></tr></thead>
         <tbody>
@@ -1891,7 +1936,7 @@ a{color:inherit;text-decoration:none}
         </tbody>
       </table>
 
-      <div class="tip-box"><strong style="color:var(--gold)">免责声明：</strong>本站为玩家自建非官方社区，所有攻略内容仅供参考。游戏数据以官方公告为准，如有疏漏欢迎通过上述方式反馈。</div>
+      <div class="tip-box"><strong style="color:var(--gold)">免责声明：</strong>本站为玩家自建非官方社区，所有攻略内容仅供参考，不构成任何游戏内交易或充值建议。游戏数据以腾讯官方公告与游戏内实际显示为准，本站不对因使用攻略内容而产生的任何损失承担责任。文中涉及的第三方商标与版权归属各自权利人所有。</div>
     </div>
   </div>
 </div>
@@ -1907,27 +1952,66 @@ a{color:inherit;text-decoration:none}
       <div class="update-time">最后更新于 2026-06-30</div>
 
       <h2>欢迎投稿</h2>
-      <p>我们欢迎所有热爱《天堂2：盟约》的玩家分享自己的攻略心得。无论你是资深大佬还是萌新小白，只要有独特的见解和实测数据，都可以投稿。</p>
+      <p>我们欢迎所有热爱《天堂2：盟约》的玩家分享自己的攻略心得。无论你是资深大佬还是萌新小白，只要有独特的见解和实测数据，都可以投稿。本站目前接受<strong>文字攻略、数据表格、图文指南和视频推荐</strong>四种形式的投稿。</p>
+
+      <h2>内容分类说明</h2>
+      <p>为了让你的投稿更快被采纳，请先确认内容属于以下哪一类别：</p>
+      <ul>
+        <li><strong>职业攻略：</strong>单职业深度解析、技能加点方案、转职路线建议</li>
+        <li><strong>装备战力：</strong>装备获取途径、强化技巧、附魔搭配、战力提升路径</li>
+        <li><strong>副本攻略：</strong>副本机制解析、BOSS打法、队伍配置、掉落整理</li>
+        <li><strong>PVP与血盟：</strong>战场技巧、血盟管理、领地战策略、职业克制分析</li>
+        <li><strong>搬砖指南：</strong>收益测试、刷怪路线、市场分析、资源规划</li>
+        <li><strong>新手向：</strong>开荒路线、第一天养成、常见误区、系统讲解</li>
+        <li><strong>数据整理：</strong>数值对比表、掉落概率统计、版本更新数据汇总</li>
+      </ul>
 
       <h2>投稿内容要求</h2>
       <ul>
-        <li><strong>原创性：</strong>投稿内容需为原创或已获授权转载，严禁抄袭</li>
-        <li><strong>准确性：</strong>攻略数据需经过实际游戏验证，避免误导</li>
-        <li><strong>完整性：</strong>攻略需包含清晰的步骤、数据和结论</li>
-        <li><strong>时效性：</strong>投稿请注明适配的游戏版本</li>
+        <li><strong>原创性：</strong>投稿内容需为原创或已获授权转载，严禁抄袭、洗稿</li>
+        <li><strong>准确性：</strong>攻略数据需经过实际游戏验证，避免云评测和误导性结论</li>
+        <li><strong>完整性：</strong>攻略需包含清晰的背景说明、步骤/数据、最终结论，忌半截内容</li>
+        <li><strong>时效性：</strong>投稿请注明适配的游戏版本号和测试日期（例：v1.2.3 / 2026-06-25）</li>
+        <li><strong>可读性：</strong>建议分章节撰写，适当使用表格、列表，避免大段文字堆砌</li>
+      </ul>
+
+      <h2>稿件格式建议</h2>
+      <p>采用以下格式能让编辑更快处理你的稿件：</p>
+      <ul>
+        <li><strong>标题：</strong>清晰点明主题，如「60级斗士搬砖实测：忘却平原 vs 龙之谷 收益对比」</li>
+        <li><strong>作者署名：</strong>游戏内昵称或希望展示的笔名</li>
+        <li><strong>正文结构：</strong>背景 → 测试条件/配置 → 过程与数据 → 结论与建议</li>
+        <li><strong>配图（可选）：</strong>游戏截图建议使用原生分辨率，可标注关键数值</li>
+        <li><strong>文件格式：</strong>优先 Word 文档或 Markdown 文本，表格用 Excel 或直接在正文中插入</li>
       </ul>
 
       <h2>投稿方式</h2>
       <table class="data-table">
         <thead><tr><th>方式</th><th>说明</th></tr></thead>
         <tbody>
-          <tr><td class="name">邮件投稿</td><td>发送攻略至 17839556263@163.com，标题注明【投稿】</td></tr>
-          <tr><td class="name">微信投稿</td><td>添加微信 17839556263，直接发送攻略内容</td></tr>
-          <tr><td class="name">GitHub</td><td>在仓库 Discussions 中发帖，审核后直接采纳</td></tr>
+          <tr><td class="name">邮件投稿</td><td>发送攻略至 17839556263@163.com，标题注明【投稿】+ 分类 + 标题</td></tr>
+          <tr><td class="name">微信投稿</td><td>添加微信 17839556263，直接发送攻略内容或文件</td></tr>
+          <tr><td class="name">GitHub</td><td>在仓库 Discussions 中发帖，标题前缀【投稿】，审核后直接采纳</td></tr>
         </tbody>
       </table>
 
-      <div class="tip-box"><strong style="color:var(--gold)">投稿奖励：</strong>优质攻略被采纳后，作者署名将永久展示在攻略页面，并有机会获得本站特别推荐。</div>
+      <h2>审核流程与时间</h2>
+      <ul>
+        <li><strong>初审（1-2 天）：</strong>编辑检查内容完整性与基本事实</li>
+        <li><strong>复核（2-3 天）：</strong>对关键数据进行游戏内抽检验证</li>
+        <li><strong>发布：</strong>审核通过后，文章将署名发布到对应板块，并邮件/微信通知作者</li>
+        <li><strong>修改：</strong>如需修改，编辑会提出具体意见，作者完善后优先进入复审</li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <ul>
+        <li><strong>Q：投稿有报酬吗？</strong>A：目前为玩家自愿分享社区，暂无现金报酬，但优质作者可获得署名展示与首页推荐。</li>
+        <li><strong>Q：可以同时投给其他平台吗？</strong>A：原创稿件允许一稿多投，但请注明已发布渠道；独家稿件将优先审核并重点推荐。</li>
+        <li><strong>Q：投稿后多久能看到？</strong>A：一般 3-5 个工作日内完成审核，紧急版本适配内容会加急处理。</li>
+        <li><strong>Q：被拒稿后还能再投吗？</strong>A：可以。编辑会告知拒稿原因，修改完善后欢迎再次投稿。</li>
+      </ul>
+
+      <div class="tip-box"><strong style="color:var(--gold)">投稿奖励：</strong>优质攻略被采纳后，作者署名与简介将永久展示在攻略页面顶部，并有机会获得本站首页轮播推荐。累计投稿 3 篇以上且质量稳定的作者，可申请成为签约撰稿人，拥有独立作者专栏页面。</div>
     </div>
   </div>
 </div>
@@ -1942,22 +2026,49 @@ a{color:inherit;text-decoration:none}
       <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">隐私政策</h1>
       <div class="update-time">最后更新于 2026-06-30</div>
 
-      <h2>信息收集</h2>
-      <p>本站使用以下第三方服务，可能会收集部分访问数据：</p>
+      <h2>信息收集与使用目的</h2>
+      <p>本站使用以下第三方服务，可能会收集部分访问数据。我们仅在必要的范围内使用这些数据，用于改善网站体验与内容质量：</p>
       <ul>
-        <li><strong>百度统计：</strong>用于分析网站访问量和用户行为，数据匿名化处理</li>
-        <li><strong>Giscus（GitHub Discussions）：</strong>评论功能需要登录 GitHub 账号</li>
-        <li><strong>GitHub Pages：</strong>托管服务会记录访问日志（IP、UA等）</li>
+        <li><strong>百度统计：</strong>用于分析网站访问量、页面热门程度和用户地域分布。所有数据均为匿名化处理，无法用于识别个人身份。</li>
+        <li><strong>Giscus（GitHub Discussions）：</strong>评论功能基于 GitHub Discussions 实现。发表评论需要登录 GitHub 账号，评论内容、用户名和头像将公开显示在评论区和关联的 GitHub 讨论帖中。</li>
+        <li><strong>GitHub Pages：</strong>本站的静态托管服务。GitHub 作为托管方可能会记录访问日志（如 IP 地址、浏览器 UA、访问时间等），用于服务运维和安全防护。</li>
+        <li><strong>Bilibili 视频嵌入：</strong>视频板块使用 Bilibili 官方 iframe 播放器。Bilibili 可能会根据用户登录状态记录视频播放行为。</li>
       </ul>
+      <p>除上述第三方服务依法收集的数据外，<strong>本站自身不收集、不存储任何用户的个人信息</strong>（包括但不限于姓名、手机号、游戏账号等）。</p>
 
       <h2>Cookie 使用</h2>
-      <p>本站不使用任何第一方 Cookie。第三方服务（百度统计）可能会使用 Cookie 来追踪访问数据。</p>
+      <p>本站不设置任何第一方 Cookie。第三方服务可能会使用 Cookie：</p>
+      <ul>
+        <li><strong>百度统计：</strong>使用 Cookie 区分独立访客和追踪访问路径，用户可通过浏览器设置禁用第三方 Cookie。</li>
+        <li><strong>GitHub / Giscus：</strong>登录状态由 GitHub 通过 Cookie 维持，不受本站控制。</li>
+      </ul>
+
+      <h2>用户权利</h2>
+      <p>根据《中华人民共和国个人信息保护法》及相关法规，用户享有以下权利：</p>
+      <ul>
+        <li><strong>知情权：</strong>你有权了解哪些数据被收集以及如何使用（即本政策所述内容）。</li>
+        <li><strong>访问与更正权：</strong>对于你在 GitHub Discussions 中发布的评论，可通过 GitHub 平台自行编辑或删除。</li>
+        <li><strong>删除权：</strong>如希望删除你在本站评论区的全部留言，请联系站长，我们将协助你在 GitHub Discussions 中移除相关内容。</li>
+        <li><strong>拒绝追踪权：</strong>可开启浏览器的「请勿追踪」（Do Not Track）功能，或安装广告/统计拦截插件。</li>
+      </ul>
 
       <h2>数据安全</h2>
-      <p>我们承诺不会将任何用户数据出售或提供给第三方。评论数据存储在 GitHub Discussions 中，受 GitHub 隐私政策保护。</p>
+      <p>我们承诺不会将任何用户数据出售、交换或提供给任何第三方用于商业目的。评论数据存储于 GitHub Discussions（美国服务器），受 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener" style="color:var(--gold-light)">GitHub 隐私声明</a> 约束。本站作为静态网站，不维护用户数据库，因此不存在用户账号密码泄露风险。</p>
+
+      <h2>第三方服务条款</h2>
+      <p>使用本站即表示你同时同意以下第三方服务的相关条款：</p>
+      <ul>
+        <li><a href="https://tongji.baidu.com/web/help/article?id=330&type=0" target="_blank" rel="noopener" style="color:var(--gold-light)">百度统计隐私政策</a></li>
+        <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener" style="color:var(--gold-light)">GitHub 隐私声明</a></li>
+        <li><a href="https://www.bilibili.com/blackboard/privacy-pc.html" target="_blank" rel="noopener" style="color:var(--gold-light)">Bilibili 隐私政策</a></li>
+      </ul>
+
+      <h2>政策更新说明</h2>
+      <p>本站保留不时修订本隐私政策的权利。当政策发生重大变更（如新增数据收集方）时，我们将在网站首页公告栏发布更新提示，并同步更新本页面的"最后更新于"日期。建议你定期查阅本页面以了解最新政策。若你继续使用本站，即视为同意修订后的条款。</p>
 
       <h2>联系我们</h2>
-      <p>如对隐私政策有任何疑问，请联系：<strong>17839556263@163.com</strong></p>
+      <p>如对隐私政策有任何疑问、投诉或数据删除请求，请通过以下方式联系站长，我们将在 15 个工作日内回复：</p>
+      <p>邮箱：<strong>17839556263@163.com</strong>　|　微信：<strong>17839556263</strong></p>
     </div>
   </div>
 </div>
