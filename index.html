@@ -127,7 +127,7 @@ a{color:inherit;text-decoration:none}
 .news-featured-body{padding:20px}
 .news-featured-body h3{font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:18px;margin-bottom:8px;line-height:1.4}
 .news-featured-body p{color:var(--text-dim);font-size:13px;line-height:1.7}
-.news-list-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(201,168,76,0.06);cursor:pointer;transition:all .2s}
+.news-list-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(201,168,76,0.06);transition:all .2s}
 .news-list-item:hover{padding-left:4px}
 .news-list-item:hover .news-list-title{color:var(--gold-light)}
 .news-list-date{flex-shrink:0;color:var(--text-muted);font-size:11px;padding-top:2px;min-width:72px}
@@ -321,6 +321,10 @@ a{color:inherit;text-decoration:none}
       <span class="ticker-label">公告</span>
       <div class="ticker-content">
         <div class="ticker-track">
+          <span class="ticker-item"><strong>[06/26]</strong> 全平台公测开启，新服亚丁之光火爆排队中</span>
+          <span class="ticker-item"><strong>[06/27]</strong> V2.0版本更新：新增恶魔岛团本、觉醒系统上线</span>
+          <span class="ticker-item"><strong>[06/28]</strong> 周末双倍经验活动开启，限时3天</span>
+          <span class="ticker-item"><strong>[06/28]</strong> 首届跨服攻城战报名开始，周三开战</span>
           <span class="ticker-item"><strong>[06/26]</strong> 全平台公测开启，新服亚丁之光火爆排队中</span>
           <span class="ticker-item"><strong>[06/27]</strong> V2.0版本更新：新增恶魔岛团本、觉醒系统上线</span>
           <span class="ticker-item"><strong>[06/28]</strong> 周末双倍经验活动开启，限时3天</span>
@@ -548,8 +552,9 @@ a{color:inherit;text-decoration:none}
     </div>
     <div style="margin-top:32px">
       <div class="wiki-search anim-reveal">
-        <input type="text" id="wikiSearchInput" placeholder="搜索物品名称、技能、NPC..."><button onclick="wikiSearch()">查询</button>
+        <input type="text" id="wikiSearchInput" placeholder="搜索物品名称、技能、NPC..."><button onclick="wikiSearch()">查询</button><button onclick="wikiSearchReset()" style="background:transparent;border:1px solid var(--border);color:var(--text-muted)">重置</button>
       </div>
+      <div id="wikiSearchFeedback" style="display:none;font-size:12px;color:var(--gold);margin-bottom:12px"></div>
       <div class="wiki-tabs anim-reveal">
         <button class="wiki-tab active" data-tab="wiki-items">装备图鉴</button>
         <button class="wiki-tab" data-tab="wiki-skills">技能百科</button>
@@ -662,25 +667,7 @@ a{color:inherit;text-decoration:none}
       <p class="section-desc">玩家经验交流、攻略投稿、问题求助，亚丁冒险者互助社区。</p>
     </div>
     <div id="communityPosts" style="display:grid;grid-template-columns:1fr;gap:24px;margin-top:32px;max-width:800px">
-      <div class="card post-card anim-reveal">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="post-header"><div class="post-avatar">🗡</div><div class="post-meta"><span class="post-author">剑与魔法</span><div style="display:flex;gap:8px;align-items:center"><span class="post-time">2小时前</span><div><span class="tag tag-hot">攻略</span></div></div></div></div>
-        <div class="post-body">恶魔岛巴风特P3阶段的即死技能可以通过打断来规避，推荐带2个骑士轮流使用打断技能。实测4个打断位足够覆盖全部即死技能窗口。</div>
-        <div class="post-actions"><span class="post-action">👍 56</span><span class="post-action">💬 23</span><span class="post-action">⭐ 收藏</span></div>
-      </div>
-      <div class="card post-card anim-reveal">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="post-header"><div class="post-avatar">✚</div><div class="post-meta"><span class="post-author">奶妈不哭</span><div style="display:flex;gap:8px;align-items:center"><span class="post-time">5小时前</span><div><span class="tag tag-new">求助</span></div></div></div></div>
-        <div class="post-body">牧师40级之后 solo 效率太低了，主线任务打不动怪。有没有牧师玩家分享一下中期的发育思路？是硬肝还是转职？</div>
-        <div class="post-actions"><span class="post-action">👍 18</span><span class="post-action">💬 45</span><span class="post-action">⭐ 收藏</span></div>
-      </div>
-      <div class="card post-card anim-reveal">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <div class="post-header"><div class="post-avatar">💰</div><div class="post-meta"><span class="post-author">搬砖小王子</span><div style="display:flex;gap:8px;align-items:center"><span class="post-time">8小时前</span><div><span class="tag tag-guide">经验</span></div></div></div></div>
-        <div class="post-body">测试了一周搬砖收益，目前最好的方式是矮人号收材料打造装备卖。一天大概能赚15-20w金币，注意控制交易频率避免恩宠值归零。</div>
-        <div class="post-actions"><span class="post-action">👍 89</span><span class="post-action">💬 67</span><span class="post-action">⭐ 收藏</span></div>
-      </div>
-      <div class="card" style="padding:24px;margin-top:24px">
+      <div class="card" style="padding:24px">
         <div style="margin-bottom:16px;font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold);font-size:14px;letter-spacing:.05em">发表评论</div>
         <p style="font-size:12px;color:var(--text-muted);margin-bottom:16px">基于 GitHub Discussions 的真实评论系统，登录 GitHub 即可参与讨论。</p>
         <div class="giscus"></div>
@@ -715,32 +702,32 @@ a{color:inherit;text-decoration:none}
     <div class="grid-3" style="margin-top:32px">
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1qsVa6pE2g&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:200px;border-radius:8px 8px 0 0"></iframe>
+        <iframe src="//player.bilibili.com/player.html?bvid=BV1qsVa6pE2g&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
         <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">职业攻略</span></div><h4>天堂2盟约职业系统详解及开荒职业推荐</h4><p>UP：是张胖子 · 3.3万播放</p></div>
       </div>
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1vw7g6YEN9&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:200px;border-radius:8px 8px 0 0"></iframe>
+        <iframe src="//player.bilibili.com/player.html?bvid=BV1vw7g6YEN9&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
         <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">搬砖攻略</span></div><h4>一个视频解决天堂2盟约搬砖所有问题</h4><p>UP：老抽游戏资讯 · 9000+播放</p></div>
       </div>
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1f1jJ6cEoQ&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:200px;border-radius:8px 8px 0 0"></iframe>
+        <iframe src="//player.bilibili.com/player.html?bvid=BV1f1jJ6cEoQ&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
         <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">新手开荒</span></div><h4>天堂2盟约国服开荒全攻略！五大种族零氪毕业</h4><p>UP：老威游料站 · 500+播放</p></div>
       </div>
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV14kjj6iEoC&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:200px;border-radius:8px 8px 0 0"></iframe>
+        <iframe src="//player.bilibili.com/player.html?bvid=BV14kjj6iEoC&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
         <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">装备攻略</span></div><h4>天堂2盟约萌新攻略-负重&回蓝套搭配</h4><p>UP：是张胖子 · 萌新向</p></div>
       </div>
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1Ay7T6MEwK&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:200px;border-radius:8px 8px 0 0"></iframe>
+        <iframe src="//player.bilibili.com/player.html?bvid=BV1Ay7T6MEwK&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
         <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">职业推荐</span></div><h4>平民微氪职业推荐，利好散人搬砖党</h4><p>UP：独白游戏分享 · 职业向</p></div>
       </div>
       <div class="card video-card anim-reveal">
         <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1Hyjd6BExA&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:200px;border-radius:8px 8px 0 0"></iframe>
+        <iframe src="//player.bilibili.com/player.html?bvid=BV1Hyjd6BExA&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
         <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">搬砖实测</span></div><h4>天堂2盟约最真实搬砖情况及多开讲解</h4><p>UP：好难好难-游戏攻略 · 实测向</p></div>
       </div>
     </div>
@@ -762,8 +749,7 @@ a{color:inherit;text-decoration:none}
         <div>
           <h5>联系方式</h5>
           <span style="color:var(--text-muted);font-size:12px;display:block;margin-bottom:6px">邮箱：17839556263@163.com</span>
-          <span style="color:var(--text-muted);font-size:12px;display:block;margin-bottom:6px">微信：17839556263</span>
-          <span style="color:var(--text-muted);font-size:12px;display:block;margin-bottom:6px">电话：17839556263</span>
+          <span style="color:var(--text-muted);font-size:12px;display:block;margin-bottom:6px">微信/电话：请通过邮箱联系索取</span>
         </div>
         <div>
           <h5>友情链接</h5>
@@ -774,24 +760,24 @@ a{color:inherit;text-decoration:none}
       <div>
         <h5>攻略专区</h5>
         <div class="footer-links-multi">
-          <a href="#" onclick="showGuide('newbie')">新手入门</a>
-          <a href="#" onclick="showGuide('class')">职业指南</a>
-          <a href="#" onclick="showGuide('equip')">装备战力</a>
-          <a href="#" onclick="showGuide('dungeon')">副本攻略</a>
-          <a href="#" onclick="showGuide('clan')">血盟PVP</a>
-          <a href="#" onclick="showGuide('gold')">搬砖指南</a>
-          <a href="#" onclick="showGuide('knight')">骑士攻略</a>
-          <a href="#" onclick="showGuide('dual')">斗士攻略</a>
-          <a href="#" onclick="showGuide('dagger')">突袭者攻略</a>
-          <a href="#" onclick="showGuide('bow')">弓手攻略</a>
-          <a href="#" onclick="showGuide('staff')">巫师攻略</a>
-          <a href="#" onclick="showGuide('orb')">牧师攻略</a>
-          <a href="#" onclick="showGuide('day1')">开区第一天</a>
-          <a href="#" onclick="showGuide('cards')">卡牌系统</a>
+          <a href="javascript:void(0)" onclick="showGuide('newbie')">新手入门</a>
+          <a href="javascript:void(0)" onclick="showGuide('class')">职业指南</a>
+          <a href="javascript:void(0)" onclick="showGuide('equip')">装备战力</a>
+          <a href="javascript:void(0)" onclick="showGuide('dungeon')">副本攻略</a>
+          <a href="javascript:void(0)" onclick="showGuide('clan')">血盟PVP</a>
+          <a href="javascript:void(0)" onclick="showGuide('gold')">搬砖指南</a>
+          <a href="javascript:void(0)" onclick="showGuide('knight')">骑士攻略</a>
+          <a href="javascript:void(0)" onclick="showGuide('dual')">斗士攻略</a>
+          <a href="javascript:void(0)" onclick="showGuide('dagger')">突袭者攻略</a>
+          <a href="javascript:void(0)" onclick="showGuide('bow')">弓手攻略</a>
+          <a href="javascript:void(0)" onclick="showGuide('staff')">巫师攻略</a>
+          <a href="javascript:void(0)" onclick="showGuide('orb')">牧师攻略</a>
+          <a href="javascript:void(0)" onclick="showGuide('day1')">开区第一天</a>
+          <a href="javascript:void(0)" onclick="showGuide('cards')">卡牌系统</a>
         </div>
       </div>
       <div><h5>数据库</h5><a href="#wiki">装备图鉴</a><a href="#wiki">技能百科</a><a href="#wiki">怪物图鉴</a><a href="#wiki">地图导航</a></div>
-      <div><h5>关于</h5><a href="#" onclick="showGuide('page-about')">关于我们</a><a href="#" onclick="showGuide('page-submit')">投稿指南</a><a href="#" onclick="showGuide('page-privacy')">隐私政策</a></div>
+      <div><h5>关于</h5><a href="javascript:void(0)" onclick="showGuide('page-about')">关于我们</a><a href="javascript:void(0)" onclick="showGuide('page-submit')">投稿指南</a><a href="javascript:void(0)" onclick="showGuide('page-privacy')">隐私政策</a></div>
     </div>
     <div class="footer-bottom"><span>《天堂2：盟约》NCSOFT原厂 · 腾讯代理 | 本站为非官方玩家社区</span><span>备案号：待申请（国内域名备案后更新）</span><span>© 2026 亚丁冒险者公会</span></div>
   </div>
@@ -2180,14 +2166,46 @@ function showSection(section){
 }
 
 function wikiSearch(){
-  const query=document.getElementById('wikiSearchInput').value.toLowerCase();
-  const activePanel=document.querySelector('.wiki-panel.active');
-  if(!activePanel)return;
-  const rows=activePanel.querySelectorAll('tbody tr, .wiki-item-card');
-  rows.forEach(row=>{
-    const text=row.textContent.toLowerCase();
-    row.style.display=text.includes(query)?'':'none';
+  const query=document.getElementById('wikiSearchInput').value.toLowerCase().trim();
+  if(!query)return;
+  const panels=document.querySelectorAll('.wiki-panel');
+  let firstMatchPanel=null;
+  let totalMatches=0;
+  panels.forEach(panel=>{
+    const rows=panel.querySelectorAll('tbody tr, .wiki-item-card');
+    let panelMatches=0;
+    rows.forEach(row=>{
+      const text=row.textContent.toLowerCase();
+      const match=text.includes(query);
+      row.style.display=match?'':'none';
+      if(match)panelMatches++;
+    });
+    if(panelMatches>0){
+      totalMatches+=panelMatches;
+      if(!firstMatchPanel)firstMatchPanel=panel;
+    }
   });
+  if(firstMatchPanel){
+    const tabId=firstMatchPanel.id;
+    document.querySelectorAll('.wiki-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.wiki-panel').forEach(p=>p.classList.remove('active'));
+    const activeTab=document.querySelector('.wiki-tab[data-tab="'+tabId+'"]');
+    if(activeTab)activeTab.classList.add('active');
+    firstMatchPanel.classList.add('active');
+  }
+  const feedback=document.getElementById('wikiSearchFeedback');
+  if(feedback){
+    feedback.textContent=totalMatches>0?'找到 '+totalMatches+' 条结果':'未找到匹配项';
+    feedback.style.display='block';
+  }
+}
+function wikiSearchReset(){
+  document.getElementById('wikiSearchInput').value='';
+  document.querySelectorAll('.wiki-panel').forEach(panel=>{
+    panel.querySelectorAll('tbody tr, .wiki-item-card').forEach(row=>row.style.display='');
+  });
+  const feedback=document.getElementById('wikiSearchFeedback');
+  if(feedback)feedback.style.display='none';
 }
 document.getElementById('wikiSearchInput').addEventListener('keypress',function(e){
   if(e.key==='Enter')wikiSearch();
