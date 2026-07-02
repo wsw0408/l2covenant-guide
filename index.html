@@ -114,7 +114,7 @@ a{color:inherit;text-decoration:none}
 .ticker-content{overflow:hidden;flex:1}
 .ticker-track{display:flex;animation:ticker-scroll 40s linear infinite;white-space:nowrap}
 @keyframes ticker-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.ticker-item{color:var(--mist);font-size:13px;margin-right:60px;flex-shrink:0}
+.ticker-item,.ticker-item a{color:var(--mist);font-size:13px;margin-right:60px;flex-shrink:0;text-decoration:none}a.ticker-item:hover{color:var(--gold-light)}
 .ticker-item strong{color:var(--gold-light);margin-right:6px}
 
 /* SECTION COMMON */
@@ -130,7 +130,7 @@ a{color:inherit;text-decoration:none}
 .news-featured-body{padding:20px}
 .news-featured-body h3{font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:18px;margin-bottom:8px;line-height:1.4}
 .news-featured-body p{color:var(--text-dim);font-size:13px;line-height:1.7}
-.news-list-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(201,168,76,0.06);transition:all .2s}
+.news-list-item,a.news-list-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(201,168,76,0.06);transition:all .2s;color:inherit;text-decoration:none}
 .news-list-item:hover{padding-left:4px}
 .news-list-item:hover .news-list-title{color:var(--gold-light)}
 .news-list-date{flex-shrink:0;color:var(--text-muted);font-size:11px;padding-top:2px;min-width:72px}
@@ -276,8 +276,8 @@ a{color:inherit;text-decoration:none}
         <a href="#guides" class="nav-link">攻略</a>
         <a href="#wiki" class="nav-link">数据库</a>
         <a href="#ranking" class="nav-link">排行</a>
-        <a href="#community" class="nav-link">社区</a>
         <a href="#videos" class="nav-link">视频</a>
+        <a href="#community" class="nav-link">社区</a>
       </div>
       <div class="nav-right">
         <button class="mobile-toggle" id="mobileToggle" aria-label="菜单">
@@ -291,8 +291,8 @@ a{color:inherit;text-decoration:none}
     <a href="#guides">攻略专区</a>
     <a href="#wiki">数据库Wiki</a>
     <a href="#ranking">排行榜</a>
-    <a href="#community">社区讨论</a>
     <a href="#videos">视频攻略</a>
+    <a href="#community">社区讨论</a>
   </div>
 </nav>
 
@@ -324,18 +324,18 @@ a{color:inherit;text-decoration:none}
       <span class="ticker-label">公告</span>
       <div class="ticker-content">
         <div class="ticker-track">
-          <span class="ticker-item"><strong>[06/24]</strong> 🎮 全平台公测正式开启！iOS/安卓/PC三端互通</span>
-          <span class="ticker-item"><strong>[06/24]</strong> 🎁 莱恩的福袋活动：累计43抽召唤券等你领取</span>
-          <span class="ticker-item"><strong>[06/24]</strong> ⚔️ 我要变强活动：完成目标领189抽召唤券+骑士称号</span>
-          <span class="ticker-item"><strong>[06/24]</strong> 🏆 新服冲级赛开启：等级榜前列送英雄品级制作卷轴</span>
-          <span class="ticker-item"><strong>[06/24]</strong> 💰 充值返利：结盟测试充值100%钻石+50%刻印钻石返还</span>
-          <span class="ticker-item"><strong>[07/01]</strong> 💡 添加微信福利官"小盟"领觉醒卷轴x20+战斗卷轴x10</span>
-          <span class="ticker-item"><strong>[06/24]</strong> 🎮 全平台公测正式开启！iOS/安卓/PC三端互通</span>
-          <span class="ticker-item"><strong>[06/24]</strong> 🎁 莱恩的福袋活动：累计43抽召唤券等你领取</span>
-          <span class="ticker-item"><strong>[06/24]</strong> ⚔️ 我要变强活动：完成目标领189抽召唤券+骑士称号</span>
-          <span class="ticker-item"><strong>[06/24]</strong> 🏆 新服冲级赛开启：等级榜前列送英雄品级制作卷轴</span>
-          <span class="ticker-item"><strong>[06/24]</strong> 💰 充值返利：结盟测试充值100%钻石+50%刻印钻石返还</span>
-          <span class="ticker-item"><strong>[07/01]</strong> 💡 添加微信福利官"小盟"领觉醒卷轴x20+战斗卷轴x10</span>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="ticker-item"><strong>[06/24]</strong> 🎮 全平台公测正式开启！iOS/安卓/PC三端互通</a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="ticker-item"><strong>[06/24]</strong> 🎁 莱恩的福袋活动：累计43抽召唤券等你领取</a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="ticker-item"><strong>[06/24]</strong> ⚔️ 我要变强活动：完成目标领189抽召唤券+骑士称号</a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="ticker-item"><strong>[06/24]</strong> 🏆 新服冲级赛开启：等级榜前列送英雄品级制作卷轴</a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="ticker-item"><strong>[06/24]</strong> 💰 充值返利：结盟测试充值100%钻石+50%刻印钻石返还</a>
+          <a href="#faq" class="ticker-item"><strong>[07/01]</strong> 💡 添加微信福利官"小盟"领觉醒卷轴x20+战斗卷轴x10</a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="ticker-item"><strong>[06/24]</strong> 🎮 全平台公测正式开启！iOS/安卓/PC三端互通</a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="ticker-item"><strong>[06/24]</strong> 🎁 莱恩的福袋活动：累计43抽召唤券等你领取</a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="ticker-item"><strong>[06/24]</strong> ⚔️ 我要变强活动：完成目标领189抽召唤券+骑士称号</a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="ticker-item"><strong>[06/24]</strong> 🏆 新服冲级赛开启：等级榜前列送英雄品级制作卷轴</a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="ticker-item"><strong>[06/24]</strong> 💰 充值返利：结盟测试充值100%钻石+50%刻印钻石返还</a>
+          <a href="#faq" class="ticker-item"><strong>[07/01]</strong> 💡 添加微信福利官"小盟"领觉醒卷轴x20+战斗卷轴x10</a>
         </div>
       </div>
     </div>
@@ -370,12 +370,12 @@ a{color:inherit;text-decoration:none}
         <div class="card" style="padding:16px">
           <div class="orn orn-tl"></div><div class="orn orn-br"></div>
           <div style="margin-bottom:12px;font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold);font-size:13px;letter-spacing:.05em">最新动态</div>
-          <div class="news-list-item"><span class="news-list-date">07-01</span><span class="news-list-title">微信福利官"小盟"上线，领觉醒卷轴</span></div>
-          <div class="news-list-item"><span class="news-list-date">06-29</span><span class="news-list-title">灵魂刻印系统详解：开荒优先堆斗志</span></div>
-          <div class="news-list-item"><span class="news-list-date">06-28</span><span class="news-list-title">多开注意事项：PC内置4账号，模拟器有风险</span></div>
-          <div class="news-list-item"><span class="news-list-date">06-27</span><span class="news-list-title">搬砖实测报告：弓箭手T0级搬砖职业</span></div>
-          <div class="news-list-item"><span class="news-list-date">06-26</span><span class="news-list-title">我要变强活动：领189抽召唤券+骑士称号</span></div>
-          <div class="news-list-item"><span class="news-list-date">06-24</span><span class="news-list-title">全平台公测正式开启，三端数据互通</span></div>
+          <a href="#faq" class="news-list-item"><span class="news-list-date">07-01</span><span class="news-list-title">微信福利官"小盟"上线，领觉醒卷轴</span></a>
+          <a href="#guides" class="news-list-item"><span class="news-list-date">06-29</span><span class="news-list-title">灵魂刻印系统详解：开荒优先堆斗志</span></a>
+          <a href="#guides" class="news-list-item"><span class="news-list-date">06-28</span><span class="news-list-title">多开注意事项：PC内置4账号，模拟器有风险</span></a>
+          <a href="#videos" class="news-list-item"><span class="news-list-date">06-27</span><span class="news-list-title">搬砖实测报告：弓箭手T0级搬砖职业</span></a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="news-list-item"><span class="news-list-date">06-26</span><span class="news-list-title">我要变强活动：领189抽召唤券+骑士称号</span></a>
+          <a href="https://l2m.qq.com/" target="_blank" rel="noopener" class="news-list-item"><span class="news-list-date">06-24</span><span class="news-list-title">全平台公测正式开启，三端数据互通</span></a>
         </div>
       </div>
     </div>
@@ -677,6 +677,21 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <!-- COMMUNITY -->
+<section id="videos" class="section section-alt">
+  <div class="container">
+    <div class="anim-reveal">
+      <div class="section-head"><div class="line"></div><span class="label">Videos</span></div>
+      <h2 class="section-title" style="font-size:28px">视频攻略</h2>
+      <p class="section-desc">实况解说、技巧演示、BOSS打法视频，更直观的攻略体验。</p>
+    </div>
+    <div id="videoGrid" class="grid-3" style="margin-top:32px"></div>
+    <div style="text-align:center;margin-top:24px">
+      <button id="loadMoreVideos" class="card" style="padding:12px 32px;background:transparent;border:1px solid var(--border);color:var(--text-muted);cursor:pointer;font-size:13px;transition:all .2s;display:none" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-muted)'">查看更多视频 ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
 <section id="community" class="section">
   <div class="container">
     <div class="anim-reveal">
@@ -704,49 +719,6 @@ a{color:inherit;text-decoration:none}
                 crossorigin="anonymous"
                 async>
         </script>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VIDEOS -->
-<section id="videos" class="section section-alt">
-  <div class="container">
-    <div class="anim-reveal">
-      <div class="section-head"><div class="line"></div><span class="label">Videos</span></div>
-      <h2 class="section-title" style="font-size:28px">视频攻略</h2>
-      <p class="section-desc">实况解说、技巧演示、BOSS打法视频，更直观的攻略体验。</p>
-    </div>
-    <div class="grid-3" style="margin-top:32px">
-      <div class="card video-card anim-reveal">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1qsVa6pE2g&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
-        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">职业攻略</span></div><h4>天堂2盟约职业系统详解及开荒职业推荐</h4><p>UP：是张胖子 · 3.3万播放</p></div>
-      </div>
-      <div class="card video-card anim-reveal">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1vw7g6YEN9&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
-        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">搬砖攻略</span></div><h4>一个视频解决天堂2盟约搬砖所有问题</h4><p>UP：老抽游戏资讯 · 9000+播放</p></div>
-      </div>
-      <div class="card video-card anim-reveal">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1f1jJ6cEoQ&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
-        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">新手开荒</span></div><h4>天堂2盟约国服开荒全攻略！五大种族零氪毕业</h4><p>UP：老威游料站 · 500+播放</p></div>
-      </div>
-      <div class="card video-card anim-reveal">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV14kjj6iEoC&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
-        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">装备攻略</span></div><h4>天堂2盟约萌新攻略-负重&回蓝套搭配</h4><p>UP：是张胖子 · 萌新向</p></div>
-      </div>
-      <div class="card video-card anim-reveal">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1Ay7T6MEwK&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
-        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">职业推荐</span></div><h4>平民微氪职业推荐，利好散人搬砖党</h4><p>UP：独白游戏分享 · 职业向</p></div>
-      </div>
-      <div class="card video-card anim-reveal">
-        <div class="orn orn-tl"></div><div class="orn orn-br"></div>
-        <iframe src="//player.bilibili.com/player.html?bvid=BV1Hyjd6BExA&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe>
-        <div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">搬砖实测</span></div><h4>天堂2盟约最真实搬砖情况及多开讲解</h4><p>UP：好难好难-游戏攻略 · 实测向</p></div>
       </div>
     </div>
   </div>
@@ -2329,6 +2301,35 @@ document.getElementById('wikiSearchInput').addEventListener('keypress',function(
   if(e.key==='Enter')wikiSearch();
 });
 
+
+// Video library
+const videoLibrary=[
+  {bvid:'BV1qsVa6pE2g',tag:'职业攻略',title:'天堂2盟约职业系统详解及开荒职业推荐',author:'是张胖子',views:'3.3万播放'},
+  {bvid:'BV1vw7g6YEN9',tag:'搬砖攻略',title:'一个视频解决天堂2盟约搬砖所有问题',author:'老抽游戏资讯',views:'9000+播放'},
+  {bvid:'BV1f1jJ6cEoQ',tag:'新手开荒',title:'天堂2盟约国服开荒全攻略！五大种族零氪毕业',author:'老威游料站',views:'500+播放'},
+  {bvid:'BV14kjj6iEoC',tag:'装备攻略',title:'天堂2盟约萌新攻略-负重&回蓝套搭配',author:'是张胖子',views:'萌新向'},
+  {bvid:'BV1Ay7T6MEwK',tag:'职业推荐',title:'平民微氪职业推荐，利好散人搬砖党',author:'独白游戏分享',views:'职业向'},
+  {bvid:'BV1Hyjd6BExA',tag:'搬砖实测',title:'天堂2盟约最真实搬砖情况及多开讲解',author:'好难好难-游戏攻略',views:'实测向'}
+];
+const VIDEOS_PER_PAGE=6;
+let videosShown=VIDEOS_PER_PAGE;
+function renderVideos(){
+  const grid=document.getElementById('videoGrid');
+  if(!grid)return;
+  const toShow=videoLibrary.slice(0,videosShown);
+  grid.innerHTML=toShow.map((v,i)=>'<div class="card video-card anim-reveal" style="animation-delay:'+(i*0.05)+'s"><div class="orn orn-tl"></div><div class="orn orn-br"></div><iframe src="//player.bilibili.com/player.html?bvid='+v.bvid+'&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width:100%;height:360px;border-radius:8px 8px 0 0"></iframe><div class="video-info"><div style="margin-bottom:6px"><span class="tag tag-video">'+v.tag+'</span></div><h4>'+v.title+'</h4><p>UP：'+v.author+' · '+v.views+'</p></div></div>').join('');
+  const btn=document.getElementById('loadMoreVideos');
+  if(btn)btn.style.display=videoLibrary.length>videosShown?'inline-block':'none';
+}
+function loadMoreVideos(){
+  videosShown+=6;
+  renderVideos();
+}
+document.addEventListener('DOMContentLoaded',function(){
+  renderVideos();
+  const btn=document.getElementById('loadMoreVideos');
+  if(btn)btn.addEventListener('click',loadMoreVideos);
+});
 
 </script>
 </body>
