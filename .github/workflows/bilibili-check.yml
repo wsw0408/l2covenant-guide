@@ -1,4 +1,4 @@
-name: B站天堂2盟约攻略视频巡检
+name: B站天堂2盟约攻略视频自动巡检
 
 on:
   schedule:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
-      contents: read
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,7 +25,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Search Bilibili videos
+      - name: Search Bilibili videos and update site
         id: search
         run: |
           python3 << 'PYEOF'
@@ -35,16 +35,7 @@ jobs:
           import re
           import os
           import sys
-
-          # 当前已知的视频BV号（网站已嵌入的视频）
-          KNOWN_BVIDS = {
-              "BV1K2jczCEAs",  # 职业攻略
-              "BV1a4jczSEWj",  # 搬砖攻略
-              "BV1NNjczCEAY",  # 新手开荒
-              "BV1jPjczqEMj",  # 装备攻略
-              "BV1pYjczZEuG",  # 职业推荐
-              "BV1Mp7ezGE6S",  # 搬砖实测
-          }
+          import time
 
           KEYWORDS = ["天堂2盟约 攻略", "天堂2盟约 搬砖", "Lineage2 盟约"]
           HEADERS = {
@@ -52,12 +43,19 @@ jobs:
               "Referer": "https://search.bilibili.com/",
           }
 
+          # 读取现有视频BV号
+          with open("index.html", "r", encoding="utf-8") as f:
+              html = f.read()
+
+          known_bvids = set(re.findall(r"bvid:'(BV\w+)'", html))
+          print(f"当前网站已有 {len(known_bvids)} 个视频: {known_bvids}")
+
           def search_bilibili(keyword):
               url = f"https://api.bilibili.com/x/web-interface/search/type?keyword={urllib.parse.quote(keyword)}&search_type=video&order=pubdate&page=1"
               req = urllib.request.Request(url, headers=HEADERS)
               try:
                   with urllib.request.urlopen(req, timeout=15) as resp:
-                      data = json.loads(resp.read().decode('utf-8'))
+                      data = json.loads(resp.read().decode("utf-8"))
                       if data.get("data", {}).get("result", []):
                           return data["data"]["result"]
               except Exception as e:
@@ -78,21 +76,77 @@ jobs:
           new_videos = []
           for item in all_results:
               bvid = item.get("bvid", "")
-              if bvid in KNOWN_BVIDS:
+              if bvid in known_bvids:
                   continue
-              # pubdate 是 unix timestamp
               pubdate = item.get("pubdate", 0)
-              # 只保留7天内发布的
-              import time
               if pubdate and (time.time() - pubdate) <= 7 * 24 * 3600:
                   new_videos.append(item)
 
-          # 按发布时间排序
+          # 按发布时间排序（最新的在前）
           new_videos.sort(key=lambda x: x.get("pubdate", 0), reverse=True)
 
           if not new_videos:
               print("NO_NEW_VIDEOS")
+              with open(os.environ.get("GITHUB_OUTPUT", "/dev/null"), "a") as f:
+                  f.write("has_new=false\n")
               sys.exit(0)
+
+          print(f"发现 {len(new_videos)} 个新视频")
+
+          # 生成新的视频数据条目（插入到数组最前面）
+          new_entries = []
+          for v in new_videos:
+              bvid = v.get("bvid", "")
+              title = v.get("title", "").replace("<em class=\"keyword\">", "").replace("</em>", "").replace("'", "\\'")
+              author = v.get("author", "").replace("'", "\\'")
+              views_str = v.get("play", "0")
+              # 尝试转换播放量为可读格式
+              try:
+                  views_num = int(views_str)
+                  if views_num >= 10000:
+                      views = f"{views_num // 10000}万播放"
+                  else:
+                      views = f"{views_num}播放"
+              except:
+                  views = views_str + "播放"
+
+              # 判断标签类型
+              tag = "攻略"
+              lower_title = title.lower()
+              if "搬砖" in lower_title:
+                  tag = "搬砖攻略"
+              elif "职业" in lower_title:
+                  tag = "职业攻略"
+              elif "副本" in lower_title or "团本" in lower_title:
+                  tag = "副本攻略"
+              elif "装备" in lower_title:
+                  tag = "装备攻略"
+              elif "新手" in lower_title or "开荒" in lower_title:
+                  tag = "新手开荒"
+              elif "氪金" in lower_title or "充值" in lower_title:
+                  tag = "氪金指南"
+
+              entry = f"  {{bvid:'{bvid}',tag:'{tag}',title:'{title}',author:'{author}',views:'{views}'}}"
+              new_entries.append(entry)
+
+          # 构建新的 videoLibrary 数组内容
+          new_entries_str = ",\n".join(new_entries)
+
+          # 在 index.html 中找到 videoLibrary 数组并插入新条目
+          # 匹配 const videoLibrary=[ 后的第一个元素
+          pattern = r"(const videoLibrary=\[\n)"
+          replacement = r"\1" + new_entries_str + ",\n"
+
+          new_html = re.sub(pattern, replacement, html, count=1)
+
+          if new_html == html:
+              print("未能成功插入新视频到 index.html")
+              sys.exit(1)
+
+          with open("index.html", "w", encoding="utf-8") as f:
+              f.write(new_html)
+
+          print(f"已更新 index.html，新增 {len(new_videos)} 个视频")
 
           # 生成报告
           lines = ["## 🔍 发现新的B站攻略视频", ""]
@@ -105,38 +159,34 @@ jobs:
               title = v.get("title", "").replace("<em class=\"keyword\">", "").replace("</em>", "")
               author = v.get("author", "")
               pubdate = time.strftime("%Y-%m-%d", time.localtime(v.get("pubdate", 0)))
-              desc = v.get("description", "")[:80]
               url = f"https://www.bilibili.com/video/{bvid}"
-              iframe = f'<iframe src="//player.bilibili.com/player.html?bvid={bvid}&page=1" width="100%" height="400" frameborder="0" allowfullscreen></iframe>'
-
               lines.append(f"### {idx}. {title}")
               lines.append(f"- **UP主**：{author}")
               lines.append(f"- **发布日期**：{pubdate}")
               lines.append(f"- **链接**：{url}")
-              lines.append(f"- **简介**：{desc}...")
-              lines.append(f"- **嵌入代码**：")
-              lines.append(f"  ```html")
-              lines.append(f"  {iframe}")
-              lines.append(f"  ```")
               lines.append("")
 
           lines.append("---")
-          lines.append("### 📋 操作指引")
-          lines.append("1. 打开 `index.html`")
-          lines.append("2. 在「视频攻略」板块添加新的 `<div class=\"video-card\">...</div>`")
-          lines.append("3. 将上述嵌入代码复制进去")
-          lines.append("4. 提交并推送到 `main` 分支")
-          lines.append("")
+          lines.append("✅ 已自动更新到网站视频库")
 
           report = "\n".join(lines)
-          # 输出到文件并设置 GitHub Actions 输出
+          with open("report.md", "w", encoding="utf-8") as f:
+              f.write(report)
+
           with open(os.environ.get("GITHUB_OUTPUT", "/dev/null"), "a") as f:
               f.write("has_new=true\n")
               f.write(f"count={len(new_videos)}\n")
-          with open("report.md", "w", encoding="utf-8") as f:
-              f.write(report)
           print(report)
           PYEOF
+
+      - name: Commit and push changes
+        if: steps.search.outputs.has_new == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "auto: 添加 $(cat report.md | grep '发现新视频数量' | sed 's/.*\*\*\([0-9]*\)\*\*.*/\1/') 个新B站攻略视频"
+          git push origin main
 
       - name: Create GitHub Issue
         if: steps.search.outputs.has_new == 'true'
