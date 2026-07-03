@@ -91,14 +91,14 @@ ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-b
 </head>
 <body>
 <div class="container">
-  <a href="../index.html" class="back-btn">&#8592; 返回首页</a>
+  <a href="javascript:void(0)" class="back-btn" onclick="parent.postMessage({action:'goHome'},'*')">&#8592; 返回首页</a>
   <div class="card" style="padding:32px">
     <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
 <div class="container">
     <div class="card" style="padding:32px">
       <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
-      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
-      <div class="breadcrumb"><a href="javascript:void(0)" onclick="showSection('home')">首页</a><span>/</span><span class="current">隐私政策</span></div>
+      <button class="back-btn" onclick="parent.postMessage({action:'goHome'},'*')">← 返回首页</button>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="parent.postMessage({action:'goHome'},'*')">首页</a><span>/</span><span class="current">隐私政策</span></div>
       <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">隐私政策</h1>
       <div class="update-time">最后更新于 2026-06-30</div>
 
