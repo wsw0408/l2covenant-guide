@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 攻略详情</title>
+    <style id="theme-vars">
+:root {
+  --l2-bg: #0a0a14;
+  --l2-bg-secondary: #0e0e1a;
+  --l2-card: rgba(20, 20, 40, 0.8);
+  --l2-card-hover: rgba(28, 28, 55, 0.9);
+  --l2-primary: #d4a44a;
+  --l2-primary-light: #e8c878;
+  --l2-primary-dark: #a87d30;
+  --l2-accent-red: #8b2252;
+  --l2-accent-purple: #4a2080;
+  --l2-accent-blue: #1e3a5f;
+  --l2-border: rgba(212, 164, 74, 0.3);
+  --l2-border-glow: rgba(212, 164, 74, 0.6);
+  --l2-foreground: #f0f0f0;
+  --l2-foreground-muted: #8888aa;
+  --l2-overlay: rgba(10, 10, 20, 0.7);
+  --gold: #d4a44a;
+  --gold-light: #e8c878;
+  --text-muted: #8888aa;
+  --l2-gradient-gold: linear-gradient(135deg, #d4a44a 0%, #e8c878 50%, #d4a44a 100%);
+  --l2-font-primary: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-font-heading: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-radius-md: 8px;
+  --l2-radius-xl: 16px;
+  --l2-transition-fast: 0.2s ease;
+}
+body {
+  background: var(--l2-bg);
+  color: var(--l2-foreground);
+  font-family: var(--l2-font-primary);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container { max-width: 800px; margin: 0 auto; }
+.card {
+  background: var(--l2-card);
+  border: 1px solid var(--l2-border);
+  border-radius: var(--l2-radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.orn { position: absolute; width: 14px; height: 14px; border: 1px solid rgba(212, 164, 74, 0.25); pointer-events: none; }
+.orn-tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+.orn-tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+.orn-bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+.orn-br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border: 1px solid var(--l2-border);
+  color: var(--l2-foreground-muted); font-size: 13px;
+  cursor: pointer; background: transparent;
+  border-radius: var(--l2-radius-md); transition: all 0.2s;
+  text-decoration: none; margin-bottom: 16px;
+}
+.back-btn:hover { border-color: var(--l2-border-glow); color: var(--l2-primary); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--l2-foreground-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--l2-foreground-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--l2-primary); }
+.breadcrumb .current { color: var(--l2-primary); }
+h1 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 24px; margin-bottom: 8px; }
+h2 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 22px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--l2-border); }
+h3 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 17px; margin: 24px 0 10px; }
+p { color: var(--l2-foreground); font-size: 14px; line-height: 1.9; margin-bottom: 14px; }
+.highlight { color: var(--l2-primary-light); font-weight: 500; }
+.tip-box { background: rgba(212, 164, 74, 0.06); border-left: 3px solid var(--l2-primary); padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+.warn-box { background: rgba(139, 38, 53, 0.08); border-left: 3px solid #8b2252; padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin: 10px 0 10px 20px; }
+ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-bottom: 4px; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 2px; margin-right: 4px; }
+.tag-hot { background: rgba(212, 164, 74, 0.12); color: var(--l2-primary-light); border: 1px solid rgba(212, 164, 74, 0.2); }
+.tag-new { background: rgba(139, 38, 53, 0.15); color: #e87986; border: 1px solid rgba(139, 38, 53, 0.25); }
+.tag-guide { background: rgba(126, 184, 208, 0.12); color: #a0d4e8; border: 1px solid rgba(126, 184, 208, 0.2); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0; }
+.data-table th { text-align: left; padding: 10px 12px; color: var(--l2-primary); font-size: 12px; border-bottom: 1px solid var(--l2-border-glow); font-weight: 500; }
+.data-table td { padding: 10px 12px; border-bottom: 1px solid rgba(212, 164, 74, 0.06); color: var(--l2-foreground); }
+.data-table .name { color: var(--l2-primary-light); font-weight: 500; }
+.data-table .s { color: var(--l2-primary); font-weight: 600; }
+.data-table .a { color: #7eb8d0; }
+.data-table .b { color: var(--l2-foreground-muted); }
+.data-table .c { color: #52525b; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-btn">&#8592; 返回首页</a>
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+<div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">装备战力</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-guide">攻略</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">装备战力完全指南：从入门到毕业</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：装备大师</span><span>2026-06-26</span><span>2.8k 阅读</span></div>
+
+      <h2>一、装备获取途径</h2>
+      <p>《天堂2：盟约》的核心特色是<span class="highlight">装备全靠打</span>。所有顶级装备都来自副本掉落、BOSS击杀和玩家打造，没有商城直接购买。</p>
+      <table class="data-table">
+        <thead><tr><th>途径</th><th>说明</th><th>推荐度</th></tr></thead>
+        <tbody>
+          <tr><td class="name">副本掉落</td><td>各等级副本通关奖励，精英怪概率掉落稀有装备</td><td class="s">★★★★★</td></tr>
+          <tr><td class="name">世界BOSS</td><td>定时刷新世界BOSS，参与即有机会获得顶级装备</td><td class="s">★★★★★</td></tr>
+          <tr><td class="name">交易行购买</td><td>自由交易系统，金币或钻石购买其他玩家装备</td><td class="a">★★★★</td></tr>
+          <tr><td class="name">打造合成</td><td>收集材料找矮人NPC打造，或低阶装备合成高阶</td><td class="a">★★★★</td></tr>
+        </tbody>
+      </table>
+
+      <h2>二、强化优先级</h2>
+      <p>资源有限的情况下，强化需要讲究优先级：</p>
+      <ul>
+        <li><span class="highlight">最高优先级：</span>武器 — 直接影响输出能力</li>
+        <li><span class="highlight">高优先级：</span>胸甲 — 提供最多防御值</li>
+        <li><span class="highlight">中优先级：</span>头盔、护腿、饰品</li>
+        <li><span class="highlight">低优先级：</span>手套、鞋子、披风</li>
+      </ul>
+
+      <h2>三、战力构成解析</h2>
+      <div style="margin:16px 0">
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span>基础属性</span><span style="color:var(--gold)">40%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width:40%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;margin-top:8px"><span>装备强化</span><span style="color:var(--gold)">30%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width:30%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;margin-top:8px"><span>技能等级</span><span style="color:var(--gold)">15%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width:15%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;margin-top:8px"><span>宝石镶嵌</span><span style="color:var(--gold)">10%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width:10%"></div></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;margin-top:8px"><span>其他（坐骑/翅膀）</span><span style="color:var(--gold)">5%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width:5%"></div></div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 攻略详情</title>
+    <style id="theme-vars">
+:root {
+  --l2-bg: #0a0a14;
+  --l2-bg-secondary: #0e0e1a;
+  --l2-card: rgba(20, 20, 40, 0.8);
+  --l2-card-hover: rgba(28, 28, 55, 0.9);
+  --l2-primary: #d4a44a;
+  --l2-primary-light: #e8c878;
+  --l2-primary-dark: #a87d30;
+  --l2-accent-red: #8b2252;
+  --l2-accent-purple: #4a2080;
+  --l2-accent-blue: #1e3a5f;
+  --l2-border: rgba(212, 164, 74, 0.3);
+  --l2-border-glow: rgba(212, 164, 74, 0.6);
+  --l2-foreground: #f0f0f0;
+  --l2-foreground-muted: #8888aa;
+  --l2-overlay: rgba(10, 10, 20, 0.7);
+  --gold: #d4a44a;
+  --gold-light: #e8c878;
+  --text-muted: #8888aa;
+  --l2-gradient-gold: linear-gradient(135deg, #d4a44a 0%, #e8c878 50%, #d4a44a 100%);
+  --l2-font-primary: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-font-heading: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-radius-md: 8px;
+  --l2-radius-xl: 16px;
+  --l2-transition-fast: 0.2s ease;
+}
+body {
+  background: var(--l2-bg);
+  color: var(--l2-foreground);
+  font-family: var(--l2-font-primary);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container { max-width: 800px; margin: 0 auto; }
+.card {
+  background: var(--l2-card);
+  border: 1px solid var(--l2-border);
+  border-radius: var(--l2-radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.orn { position: absolute; width: 14px; height: 14px; border: 1px solid rgba(212, 164, 74, 0.25); pointer-events: none; }
+.orn-tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+.orn-tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+.orn-bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+.orn-br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border: 1px solid var(--l2-border);
+  color: var(--l2-foreground-muted); font-size: 13px;
+  cursor: pointer; background: transparent;
+  border-radius: var(--l2-radius-md); transition: all 0.2s;
+  text-decoration: none; margin-bottom: 16px;
+}
+.back-btn:hover { border-color: var(--l2-border-glow); color: var(--l2-primary); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--l2-foreground-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--l2-foreground-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--l2-primary); }
+.breadcrumb .current { color: var(--l2-primary); }
+h1 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 24px; margin-bottom: 8px; }
+h2 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 22px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--l2-border); }
+h3 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 17px; margin: 24px 0 10px; }
+p { color: var(--l2-foreground); font-size: 14px; line-height: 1.9; margin-bottom: 14px; }
+.highlight { color: var(--l2-primary-light); font-weight: 500; }
+.tip-box { background: rgba(212, 164, 74, 0.06); border-left: 3px solid var(--l2-primary); padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+.warn-box { background: rgba(139, 38, 53, 0.08); border-left: 3px solid #8b2252; padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin: 10px 0 10px 20px; }
+ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-bottom: 4px; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 2px; margin-right: 4px; }
+.tag-hot { background: rgba(212, 164, 74, 0.12); color: var(--l2-primary-light); border: 1px solid rgba(212, 164, 74, 0.2); }
+.tag-new { background: rgba(139, 38, 53, 0.15); color: #e87986; border: 1px solid rgba(139, 38, 53, 0.25); }
+.tag-guide { background: rgba(126, 184, 208, 0.12); color: #a0d4e8; border: 1px solid rgba(126, 184, 208, 0.2); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0; }
+.data-table th { text-align: left; padding: 10px 12px; color: var(--l2-primary); font-size: 12px; border-bottom: 1px solid var(--l2-border-glow); font-weight: 500; }
+.data-table td { padding: 10px 12px; border-bottom: 1px solid rgba(212, 164, 74, 0.06); color: var(--l2-foreground); }
+.data-table .name { color: var(--l2-primary-light); font-weight: 500; }
+.data-table .s { color: var(--l2-primary); font-weight: 600; }
+.data-table .a { color: #7eb8d0; }
+.data-table .b { color: var(--l2-foreground-muted); }
+.data-table .c { color: #52525b; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-btn">&#8592; 返回首页</a>
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+<div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="showSection('home')">首页</a><span>/</span><span class="current">隐私政策</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">隐私政策</h1>
+      <div class="update-time">最后更新于 2026-06-30</div>
+
+      <h2>信息收集与使用目的</h2>
+      <p>本站使用以下第三方服务，可能会收集部分访问数据。我们仅在必要的范围内使用这些数据，用于改善网站体验与内容质量：</p>
+      <ul>
+        <li><strong>百度统计：</strong>用于分析网站访问量、页面热门程度和用户地域分布。所有数据均为匿名化处理，无法用于识别个人身份。</li>
+        <li><strong>Giscus（GitHub Discussions）：</strong>评论功能基于 GitHub Discussions 实现。发表评论需要登录 GitHub 账号，评论内容、用户名和头像将公开显示在评论区和关联的 GitHub 讨论帖中。</li>
+        <li><strong>GitHub Pages：</strong>本站的静态托管服务。GitHub 作为托管方可能会记录访问日志（如 IP 地址、浏览器 UA、访问时间等），用于服务运维和安全防护。</li>
+        <li><strong>Bilibili 视频嵌入：</strong>视频板块使用 Bilibili 官方 iframe 播放器。Bilibili 可能会根据用户登录状态记录视频播放行为。</li>
+      </ul>
+      <p>除上述第三方服务依法收集的数据外，<strong>本站自身不收集、不存储任何用户的个人信息</strong>（包括但不限于姓名、手机号、游戏账号等）。</p>
+
+      <h2>Cookie 使用</h2>
+      <p>本站不设置任何第一方 Cookie。第三方服务可能会使用 Cookie：</p>
+      <ul>
+        <li><strong>百度统计：</strong>使用 Cookie 区分独立访客和追踪访问路径，用户可通过浏览器设置禁用第三方 Cookie。</li>
+        <li><strong>GitHub / Giscus：</strong>登录状态由 GitHub 通过 Cookie 维持，不受本站控制。</li>
+      </ul>
+
+      <h2>用户权利</h2>
+      <p>根据《中华人民共和国个人信息保护法》及相关法规，用户享有以下权利：</p>
+      <ul>
+        <li><strong>知情权：</strong>你有权了解哪些数据被收集以及如何使用（即本政策所述内容）。</li>
+        <li><strong>访问与更正权：</strong>对于你在 GitHub Discussions 中发布的评论，可通过 GitHub 平台自行编辑或删除。</li>
+        <li><strong>删除权：</strong>如希望删除你在本站评论区的全部留言，请联系站长，我们将协助你在 GitHub Discussions 中移除相关内容。</li>
+        <li><strong>拒绝追踪权：</strong>可开启浏览器的「请勿追踪」（Do Not Track）功能，或安装广告/统计拦截插件。</li>
+      </ul>
+
+      <h2>数据安全</h2>
+      <p>我们承诺不会将任何用户数据出售、交换或提供给任何第三方用于商业目的。评论数据存储于 GitHub Discussions（美国服务器），受 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener" style="color:var(--gold-light)">GitHub 隐私声明</a> 约束。本站作为静态网站，不维护用户数据库，因此不存在用户账号密码泄露风险。</p>
+
+      <h2>第三方服务条款</h2>
+      <p>使用本站即表示你同时同意以下第三方服务的相关条款：</p>
+      <ul>
+        <li><a href="https://tongji.baidu.com/web/help/article?id=330&type=0" target="_blank" rel="noopener" style="color:var(--gold-light)">百度统计隐私政策</a></li>
+        <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener" style="color:var(--gold-light)">GitHub 隐私声明</a></li>
+        <li><a href="https://www.bilibili.com/blackboard/privacy-pc.html" target="_blank" rel="noopener" style="color:var(--gold-light)">Bilibili 隐私政策</a></li>
+      </ul>
+
+      <h2>政策更新说明</h2>
+      <p>本站保留不时修订本隐私政策的权利。当政策发生重大变更（如新增数据收集方）时，我们将在网站首页公告栏发布更新提示，并同步更新本页面的"最后更新于"日期。建议你定期查阅本页面以了解最新政策。若你继续使用本站，即视为同意修订后的条款。</p>
+
+      <h2>联系我们</h2>
+      <p>如对隐私政策有任何疑问、投诉或数据删除请求，请通过以下方式联系站长，我们将在 15 个工作日内回复：</p>
+      <p>邮箱：<strong>17839556263@163.com</strong>　|　微信：<strong>17839556263</strong></p>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>

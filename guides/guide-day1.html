@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 攻略详情</title>
+    <style id="theme-vars">
+:root {
+  --l2-bg: #0a0a14;
+  --l2-bg-secondary: #0e0e1a;
+  --l2-card: rgba(20, 20, 40, 0.8);
+  --l2-card-hover: rgba(28, 28, 55, 0.9);
+  --l2-primary: #d4a44a;
+  --l2-primary-light: #e8c878;
+  --l2-primary-dark: #a87d30;
+  --l2-accent-red: #8b2252;
+  --l2-accent-purple: #4a2080;
+  --l2-accent-blue: #1e3a5f;
+  --l2-border: rgba(212, 164, 74, 0.3);
+  --l2-border-glow: rgba(212, 164, 74, 0.6);
+  --l2-foreground: #f0f0f0;
+  --l2-foreground-muted: #8888aa;
+  --l2-overlay: rgba(10, 10, 20, 0.7);
+  --gold: #d4a44a;
+  --gold-light: #e8c878;
+  --text-muted: #8888aa;
+  --l2-gradient-gold: linear-gradient(135deg, #d4a44a 0%, #e8c878 50%, #d4a44a 100%);
+  --l2-font-primary: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-font-heading: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-radius-md: 8px;
+  --l2-radius-xl: 16px;
+  --l2-transition-fast: 0.2s ease;
+}
+body {
+  background: var(--l2-bg);
+  color: var(--l2-foreground);
+  font-family: var(--l2-font-primary);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container { max-width: 800px; margin: 0 auto; }
+.card {
+  background: var(--l2-card);
+  border: 1px solid var(--l2-border);
+  border-radius: var(--l2-radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.orn { position: absolute; width: 14px; height: 14px; border: 1px solid rgba(212, 164, 74, 0.25); pointer-events: none; }
+.orn-tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+.orn-tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+.orn-bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+.orn-br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border: 1px solid var(--l2-border);
+  color: var(--l2-foreground-muted); font-size: 13px;
+  cursor: pointer; background: transparent;
+  border-radius: var(--l2-radius-md); transition: all 0.2s;
+  text-decoration: none; margin-bottom: 16px;
+}
+.back-btn:hover { border-color: var(--l2-border-glow); color: var(--l2-primary); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--l2-foreground-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--l2-foreground-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--l2-primary); }
+.breadcrumb .current { color: var(--l2-primary); }
+h1 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 24px; margin-bottom: 8px; }
+h2 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 22px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--l2-border); }
+h3 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 17px; margin: 24px 0 10px; }
+p { color: var(--l2-foreground); font-size: 14px; line-height: 1.9; margin-bottom: 14px; }
+.highlight { color: var(--l2-primary-light); font-weight: 500; }
+.tip-box { background: rgba(212, 164, 74, 0.06); border-left: 3px solid var(--l2-primary); padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+.warn-box { background: rgba(139, 38, 53, 0.08); border-left: 3px solid #8b2252; padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin: 10px 0 10px 20px; }
+ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-bottom: 4px; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 2px; margin-right: 4px; }
+.tag-hot { background: rgba(212, 164, 74, 0.12); color: var(--l2-primary-light); border: 1px solid rgba(212, 164, 74, 0.2); }
+.tag-new { background: rgba(139, 38, 53, 0.15); color: #e87986; border: 1px solid rgba(139, 38, 53, 0.25); }
+.tag-guide { background: rgba(126, 184, 208, 0.12); color: #a0d4e8; border: 1px solid rgba(126, 184, 208, 0.2); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0; }
+.data-table th { text-align: left; padding: 10px 12px; color: var(--l2-primary); font-size: 12px; border-bottom: 1px solid var(--l2-border-glow); font-weight: 500; }
+.data-table td { padding: 10px 12px; border-bottom: 1px solid rgba(212, 164, 74, 0.06); color: var(--l2-foreground); }
+.data-table .name { color: var(--l2-primary-light); font-weight: 500; }
+.data-table .s { color: var(--l2-primary); font-weight: 600; }
+.data-table .a { color: #7eb8d0; }
+.data-table .b { color: var(--l2-foreground-muted); }
+.data-table .c { color: #52525b; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-btn">&#8592; 返回首页</a>
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+<div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">开区第一天攻略</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-hot">必看</span><span class="tag tag-new">新手</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">开区第一天保姆级攻略：4-40级关键节点</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：亚丁旅人</span><span>2026-06-28</span><span>5.8k 阅读</span></div>
+
+      <div class="tip-box"><strong style="color:var(--gold)">核心铁律：</strong>一切玩法围绕等级展开。首日目标是在晚8点前冲到40级。</div>
+
+      <h2>一、等级节点速查</h2>
+      <table class="data-table">
+        <thead><tr><th>等级</th><th>关键事件</th><th>操作建议</th></tr></thead>
+        <tbody>
+          <tr><td class="name">4级</td><td>佩戴基础技能书</td><td>按职业装备初始技能</td></tr>
+          <tr><td class="name">7级</td><td>商店开启</td><td>零氪不买；微氪买30元稀有技能；中氪买每周组合包(20个共8000砖)</td></tr>
+          <tr><td class="name">9级</td><td>守护精灵解锁</td><td>领取免费枯木精灵</td></tr>
+          <tr><td class="name">10级</td><td>功能大解锁</td><td><span class="highlight">60砖组合包必买</span>，解锁交易所/收藏/灵魂印刻/熟练度</td></tr>
+          <tr><td class="name">11级</td><td>系统赠送普通防具</td><td>佛系不强化，追求+4即可</td></tr>
+          <tr><td class="name">13级</td><td>蓝色技能书</td><td>支线无视，<span class="highlight">金币买齐蓝色技能（总价190w）</span></td></tr>
+          <tr><td class="name">15级</td><td>肖像画称号</td><td>仅单一套生效，选择当前最优</td></tr>
+          <tr><td class="name">20级</td><td>战盟+属性加点</td><td><span class="highlight">必进战盟</span>；200砖纪念包必买；武器强化+6</td></tr>
+          <tr><td class="name">21级</td><td>高速成长包</td><td>60砖高速成长包必买；世界魔剑活动必打</td></tr>
+          <tr><td class="name">25级</td><td>纪念礼包</td><td>250砖纪念礼包；队伍副本先跳过；神谕任务31级再做</td></tr>
+          <tr><td class="name">26级</td><td>防具支线（重中之重）</td><td><span class="highlight">不到26级不做防具</span>，做完直接质变</td></tr>
+          <tr><td class="name">27级</td><td>领地包</td><td>680砖狄恩领地包；经验药水叠buff</td></tr>
+          <tr><td class="name">30级</td><td>纪念包</td><td>300砖纪念包</td></tr>
+          <tr><td class="name">34级</td><td>限时传承任务</td><td><span class="highlight">必做</span>：奥林匹亚、异教徒地下墓穴</td></tr>
+          <tr><td class="name">35级</td><td>新副本解锁</td><td>水晶寺院挂1小时；安塔瑞斯洞窟挂5小时</td></tr>
+          <tr><td class="name">39级</td><td>冲刺40级</td><td>晚8点前务必冲到40级</td></tr>
+          <tr><td class="name">40级</td><td>副本优先</td><td>优先清副本；22点前买充能石多刷2小时，0点再买一次</td></tr>
+        </tbody>
+      </table>
+
+      <h2>二、氪金建议</h2>
+      <table class="data-table">
+        <thead><tr><th>项目</th><th>价格</th><th>推荐度</th></tr></thead>
+        <tbody>
+          <tr><td class="name">6元首充</td><td>6元</td><td class="s">必买</td></tr>
+          <tr><td class="name">黄金之证月卡</td><td>98元</td><td class="a">中氪以上</td></tr>
+          <tr><td class="name">白银之证月卡</td><td>30元</td><td class="a">微氪以上</td></tr>
+          <tr><td class="name">10级60砖组合包</td><td>60砖</td><td class="s">必买</td></tr>
+          <tr><td class="name">20级200砖纪念包</td><td>200砖</td><td class="s">必买</td></tr>
+          <tr><td class="name">21级高速成长包</td><td>60砖</td><td class="s">必买</td></tr>
+          <tr><td class="name">25级纪念礼包</td><td>250砖</td><td class="a">推荐</td></tr>
+          <tr><td class="name">27级狄恩领地包</td><td>680砖</td><td class="a">推荐</td></tr>
+          <tr><td class="name">30级纪念包</td><td>300砖</td><td class="a">推荐</td></tr>
+        </tbody>
+      </table>
+
+      <h2>三、日常必做</h2>
+      <ul>
+        <li>战盟BOSS：每日必打，贡献与材料核心来源</li>
+        <li>剑魔活动：限时活动，奖励丰厚</li>
+        <li>世界魔剑：21级后必打，经验与装备并重</li>
+      </ul>
+
+      <h2>四、7大避坑铁律</h2>
+      <div class="warn-box">
+        <ol style="margin:0 0 0 20px">
+          <li>不要乱花砖石——砖石是硬通货，优先买成长包与纪念包</li>
+          <li>不要提前做防具——<span class="highlight">26级前做防具=浪费资源</span></li>
+          <li>不要盲目强化——前期武器+6即可，防具佛系+4</li>
+          <li>不要沉迷副本——首日一切以升级为核心，副本可后面补</li>
+          <li>不要早做神谕——31级后再考虑神谕任务</li>
+          <li>不要忽视活动——世界魔剑、战盟BOSS经验极高</li>
+          <li>不要叠加称号——仅单一套称号生效，不要重复投入</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 攻略详情</title>
+    <style id="theme-vars">
+:root {
+  --l2-bg: #0a0a14;
+  --l2-bg-secondary: #0e0e1a;
+  --l2-card: rgba(20, 20, 40, 0.8);
+  --l2-card-hover: rgba(28, 28, 55, 0.9);
+  --l2-primary: #d4a44a;
+  --l2-primary-light: #e8c878;
+  --l2-primary-dark: #a87d30;
+  --l2-accent-red: #8b2252;
+  --l2-accent-purple: #4a2080;
+  --l2-accent-blue: #1e3a5f;
+  --l2-border: rgba(212, 164, 74, 0.3);
+  --l2-border-glow: rgba(212, 164, 74, 0.6);
+  --l2-foreground: #f0f0f0;
+  --l2-foreground-muted: #8888aa;
+  --l2-overlay: rgba(10, 10, 20, 0.7);
+  --gold: #d4a44a;
+  --gold-light: #e8c878;
+  --text-muted: #8888aa;
+  --l2-gradient-gold: linear-gradient(135deg, #d4a44a 0%, #e8c878 50%, #d4a44a 100%);
+  --l2-font-primary: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-font-heading: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-radius-md: 8px;
+  --l2-radius-xl: 16px;
+  --l2-transition-fast: 0.2s ease;
+}
+body {
+  background: var(--l2-bg);
+  color: var(--l2-foreground);
+  font-family: var(--l2-font-primary);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container { max-width: 800px; margin: 0 auto; }
+.card {
+  background: var(--l2-card);
+  border: 1px solid var(--l2-border);
+  border-radius: var(--l2-radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.orn { position: absolute; width: 14px; height: 14px; border: 1px solid rgba(212, 164, 74, 0.25); pointer-events: none; }
+.orn-tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+.orn-tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+.orn-bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+.orn-br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border: 1px solid var(--l2-border);
+  color: var(--l2-foreground-muted); font-size: 13px;
+  cursor: pointer; background: transparent;
+  border-radius: var(--l2-radius-md); transition: all 0.2s;
+  text-decoration: none; margin-bottom: 16px;
+}
+.back-btn:hover { border-color: var(--l2-border-glow); color: var(--l2-primary); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--l2-foreground-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--l2-foreground-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--l2-primary); }
+.breadcrumb .current { color: var(--l2-primary); }
+h1 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 24px; margin-bottom: 8px; }
+h2 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 22px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--l2-border); }
+h3 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 17px; margin: 24px 0 10px; }
+p { color: var(--l2-foreground); font-size: 14px; line-height: 1.9; margin-bottom: 14px; }
+.highlight { color: var(--l2-primary-light); font-weight: 500; }
+.tip-box { background: rgba(212, 164, 74, 0.06); border-left: 3px solid var(--l2-primary); padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+.warn-box { background: rgba(139, 38, 53, 0.08); border-left: 3px solid #8b2252; padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin: 10px 0 10px 20px; }
+ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-bottom: 4px; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 2px; margin-right: 4px; }
+.tag-hot { background: rgba(212, 164, 74, 0.12); color: var(--l2-primary-light); border: 1px solid rgba(212, 164, 74, 0.2); }
+.tag-new { background: rgba(139, 38, 53, 0.15); color: #e87986; border: 1px solid rgba(139, 38, 53, 0.25); }
+.tag-guide { background: rgba(126, 184, 208, 0.12); color: #a0d4e8; border: 1px solid rgba(126, 184, 208, 0.2); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0; }
+.data-table th { text-align: left; padding: 10px 12px; color: var(--l2-primary); font-size: 12px; border-bottom: 1px solid var(--l2-border-glow); font-weight: 500; }
+.data-table td { padding: 10px 12px; border-bottom: 1px solid rgba(212, 164, 74, 0.06); color: var(--l2-foreground); }
+.data-table .name { color: var(--l2-primary-light); font-weight: 500; }
+.data-table .s { color: var(--l2-primary); font-weight: 600; }
+.data-table .a { color: #7eb8d0; }
+.data-table .b { color: var(--l2-foreground-muted); }
+.data-table .c { color: #52525b; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-btn">&#8592; 返回首页</a>
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+<div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">职业指南</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-hot">热门</span><span class="tag tag-guide">攻略</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">职业指南：官方六大职业解析</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：剑与魔法</span><span>2026-06-27</span><span>3.2k 阅读</span></div>
+
+      <h2>一、为什么职业选择如此重要</h2>
+      <p>在《天堂2：盟约》中，职业选择几乎决定了你前中期的全部游戏体验。<span class="highlight">选对职业</span>意味着更快的升级速度、更高的副本通过率、更稳定的搬砖收益。</p>
+
+      <div class="tip-box"><strong style="color:var(--gold)">核心原则：</strong>平民玩家优先选择<span class="highlight">高生存、低操作依赖、组队价值高</span>的职业。生存力才是零氪玩家的第一属性。</div>
+
+      <h2>二、T0 推荐：骑士（矮人首选）</h2>
+      <p>零氪玩家的不二之选。骑士凭借<span class="highlight">单手剑+盾</span>的搭配，拥有全职业最高的生存能力。挂机不易暴毙，单人副本也能稳扎稳打通关。</p>
+      <ul>
+        <li><span class="highlight">优势：</span>高防御、高HP、自带减伤技能</li>
+        <li><span class="highlight">定位：</span>前排坦克、城战核心</li>
+        <li><span class="highlight">适合：</span>零氪玩家、挂机党、新手入门</li>
+        <li><span class="highlight">种族推荐：</span>矮人首选（体质高，盾牌防御加成）、人类次选（属性均衡）</li>
+      </ul>
+
+      <h2>三、T1 推荐：牧师（精灵首选）</h2>
+      <p>组队刚需职业。副本中牧师的地位无可替代，<span class="highlight">永远不愁找不到队伍</span>。虽然solo能力较弱，但通过组队可以获得更高效的升级体验。</p>
+      <div class="warn-box"><strong style="color:var(--crimson-light)">注意：</strong>牧师solo效率较低，如果你经常独自上线、无法固定组队，不建议作为主号。可以考虑作为副号练级。</div>
+      <ul>
+        <li><span class="highlight">种族推荐：</span>精灵首选（智慧成长高，治疗范围大）、矮人次选（体质高，生存稳）</li>
+      </ul>
+
+      <h2>四、T1 推荐：斗士</h2>
+      <p>攻守均衡的万金油选择。斗士以<span class="highlight">双刀</span>为武器，高攻速、高爆发近战输出，在中后期成长空间大。<span class="highlight">适合月卡党</span>，有一定经济基础后装备跟上，DPS表现可圈可点。</p>
+      <ul>
+        <li><span class="highlight">种族推荐：</span>黑暗精灵首选（高力量成长）、人类次选（属性均衡）</li>
+        <li><span class="highlight">加点推荐：</span>敏捷 + 力量</li>
+      </ul>
+
+      <h2>五、各职业对比总览</h2>
+      <table class="data-table">
+        <thead><tr><th>职业</th><th>武器</th><th>生存</th><th>输出</th><th>组队需求</th><th>推荐度</th></tr></thead>
+        <tbody>
+          <tr><td class="name">骑士</td><td>单手剑</td><td class="s">★★★★★</td><td>★★★</td><td class="s">★★★★★</td><td class="s">T0</td></tr>
+          <tr><td class="name">牧师</td><td>魔珠</td><td>★★★</td><td>★★</td><td class="s">★★★★★</td><td class="a">T1</td></tr>
+          <tr><td class="name">斗士</td><td>双刀</td><td>★★★★</td><td>★★★★</td><td>★★★★</td><td class="a">T1</td></tr>
+          <tr><td class="name">弓手</td><td>弓箭</td><td>★★★</td><td>★★★★</td><td>★★★★</td><td class="b">T2</td></tr>
+          <tr><td class="name">突袭者</td><td>匕首</td><td>★★</td><td class="s">★★★★★</td><td>★★★</td><td class="b">T2</td></tr>
+          <tr><td class="name">巫师</td><td>魔杖</td><td>★★★</td><td class="s">★★★★★</td><td>★★★★</td><td class="b">T2</td></tr>
+        </tbody>
+      </table>
+
+      <h2>六、技能品级与获取</h2>
+      <p>《天堂2：盟约》中的技能分为<span class="highlight">4个品级</span>，品级越高效果越强，获取难度也越大：</p>
+      <table class="data-table">
+        <thead><tr><th>品级</th><th>颜色</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td class="name">高级</td><td style="color:#4a90d9">蓝色</td><td>基础技能，可通过技能商人或任务获取</td></tr>
+          <tr><td class="name">稀有</td><td style="color:#9b59b6">紫色</td><td>较强技能，商店或副本掉落</td></tr>
+          <tr><td class="name">英雄</td><td style="color:#e91e63">粉色</td><td>强力技能，高难副本或活动产出</td></tr>
+          <tr><td class="name">传说</td><td style="color:#ff9800">橙色</td><td>只能通过配方制作或神谕之书任务获取，无法通过常规刷图/商店产出</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box"><strong style="color:var(--gold)">技能商人位置：</strong>普通技能书商人位于<span class="highlight">古鲁丁区域</span>；高级技能书商人位于<span class="highlight">狄恩、奇岩城镇</span>。建议优先买齐本职业蓝色基础技能（总价约190万金币）。</div>
+      <div class="warn-box"><strong style="color:var(--crimson-light)">重要限制：</strong>传说技能（橙色）无法通过常规刷图或商店直接产出，只能通过<span class="highlight">配方制作</span>或<span class="highlight">神谕之书任务</span>获取，请合理规划资源。</div>
+
+      <h2>七、觉醒加点建议</h2>
+      <p>50级后可进行二转觉醒，解锁全新技能树。各职业官方推荐加点路线：</p>
+      <ul>
+        <li><span class="highlight">骑士：</span>力量(主) + 体质(少量) —— 兼顾输出与坦度</li>
+        <li><span class="highlight">斗士：</span>敏捷 + 力量 —— 攻速与爆发并重</li>
+        <li><span class="highlight">弓手：</span>敏捷 —— 提升远攻、命中与暴击。需要在杂货商人处购买弓箭才能射击</li>
+        <li><span class="highlight">牧师：</span>智慧(主) + 智力(副) —— 治疗量与魔攻兼顾</li>
+        <li><span class="highlight">突袭者：</span>敏捷 —— 暴击与攻速最大化</li>
+        <li><span class="highlight">巫师：</span>智力 + 智慧 —— 魔攻与技能效果并重</li>
+      </ul>
+
+      <h2>八、六职业详细攻略导航</h2>
+      <p>点击下方卡片查看各职业的详细养成攻略。</p>
+      <div class="grid-3" style="margin-top:16px">
+        <div class="card guide-card anim-reveal" onclick="showGuide('knight')" style="padding:16px">
+          <div class="guide-card-header" style="margin-bottom:8px">
+            <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div style="flex:1"><h3 style="font-size:15px">骑士职业攻略</h3></div>
+          </div>
+          <p style="font-size:12px">前排坦核·单手剑骑士</p>
+        </div>
+        <div class="card guide-card anim-reveal" onclick="showGuide('dual')" style="padding:16px">
+          <div class="guide-card-header" style="margin-bottom:8px">
+            <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 18L18 6M6 6l12 12"/></svg></div>
+            <div style="flex:1"><h3 style="font-size:15px">斗士职业攻略</h3></div>
+          </div>
+          <p style="font-size:12px">T0近战·双刀斗士</p>
+        </div>
+        <div class="card guide-card anim-reveal" onclick="showGuide('dagger')" style="padding:16px">
+          <div class="guide-card-header" style="margin-bottom:8px">
+            <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2L4 22h16L12 2z"/></svg></div>
+            <div style="flex:1"><h3 style="font-size:15px">突袭者职业攻略</h3></div>
+          </div>
+          <p style="font-size:12px">隐身刺客·匕首突袭者</p>
+        </div>
+        <div class="card guide-card anim-reveal" onclick="showGuide('bow')" style="padding:16px">
+          <div class="guide-card-header" style="margin-bottom:8px">
+            <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></div>
+            <div style="flex:1"><h3 style="font-size:15px">弓手职业攻略</h3></div>
+          </div>
+          <p style="font-size:12px">远程风筝·弓箭弓手</p>
+        </div>
+        <div class="card guide-card anim-reveal" onclick="showGuide('staff')" style="padding:16px">
+          <div class="guide-card-header" style="margin-bottom:8px">
+            <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2l2.4 4.8L20 8l-3.8 3.6L17.6 18 12 15.2 6.4 18l1.4-6.4L4 8l5.6-1.2L12 2z"/></svg></div>
+            <div style="flex:1"><h3 style="font-size:15px">巫师职业攻略</h3></div>
+          </div>
+          <p style="font-size:12px">AOE法师·魔杖巫师</p>
+        </div>
+        <div class="card guide-card anim-reveal" onclick="showGuide('orb')" style="padding:16px">
+          <div class="guide-card-header" style="margin-bottom:8px">
+            <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></div>
+            <div style="flex:1"><h3 style="font-size:15px">牧师职业攻略</h3></div>
+          </div>
+          <p style="font-size:12px">法系双修·魔珠牧师</p>
+        </div>
+      </div>
+</ul>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>

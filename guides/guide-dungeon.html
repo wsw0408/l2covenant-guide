@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 攻略详情</title>
+    <style id="theme-vars">
+:root {
+  --l2-bg: #0a0a14;
+  --l2-bg-secondary: #0e0e1a;
+  --l2-card: rgba(20, 20, 40, 0.8);
+  --l2-card-hover: rgba(28, 28, 55, 0.9);
+  --l2-primary: #d4a44a;
+  --l2-primary-light: #e8c878;
+  --l2-primary-dark: #a87d30;
+  --l2-accent-red: #8b2252;
+  --l2-accent-purple: #4a2080;
+  --l2-accent-blue: #1e3a5f;
+  --l2-border: rgba(212, 164, 74, 0.3);
+  --l2-border-glow: rgba(212, 164, 74, 0.6);
+  --l2-foreground: #f0f0f0;
+  --l2-foreground-muted: #8888aa;
+  --l2-overlay: rgba(10, 10, 20, 0.7);
+  --gold: #d4a44a;
+  --gold-light: #e8c878;
+  --text-muted: #8888aa;
+  --l2-gradient-gold: linear-gradient(135deg, #d4a44a 0%, #e8c878 50%, #d4a44a 100%);
+  --l2-font-primary: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-font-heading: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-radius-md: 8px;
+  --l2-radius-xl: 16px;
+  --l2-transition-fast: 0.2s ease;
+}
+body {
+  background: var(--l2-bg);
+  color: var(--l2-foreground);
+  font-family: var(--l2-font-primary);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container { max-width: 800px; margin: 0 auto; }
+.card {
+  background: var(--l2-card);
+  border: 1px solid var(--l2-border);
+  border-radius: var(--l2-radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.orn { position: absolute; width: 14px; height: 14px; border: 1px solid rgba(212, 164, 74, 0.25); pointer-events: none; }
+.orn-tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+.orn-tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+.orn-bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+.orn-br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border: 1px solid var(--l2-border);
+  color: var(--l2-foreground-muted); font-size: 13px;
+  cursor: pointer; background: transparent;
+  border-radius: var(--l2-radius-md); transition: all 0.2s;
+  text-decoration: none; margin-bottom: 16px;
+}
+.back-btn:hover { border-color: var(--l2-border-glow); color: var(--l2-primary); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--l2-foreground-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--l2-foreground-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--l2-primary); }
+.breadcrumb .current { color: var(--l2-primary); }
+h1 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 24px; margin-bottom: 8px; }
+h2 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 22px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--l2-border); }
+h3 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 17px; margin: 24px 0 10px; }
+p { color: var(--l2-foreground); font-size: 14px; line-height: 1.9; margin-bottom: 14px; }
+.highlight { color: var(--l2-primary-light); font-weight: 500; }
+.tip-box { background: rgba(212, 164, 74, 0.06); border-left: 3px solid var(--l2-primary); padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+.warn-box { background: rgba(139, 38, 53, 0.08); border-left: 3px solid #8b2252; padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin: 10px 0 10px 20px; }
+ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-bottom: 4px; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 2px; margin-right: 4px; }
+.tag-hot { background: rgba(212, 164, 74, 0.12); color: var(--l2-primary-light); border: 1px solid rgba(212, 164, 74, 0.2); }
+.tag-new { background: rgba(139, 38, 53, 0.15); color: #e87986; border: 1px solid rgba(139, 38, 53, 0.25); }
+.tag-guide { background: rgba(126, 184, 208, 0.12); color: #a0d4e8; border: 1px solid rgba(126, 184, 208, 0.2); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0; }
+.data-table th { text-align: left; padding: 10px 12px; color: var(--l2-primary); font-size: 12px; border-bottom: 1px solid var(--l2-border-glow); font-weight: 500; }
+.data-table td { padding: 10px 12px; border-bottom: 1px solid rgba(212, 164, 74, 0.06); color: var(--l2-foreground); }
+.data-table .name { color: var(--l2-primary-light); font-weight: 500; }
+.data-table .s { color: var(--l2-primary); font-weight: 600; }
+.data-table .a { color: #7eb8d0; }
+.data-table .b { color: var(--l2-foreground-muted); }
+.data-table .c { color: #52525b; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-btn">&#8592; 返回首页</a>
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+<div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">副本攻略</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-hot">热门</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">副本攻略大全：BOSS机制与通关要点</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：副本通</span><span>2026-06-26</span><span>4.1k 阅读</span></div>
+
+      <h2>一、遗忘神殿（Lv.20-30）</h2>
+      <p>第一个多人副本，主要产出20-25级蓝装和大量经验。BOSS<span class="highlight">神殿守卫</span>会在血量50%时召唤小怪，优先清理小怪再集火BOSS。</p>
+      <table class="data-table">
+        <thead><tr><th>项目</th><th>详情</th></tr></thead>
+        <tbody>
+          <tr><td class="name">推荐等级</td><td>20-30级</td></tr>
+          <tr><td class="name">组队人数</td><td>3-5人</td></tr>
+          <tr><td class="name">推荐配置</td><td>1骑士+1牧师+2-3输出</td></tr>
+          <tr><td class="name">核心机制</td><td>BOSS血量50%召唤小怪群</td></tr>
+          <tr><td class="name">主要掉落</td><td>蓝色武器、防具强化石、经验卷轴</td></tr>
+        </tbody>
+      </table>
+
+      <h2>二、蚂蚁洞穴（Lv.35-45）</h2>
+      <p>35级核心装备本，产出大量30-40级紫装材料。蚁后BOSS有全屏毒雾技能，看到地面红圈立刻远离。</p>
+      <table class="data-table">
+        <thead><tr><th>项目</th><th>详情</th></tr></thead>
+        <tbody>
+          <tr><td class="name">推荐等级</td><td>35-45级</td></tr>
+          <tr><td class="name">组队人数</td><td>5人</td></tr>
+          <tr><td class="name">推荐配置</td><td>1骑士+1牧师+1弓手+2近战</td></tr>
+          <tr><td class="name">核心机制</td><td>全屏毒雾，地面红圈预警</td></tr>
+          <tr><td class="name">主要掉落</td><td>紫色装备图纸、高级强化石、稀有宝石</td></tr>
+        </tbody>
+      </table>
+
+      <h2>三、恶魔岛（Lv.50+）</h2>
+      <p>当前版本最高难度团队副本，需要血盟组织10人团队挑战。最终BOSS<span class="highlight">巴风特</span>拥有多阶段变身机制。</p>
+      <div class="tip-box"><strong style="color:var(--gold)">P1阶段：</strong>正常输出，注意躲避地面AOE。<br><strong style="color:var(--gold)">P2阶段：</strong>BOSS召唤分身，优先击杀真身（头顶有标记）。<br><strong style="color:var(--gold)">P3阶段：</strong>释放即死技能，必须打断！建议带2个骑士轮流打断。</div>
+      <table class="data-table">
+        <thead><tr><th>项目</th><th>详情</th></tr></thead>
+        <tbody>
+          <tr><td class="name">推荐等级</td><td>50级以上</td></tr>
+          <tr><td class="name">组队人数</td><td>10人团队</td></tr>
+          <tr><td class="name">推荐配置</td><td>2骑士+2牧师+3远程+3近战</td></tr>
+          <tr><td class="name">核心机制</td><td>三阶段变身，P3即死技能需打断</td></tr>
+          <tr><td class="name">主要掉落</td><td>橙色传说装备、传说强化石、坐骑碎片</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 攻略详情</title>
+    <style id="theme-vars">
+:root {
+  --l2-bg: #0a0a14;
+  --l2-bg-secondary: #0e0e1a;
+  --l2-card: rgba(20, 20, 40, 0.8);
+  --l2-card-hover: rgba(28, 28, 55, 0.9);
+  --l2-primary: #d4a44a;
+  --l2-primary-light: #e8c878;
+  --l2-primary-dark: #a87d30;
+  --l2-accent-red: #8b2252;
+  --l2-accent-purple: #4a2080;
+  --l2-accent-blue: #1e3a5f;
+  --l2-border: rgba(212, 164, 74, 0.3);
+  --l2-border-glow: rgba(212, 164, 74, 0.6);
+  --l2-foreground: #f0f0f0;
+  --l2-foreground-muted: #8888aa;
+  --l2-overlay: rgba(10, 10, 20, 0.7);
+  --gold: #d4a44a;
+  --gold-light: #e8c878;
+  --text-muted: #8888aa;
+  --l2-gradient-gold: linear-gradient(135deg, #d4a44a 0%, #e8c878 50%, #d4a44a 100%);
+  --l2-font-primary: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-font-heading: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-radius-md: 8px;
+  --l2-radius-xl: 16px;
+  --l2-transition-fast: 0.2s ease;
+}
+body {
+  background: var(--l2-bg);
+  color: var(--l2-foreground);
+  font-family: var(--l2-font-primary);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container { max-width: 800px; margin: 0 auto; }
+.card {
+  background: var(--l2-card);
+  border: 1px solid var(--l2-border);
+  border-radius: var(--l2-radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.orn { position: absolute; width: 14px; height: 14px; border: 1px solid rgba(212, 164, 74, 0.25); pointer-events: none; }
+.orn-tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+.orn-tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+.orn-bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+.orn-br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border: 1px solid var(--l2-border);
+  color: var(--l2-foreground-muted); font-size: 13px;
+  cursor: pointer; background: transparent;
+  border-radius: var(--l2-radius-md); transition: all 0.2s;
+  text-decoration: none; margin-bottom: 16px;
+}
+.back-btn:hover { border-color: var(--l2-border-glow); color: var(--l2-primary); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--l2-foreground-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--l2-foreground-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--l2-primary); }
+.breadcrumb .current { color: var(--l2-primary); }
+h1 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 24px; margin-bottom: 8px; }
+h2 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 22px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--l2-border); }
+h3 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 17px; margin: 24px 0 10px; }
+p { color: var(--l2-foreground); font-size: 14px; line-height: 1.9; margin-bottom: 14px; }
+.highlight { color: var(--l2-primary-light); font-weight: 500; }
+.tip-box { background: rgba(212, 164, 74, 0.06); border-left: 3px solid var(--l2-primary); padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+.warn-box { background: rgba(139, 38, 53, 0.08); border-left: 3px solid #8b2252; padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin: 10px 0 10px 20px; }
+ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-bottom: 4px; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 2px; margin-right: 4px; }
+.tag-hot { background: rgba(212, 164, 74, 0.12); color: var(--l2-primary-light); border: 1px solid rgba(212, 164, 74, 0.2); }
+.tag-new { background: rgba(139, 38, 53, 0.15); color: #e87986; border: 1px solid rgba(139, 38, 53, 0.25); }
+.tag-guide { background: rgba(126, 184, 208, 0.12); color: #a0d4e8; border: 1px solid rgba(126, 184, 208, 0.2); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0; }
+.data-table th { text-align: left; padding: 10px 12px; color: var(--l2-primary); font-size: 12px; border-bottom: 1px solid var(--l2-border-glow); font-weight: 500; }
+.data-table td { padding: 10px 12px; border-bottom: 1px solid rgba(212, 164, 74, 0.06); color: var(--l2-foreground); }
+.data-table .name { color: var(--l2-primary-light); font-weight: 500; }
+.data-table .s { color: var(--l2-primary); font-weight: 600; }
+.data-table .a { color: #7eb8d0; }
+.data-table .b { color: var(--l2-foreground-muted); }
+.data-table .c { color: #52525b; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-btn">&#8592; 返回首页</a>
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+<div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">卡牌系统攻略</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-new">系统</span><span class="tag tag-guide">必看</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">全职业卡牌（红卡属性）完全攻略</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：亚丁旅人</span><span>2026-06-28</span><span>3.5k 阅读</span></div>
+
+      <h2>一、六维属性说明</h2>
+      <table class="data-table">
+        <thead><tr><th>属性</th><th>效果</th><th>适用职业</th></tr></thead>
+        <tbody>
+          <tr><td class="name">力量</td><td>近战物理伤害</td><td>骑士、斗士、突袭者</td></tr>
+          <tr><td class="name">灵巧</td><td>远程物理伤害</td><td>弓手</td></tr>
+          <tr><td class="name">智力</td><td>魔法伤害</td><td>巫师、牧师</td></tr>
+          <tr><td class="name">体质</td><td>生命/防御</td><td>全职业通用</td></tr>
+          <tr><td class="name">敏捷</td><td>攻速/回避</td><td>全职业通用</td></tr>
+          <tr><td class="name">智慧</td><td>魔力/技能效果</td><td>全职业通用</td></tr>
+        </tbody>
+      </table>
+
+      <h2>二、攻速/施法速度基准表</h2>
+      <table class="data-table">
+        <thead><tr><th>品级</th><th>攻速</th><th>施法速度</th></tr></thead>
+        <tbody>
+          <tr><td class="name">普通卡</td><td>20%</td><td>10%</td></tr>
+          <tr><td class="name">高级卡</td><td>40%</td><td>20%</td></tr>
+          <tr><td class="name">稀有·天使骑士</td><td class="s">65%</td><td class="s">35%</td></tr>
+          <tr><td class="name">稀有基础卡</td><td>60%</td><td>30%</td></tr>
+          <tr><td class="name">稀有职业大师卡</td><td>65%</td><td>35%</td></tr>
+          <tr><td class="name">稀有勋爵大师</td><td class="a">70%</td><td class="a">40%</td></tr>
+          <tr><td class="name">英雄卡</td><td class="s">95-100%</td><td class="s">45-50%</td></tr>
+          <tr><td class="name">传说卡</td><td class="s">125%</td><td class="s">65%</td></tr>
+        </tbody>
+      </table>
+
+      <h2>三、两张特殊神卡</h2>
+      <table class="data-table">
+        <thead><tr><th>卡牌</th><th>获取方式</th><th>六维</th><th>攻速/施法</th></tr></thead>
+        <tbody>
+          <tr><td class="name">稀有·天使骑士</td><td>6元首充</td><td>21/21/21/18/18/18</td><td>65% / 35%</td></tr>
+          <tr><td class="name">传说·恶鬼天敌-深渊骑士</td><td>只能合成</td><td>-</td><td class="s">125% / 65%</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box"><strong style="color:var(--gold)">提示：</strong>天使骑士是<span class="highlight">全职业通用</span>的性价比之王，6元首充必拿；传说·恶鬼天敌是全服攻速天花板，只能通过合成获得。</div>
+
+      <h2>四、6职业英雄卡表</h2>
+      <table class="data-table">
+        <thead><tr><th>职业</th><th>英雄卡</th><th>获取备注</th></tr></thead>
+        <tbody>
+          <tr><td class="name">骑士</td><td>艾黎阿司、齐格海特·亚仁、席肯、库玛</td><td>齐格海特·亚仁仅抽取</td></tr>
+          <tr><td class="name">斗士</td><td>牙那、卡卡伊、巴兰克、卡因范浩特</td><td>卡卡伊仅抽取</td></tr>
+          <tr><td class="name">突袭者</td><td>史坦瑞斯、巴里司、艾丽卡·肯伟柏、肯塔仑</td><td>巴里司仅抽取</td></tr>
+          <tr><td class="name">弓手</td><td>托勒、赛瑞尔、巴纳明、埃斯恩</td><td>托勒仅抽取</td></tr>
+          <tr><td class="name">巫师</td><td>塔尔卡依、卡斯珀、梅迪纳、铁勒斯提恩</td><td>塔尔卡依仅抽取</td></tr>
+          <tr><td class="name">牧师</td><td>艾勒纳、卡地雅、鲁娜、凯沙</td><td>艾勒纳仅抽取</td></tr>
+        </tbody>
+      </table>
+
+      <h2>五、配卡方案推荐</h2>
+      <table class="data-table">
+        <thead><tr><th>玩家类型</th><th>推荐方案</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td class="name">0氪</td><td class="s">天使骑士</td><td>首充6元即可拿到，性价比无敌</td></tr>
+          <tr><td class="name">微氪</td><td class="a">稀有勋爵大师卡</td><td>攻速70%/施法40%，过渡优秀</td></tr>
+          <tr><td class="name">中氪/重氪</td><td class="s">英雄卡</td><td>攻速95-100%，毕业方向</td></tr>
+        </tbody>
+      </table>
+
+      <div class="warn-box"><strong style="color:var(--crimson-light)">注意：</strong>英雄卡中的"仅抽取"卡获取难度极高，中氪玩家优先凑齐可肝可换的3张英雄卡即可，不必强求抽取限定。</div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>

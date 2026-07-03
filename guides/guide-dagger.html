@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 攻略详情</title>
+    <style id="theme-vars">
+:root {
+  --l2-bg: #0a0a14;
+  --l2-bg-secondary: #0e0e1a;
+  --l2-card: rgba(20, 20, 40, 0.8);
+  --l2-card-hover: rgba(28, 28, 55, 0.9);
+  --l2-primary: #d4a44a;
+  --l2-primary-light: #e8c878;
+  --l2-primary-dark: #a87d30;
+  --l2-accent-red: #8b2252;
+  --l2-accent-purple: #4a2080;
+  --l2-accent-blue: #1e3a5f;
+  --l2-border: rgba(212, 164, 74, 0.3);
+  --l2-border-glow: rgba(212, 164, 74, 0.6);
+  --l2-foreground: #f0f0f0;
+  --l2-foreground-muted: #8888aa;
+  --l2-overlay: rgba(10, 10, 20, 0.7);
+  --gold: #d4a44a;
+  --gold-light: #e8c878;
+  --text-muted: #8888aa;
+  --l2-gradient-gold: linear-gradient(135deg, #d4a44a 0%, #e8c878 50%, #d4a44a 100%);
+  --l2-font-primary: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-font-heading: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-radius-md: 8px;
+  --l2-radius-xl: 16px;
+  --l2-transition-fast: 0.2s ease;
+}
+body {
+  background: var(--l2-bg);
+  color: var(--l2-foreground);
+  font-family: var(--l2-font-primary);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+.container { max-width: 800px; margin: 0 auto; }
+.card {
+  background: var(--l2-card);
+  border: 1px solid var(--l2-border);
+  border-radius: var(--l2-radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.orn { position: absolute; width: 14px; height: 14px; border: 1px solid rgba(212, 164, 74, 0.25); pointer-events: none; }
+.orn-tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+.orn-tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+.orn-bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+.orn-br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border: 1px solid var(--l2-border);
+  color: var(--l2-foreground-muted); font-size: 13px;
+  cursor: pointer; background: transparent;
+  border-radius: var(--l2-radius-md); transition: all 0.2s;
+  text-decoration: none; margin-bottom: 16px;
+}
+.back-btn:hover { border-color: var(--l2-border-glow); color: var(--l2-primary); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--l2-foreground-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--l2-foreground-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--l2-primary); }
+.breadcrumb .current { color: var(--l2-primary); }
+h1 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 24px; margin-bottom: 8px; }
+h2 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 22px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--l2-border); }
+h3 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 17px; margin: 24px 0 10px; }
+p { color: var(--l2-foreground); font-size: 14px; line-height: 1.9; margin-bottom: 14px; }
+.highlight { color: var(--l2-primary-light); font-weight: 500; }
+.tip-box { background: rgba(212, 164, 74, 0.06); border-left: 3px solid var(--l2-primary); padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+.warn-box { background: rgba(139, 38, 53, 0.08); border-left: 3px solid #8b2252; padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin: 10px 0 10px 20px; }
+ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-bottom: 4px; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 2px; margin-right: 4px; }
+.tag-hot { background: rgba(212, 164, 74, 0.12); color: var(--l2-primary-light); border: 1px solid rgba(212, 164, 74, 0.2); }
+.tag-new { background: rgba(139, 38, 53, 0.15); color: #e87986; border: 1px solid rgba(139, 38, 53, 0.25); }
+.tag-guide { background: rgba(126, 184, 208, 0.12); color: #a0d4e8; border: 1px solid rgba(126, 184, 208, 0.2); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0; }
+.data-table th { text-align: left; padding: 10px 12px; color: var(--l2-primary); font-size: 12px; border-bottom: 1px solid var(--l2-border-glow); font-weight: 500; }
+.data-table td { padding: 10px 12px; border-bottom: 1px solid rgba(212, 164, 74, 0.06); color: var(--l2-foreground); }
+.data-table .name { color: var(--l2-primary-light); font-weight: 500; }
+.data-table .s { color: var(--l2-primary); font-weight: 600; }
+.data-table .a { color: #7eb8d0; }
+.data-table .b { color: var(--l2-foreground-muted); }
+.data-table .c { color: #52525b; }
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="../index.html" class="back-btn">&#8592; 返回首页</a>
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+<div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <button class="back-btn" onclick="showSection('home')">← 返回首页</button>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="showSection('home')">首页</a><span>/</span><a href="#guides" onclick="showSection('home')">攻略专区</a><span>/</span><span class="current">突袭者职业攻略</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-new">刺客</span><span class="tag tag-guide">职业</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">突袭者职业攻略：匕首刺客·突袭者完全指南</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：亚丁旅人</span><span>2026-06-28</span><span>1.9k 阅读</span></div>
+
+      <h2>一、核心定位</h2>
+      <p>隐身偷袭刺客，毒系持续伤害、高频暴击爆发，<span class="highlight">突袭者</span>的暗杀艺术。</p>
+
+      <h2>二、属性加点</h2>
+      <table class="data-table">
+        <thead><tr><th>阶段</th><th>加点方向</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td class="name">1-50级</td><td class="s">敏捷</td><td>提升暴击、攻速与闪避</td></tr>
+          <tr><td class="name">50级后</td><td class="s">敏捷</td><td>持续强化暴击与攻速</td></tr>
+        </tbody>
+      </table>
+
+      <h2>三、种族选择</h2>
+      <table class="data-table">
+        <thead><tr><th>推荐</th><th>种族</th><th>理由</th></tr></thead>
+        <tbody>
+          <tr><td class="s">首选</td><td class="name">黑暗义士（黑暗精灵）</td><td>高暴击、高敏捷，刺客最优解</td></tr>
+          <tr><td class="a">次选</td><td class="name">人类突袭者</td><td>均衡型，操作容错更高</td></tr>
+        </tbody>
+      </table>
+
+      <h2>四、蓝色基础技能（4级）</h2>
+      <table class="data-table">
+        <thead><tr><th>技能</th><th>价格</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td class="name">极致爆破</td><td>免费</td><td>基础爆发</td></tr>
+          <tr><td class="name">移动加速</td><td>10w</td><td>追击/逃生</td></tr>
+          <tr><td class="name">凝聚力量</td><td>20w</td><td>蓄力增伤</td></tr>
+          <tr><td class="name">贪念</td><td>30w</td><td>击杀回血</td></tr>
+          <tr><td class="name">元素抵抗</td><td>30w</td><td>减元素伤</td></tr>
+          <tr><td class="name">闪避强化</td><td>50w</td><td>生存向</td></tr>
+          <tr><td class="name">凝聚机遇</td><td>50w</td><td>暴击增益</td></tr>
+        </tbody>
+      </table>
+
+      <h2>五、装备推荐</h2>
+      <table class="data-table">
+        <thead><tr><th>部位</th><th>推荐</th><th>备注</th></tr></thead>
+        <tbody>
+          <tr><td class="name">武器</td><td>20级蓝色匕首，强化+6以上</td><td>暴击属性优先</td></tr>
+          <tr><td class="name">防具</td><td>秘银重甲套（日常挂机首选）/ 卡勒米安布甲套（缺蓝应急）</td><td>重甲防猝死，布甲续航</td></tr>
+        </tbody>
+      </table>
+
+      <h2>六、技能学习优先级</h2>
+      <table class="data-table">
+        <thead><tr><th>档位</th><th>技能</th><th>来源/价格</th></tr></thead>
+        <tbody>
+          <tr><td class="s">T0必做</td><td class="name">极致之息</td><td>30元</td></tr>
+          <tr><td class="s">T1核心</td><td class="name">伪魔</td><td>550w金币</td></tr>
+          <tr><td class="a">T2重要</td><td class="name">污素匕首</td><td>350w金币</td></tr>
+          <tr><td class="a">T2重要</td><td class="name">精准凝聚</td><td>战盟兑换</td></tr>
+          <tr><td class="a">T2重要</td><td class="name">影之箭</td><td>传承任务</td></tr>
+          <tr><td class="a">T2重要</td><td class="name">爆击之痕</td><td>T0，2700w</td></tr>
+          <tr><td class="b">T3补充</td><td class="name">风之疾走、影之斗篷、凝聚破败</td><td>-</td></tr>
+          <tr><td class="c">后期</td><td class="name">隐藏（BOSS）、痛苦之刺（BOSS）</td><td>后期再学</td></tr>
+        </tbody>
+      </table>
+
+      <div class="warn-box"><strong style="color:var(--crimson-light)">避坑总结：</strong>刺客身板极脆，挂机务必穿重甲；爆击之痕虽贵但T0必做；PVP先学影之斗篷与隐藏，再考虑输出技能。</div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>
