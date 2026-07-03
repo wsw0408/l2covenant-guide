@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 怪物图鉴</title>
+    <style>
+:root { --l2-bg:#0a0a14; --l2-card:rgba(20,20,40,0.8); --l2-primary:#d4a44a; --l2-primary-light:#e8c878; --l2-border:rgba(212,164,74,0.3); --l2-border-glow:rgba(212,164,74,0.6); --l2-foreground:#f0f0f0; --l2-foreground-muted:#8888aa; --gold:#d4a44a; --gold-light:#e8c878; --text-muted:#8888aa; --l2-radius-md:8px; --l2-radius-xl:16px; }
+body { background:var(--l2-bg); color:var(--l2-foreground); font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif; margin:0; padding:20px; }
+.container { max-width:800px; margin:0 auto; }
+.card { background:var(--l2-card); border:1px solid var(--l2-border); border-radius:var(--l2-radius-xl); padding:32px; position:relative; }
+.orn { position:absolute; width:14px; height:14px; border:1px solid rgba(212,164,74,0.25); pointer-events:none; }
+.orn-tl { top:16px; left:16px; border-right:none; border-bottom:none; }
+.orn-tr { top:16px; right:16px; border-left:none; border-bottom:none; }
+.orn-bl { bottom:16px; left:16px; border-right:none; border-top:none; }
+.orn-br { bottom:16px; right:16px; border-left:none; border-top:none; }
+.back-btn { display:inline-flex; align-items:center; gap:6px; padding:8px 18px; border:1px solid var(--l2-border); color:var(--l2-foreground-muted); font-size:13px; cursor:pointer; background:transparent; border-radius:var(--l2-radius-md); text-decoration:none; margin-bottom:16px; }
+.back-btn:hover { border-color:var(--l2-border-glow); color:var(--l2-primary); }
+.breadcrumb { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--l2-foreground-muted); margin-bottom:16px; }
+.breadcrumb a { color:var(--l2-foreground-muted); text-decoration:none; }
+.breadcrumb a:hover { color:var(--l2-primary); }
+.breadcrumb .current { color:var(--l2-primary); }
+h1 { font-family:var(--l2-font-heading); color:var(--l2-primary-light); font-size:24px; margin-bottom:8px; }
+h2 { color:var(--l2-primary-light); font-size:20px; margin:24px 0 12px; padding-bottom:10px; border-bottom:1px solid var(--l2-border); }
+h3 { color:var(--l2-primary-light); font-size:17px; margin:20px 0 8px; }
+p { color:var(--l2-foreground); font-size:14px; line-height:1.9; margin-bottom:14px; }
+.highlight { color:var(--l2-primary-light); font-weight:500; }
+.tip-box { background:rgba(212,164,74,0.06); border-left:3px solid var(--l2-primary); padding:14px 18px; margin:14px 0; font-size:13px; color:var(--l2-foreground); border-radius:0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin:10px 0 10px 20px; }
+ul li { color:var(--l2-foreground); font-size:13px; line-height:1.9; margin-bottom:4px; }
+.data-table { width:100%; border-collapse:collapse; font-size:13px; margin:14px 0; }
+.data-table th { text-align:left; padding:10px 12px; color:var(--l2-primary); font-size:12px; border-bottom:1px solid var(--l2-border-glow); font-weight:500; }
+.data-table td { padding:10px 12px; border-bottom:1px solid rgba(212,164,74,0.06); color:var(--l2-foreground); }
+.data-table .name { color:var(--l2-primary-light); font-weight:500; }
+.data-table .s { color:var(--l2-primary); font-weight:600; }
+.data-table .a { color:#7eb8d0; }
+.data-table .b { color:var(--l2-foreground-muted); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+
+    <a href="javascript:history.back()" class="back-btn">&larr; 返回</a>
+    <div class="breadcrumb">
+      <a href="#">首页</a>
+      <span>/</span>
+      <a href="#">数据库</a>
+      <span>/</span>
+      <span class="current">怪物图鉴</span>
+    </div>
+
+    <h1>怪物图鉴</h1>
+    <p>亚丁大陆上栖息着形形色色的怪物，它们是冒险者获取经验和装备的主要来源。游戏中的怪物按照强度分为四个等级：<span class="highlight">普通怪物</span>——分布最广，适合日常狩猎练级；<span class="highlight">精英怪物</span>——体型更大、属性更强，击杀后掉落优秀品质装备；<span class="highlight">BOSS</span>——副本中的守关首领，需要团队合作才能击败，掉落精良及以上品质装备；<span class="highlight">世界首领</span>——游荡在亚丁大陆各处的超强力怪物，全服玩家共同讨伐，掉落传说级装备和稀有坐骑。</p>
+
+    <h2>新手区域怪物 (Lv.1-20)</h2>
+    <p>这些怪物分布在说话之岛和精灵森林周边地区，是新手玩家熟悉战斗系统和积累前期经验的最佳目标。建议Lv.1-10在说话之岛狩猎，Lv.10-20前往精灵森林深处。</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>名称</th>
+          <th>等级</th>
+          <th>区域</th>
+          <th>特点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">布赖卡兽人战士</td>
+          <td class="s">Lv.5</td>
+          <td>说话之岛外围</td>
+          <td>数量多、刷新快，适合新手初次练级，掉落基础防具</td>
+        </tr>
+        <tr>
+          <td class="name">安柏邪恶蜥蜴</td>
+          <td class="s">Lv.8</td>
+          <td>说话之岛南部</td>
+          <td>攻击带有毒素效果，建议备好解毒药剂</td>
+        </tr>
+        <tr>
+          <td class="name">突伦克食人妖</td>
+          <td class="s">Lv.12</td>
+          <td>精灵森林入口</td>
+          <td>攻击力和生命值明显提升，开始掉落<span class="s">优秀品质</span>装备</td>
+        </tr>
+        <tr>
+          <td class="name">亚丁草原狼</td>
+          <td class="s">Lv.15</td>
+          <td>精灵森林外围</td>
+          <td>移动速度快，攻击频率高，注意走位躲避</td>
+        </tr>
+        <tr>
+          <td class="name">废墟守卫</td>
+          <td class="s">Lv.18</td>
+          <td>精灵森林废墟</td>
+          <td>防御力较高，物理职业需要注意输出效率</td>
+        </tr>
+        <tr>
+          <td class="name">暗影蝙蝠</td>
+          <td class="s">Lv.20</td>
+          <td>精灵森林深处</td>
+          <td>具有<span class="s">夜行特性</span>，夜间属性增强，击杀后掉落初级饰品</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>中级区域怪物 (Lv.21-40)</h2>
+    <p>中级区域的怪物难度显著提升，单人挑战需要一定的装备基础和操作技巧。推荐组队狩猎以提高效率和安全性。Lv.21-30可在矮人矿山和暗影沼泽外围活动，Lv.30-40则需前往暗影沼泽深处和亚丁城堡周边。</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>名称</th>
+          <th>等级</th>
+          <th>区域</th>
+          <th>特点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">梅杜莎</td>
+          <td class="s">Lv.25</td>
+          <td>暗影沼泽外围</td>
+          <td>带有<span class="s">石化凝视</span>能力，被注视有概率被定身，务必背对战斗</td>
+        </tr>
+        <tr>
+          <td class="name">布赖卡兽人王</td>
+          <td class="s">Lv.28</td>
+          <td>矮人矿山深处</td>
+          <td>兽人战士的精英版本，会召唤小怪增援，优先清理召唤物</td>
+        </tr>
+        <tr>
+          <td class="name">突伦克食人妖战士</td>
+          <td class="s">Lv.32</td>
+          <td>暗影沼泽中部</td>
+          <td>攻击附带吸血效果，生命值越低伤害越高</td>
+        </tr>
+        <tr>
+          <td class="name">亚龙</td>
+          <td class="s">Lv.35</td>
+          <td>燃烧之沼入口</td>
+          <td>具有<span class="s">龙息攻击</span>，对前方扇形区域造成大量火焰伤害</td>
+        </tr>
+        <tr>
+          <td class="name">乌妖</td>
+          <td class="s">Lv.38</td>
+          <td>暗影沼泽深处</td>
+          <td>魔法攻击型怪物，会释放诅咒降低玩家属性</td>
+        </tr>
+        <tr>
+          <td class="name">岩石巨人</td>
+          <td class="s">Lv.40</td>
+          <td>帝国边境外围</td>
+          <td><span class="s">超高防御力</span>，物理伤害减免50%，建议法师职业应对</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>精英与BOSS</h2>
+    <p>精英怪物和BOSS是亚丁大陆上最具挑战性的存在，需要精心准备和团队配合才能击败。</p>
+    <h3>副本BOSS</h3>
+    <p>副本BOSS位于各等级段的副本之中，每个副本的最终区域都有一位强大的BOSS守关。击败副本BOSS可获得<span class="highlight">精良及以上品质</span>的装备、稀有制作材料和BOSS专属掉落物。部分高级副本BOSS拥有多个阶段，需要玩家在战斗中应对不同的技能机制。</p>
+    <h3>世界首领</h3>
+    <p>世界首领是游荡在亚丁大陆各地的超强力BOSS，拥有<span class="highlight">海量生命值</span>和毁灭性的技能。世界首领不定期刷新，全服玩家可以组队共同讨伐。参与击杀世界首领的玩家根据贡献度获得奖励，有几率获得<span class="highlight">传说级装备</span>、稀有坐骑和称号。世界首领的刷新时间和位置会在系统公告中提前通知，请冒险者留意。</p>
+
+    <div class="tip-box">
+      <strong>怪物刷新机制与掉落说明：</strong>普通怪物的刷新时间为<span class="highlight">3-5分钟</span>，精英怪物为<span class="highlight">10-15分钟</span>；副本BOSS在副本重置后刷新，普通副本每日可进入3次；世界首领刷新间隔为<span class="highlight">2-4小时</span>，首次击杀额外奖励更丰厚。怪物掉落采用独立概率计算，品质越高的装备掉落概率越低。击杀精英和BOSS时，建议开启<span class="highlight">幸运加成</span> buff提升稀有掉落概率。组队狩猎时，掉落物品由队伍分配规则决定，建议提前设定好分配方式以避免纠纷。
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 技能百科</title>
+    <style>
+:root { --l2-bg:#0a0a14; --l2-card:rgba(20,20,40,0.8); --l2-primary:#d4a44a; --l2-primary-light:#e8c878; --l2-border:rgba(212,164,74,0.3); --l2-border-glow:rgba(212,164,74,0.6); --l2-foreground:#f0f0f0; --l2-foreground-muted:#8888aa; --gold:#d4a44a; --gold-light:#e8c878; --text-muted:#8888aa; --l2-radius-md:8px; --l2-radius-xl:16px; }
+body { background:var(--l2-bg); color:var(--l2-foreground); font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif; margin:0; padding:20px; }
+.container { max-width:800px; margin:0 auto; }
+.card { background:var(--l2-card); border:1px solid var(--l2-border); border-radius:var(--l2-radius-xl); padding:32px; position:relative; }
+.orn { position:absolute; width:14px; height:14px; border:1px solid rgba(212,164,74,0.25); pointer-events:none; }
+.orn-tl { top:16px; left:16px; border-right:none; border-bottom:none; }
+.orn-tr { top:16px; right:16px; border-left:none; border-bottom:none; }
+.orn-bl { bottom:16px; left:16px; border-right:none; border-top:none; }
+.orn-br { bottom:16px; right:16px; border-left:none; border-top:none; }
+.back-btn { display:inline-flex; align-items:center; gap:6px; padding:8px 18px; border:1px solid var(--l2-border); color:var(--l2-foreground-muted); font-size:13px; cursor:pointer; background:transparent; border-radius:var(--l2-radius-md); text-decoration:none; margin-bottom:16px; }
+.back-btn:hover { border-color:var(--l2-border-glow); color:var(--l2-primary); }
+.breadcrumb { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--l2-foreground-muted); margin-bottom:16px; }
+.breadcrumb a { color:var(--l2-foreground-muted); text-decoration:none; }
+.breadcrumb a:hover { color:var(--l2-primary); }
+.breadcrumb .current { color:var(--l2-primary); }
+h1 { font-family:var(--l2-font-heading); color:var(--l2-primary-light); font-size:24px; margin-bottom:8px; }
+h2 { color:var(--l2-primary-light); font-size:20px; margin:24px 0 12px; padding-bottom:10px; border-bottom:1px solid var(--l2-border); }
+h3 { color:var(--l2-primary-light); font-size:17px; margin:20px 0 8px; }
+p { color:var(--l2-foreground); font-size:14px; line-height:1.9; margin-bottom:14px; }
+.highlight { color:var(--l2-primary-light); font-weight:500; }
+.tip-box { background:rgba(212,164,74,0.06); border-left:3px solid var(--l2-primary); padding:14px 18px; margin:14px 0; font-size:13px; color:var(--l2-foreground); border-radius:0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin:10px 0 10px 20px; }
+ul li { color:var(--l2-foreground); font-size:13px; line-height:1.9; margin-bottom:4px; }
+.data-table { width:100%; border-collapse:collapse; font-size:13px; margin:14px 0; }
+.data-table th { text-align:left; padding:10px 12px; color:var(--l2-primary); font-size:12px; border-bottom:1px solid var(--l2-border-glow); font-weight:500; }
+.data-table td { padding:10px 12px; border-bottom:1px solid rgba(212,164,74,0.06); color:var(--l2-foreground); }
+.data-table .name { color:var(--l2-primary-light); font-weight:500; }
+.data-table .s { color:var(--l2-primary); font-weight:600; }
+.data-table .a { color:#7eb8d0; }
+.data-table .b { color:var(--l2-foreground-muted); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+
+    <a href="javascript:history.back()" class="back-btn">&larr; 返回</a>
+    <div class="breadcrumb">
+      <a href="#">首页</a>
+      <span>/</span>
+      <a href="#">数据库</a>
+      <span>/</span>
+      <span class="current">技能百科</span>
+    </div>
+
+    <h1>技能百科</h1>
+    <p>技能系统是《天堂2：盟约》战斗体验的核心。游戏中的技能分为三大类别：<span class="highlight">主动技能</span>需要在战斗中手动施放，拥有多样化的效果和策略性；<span class="highlight">被动技能</span>始终生效，持续提升角色基础属性和战斗能力；<span class="highlight">转职技能</span>在角色完成转职后解锁，代表该职业进阶方向的核心强力技能。合理搭配技能组合、掌握释放时机，是成为高手的关键。</p>
+
+    <h2>通用技能</h2>
+    <p>通用技能是所有职业均可学习的基础技能，无论选择何种职业路线，这些技能都是前期战斗的重要保障。</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>技能名称</th>
+          <th>类型</th>
+          <th>效果</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">治愈术</td>
+          <td class="a">主动/恢复</td>
+          <td>恢复自身生命值，基础治疗效果随等级提升</td>
+        </tr>
+        <tr>
+          <td class="name">防护强化</td>
+          <td class="a">主动/增益</td>
+          <td>提升自身防御力，持续一定时间，适合冲锋前使用</td>
+        </tr>
+        <tr>
+          <td class="name">精准打击</td>
+          <td class="a">主动/攻击</td>
+          <td>对目标造成<span class="s">高命中单体伤害</span>，不易被闪避</td>
+        </tr>
+        <tr>
+          <td class="name">致命一击</td>
+          <td class="a">主动/攻击</td>
+          <td>对目标发动<span class="s">暴击攻击</span>，暴击率和暴击伤害大幅提升</td>
+        </tr>
+        <tr>
+          <td class="name">魔力回复</td>
+          <td class="a">主动/恢复</td>
+          <td>恢复自身魔力值，法师职业效果更强</td>
+        </tr>
+        <tr>
+          <td class="name">战盟召唤</td>
+          <td class="a">主动/辅助</td>
+          <td>召唤附近战盟成员传送至自身位置，团队协作必备</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>骑士技能</h2>
+    <p>骑士作为团队的前排坦克，技能以<span class="highlight">防御强化</span>和<span class="highlight">仇恨控制</span>为核心，能有效保护队友并稳定BOSS的攻击目标。</p>
+    <ul>
+      <li><span class="highlight">铁壁防御</span> — 进入防御姿态，大幅提升物理防御力和格挡率，持续时间内受到的伤害降低30%</li>
+      <li><span class="highlight">挑衅怒吼</span> — 向周围敌人发出挑衅，强制所有目标攻击自己，并降低目标攻击力</li>
+      <li><span class="highlight">圣盾打击</span> — 用盾牌猛击目标，造成伤害的同时<span class="s">击晕</span>目标2秒，是重要的控制技能</li>
+      <li><span class="highlight">群体嘲讽</span> — 大范围嘲讽技能，同时嘲讽多个目标，副本开怪的核心技能</li>
+    </ul>
+
+    <h2>斗士技能</h2>
+    <p>斗士是纯粹的物理输出职业，技能以<span class="highlight">高伤害</span>和<span class="highlight">范围攻击</span>见长，能在短时间内爆发出毁灭性的战斗力。</p>
+    <ul>
+      <li><span class="highlight">旋风斩</span> — 挥舞武器旋转攻击，对<span class="s">周围所有敌人</span>造成范围物理伤害</li>
+      <li><span class="highlight">狂暴之怒</span> — 进入狂暴状态，攻击力和攻击速度大幅提升，但防御力暂时降低</li>
+      <li><span class="highlight">双重打击</span> — 对同一目标连续发动两次强力攻击，第二次攻击伤害更高</li>
+      <li><span class="highlight">战争咆哮</span> — 发出震撼战场的咆哮，提升自身及周围队友的攻击力和暴击率</li>
+    </ul>
+
+    <h2>刺客技能</h2>
+    <p>刺客擅长<span class="highlight">潜行和暗杀</span>，技能组合灵活多变，能在敌人毫无防备时发动致命一击，是PVP中的强势职业。</p>
+    <ul>
+      <li><span class="highlight">隐身</span> — 进入隐身状态，脱离敌人的视野，隐身状态下首次攻击伤害翻倍</li>
+      <li><span class="highlight">背刺</span> — 从目标背后发动攻击，造成<span class="s">巨额伤害</span>，必须位于目标背面才能触发</li>
+      <li><span class="highlight">毒刃</span> — 为武器涂上剧毒，攻击时附加持续毒素伤害，降低目标移动速度</li>
+      <li><span class="highlight">致命刺杀</span> — 刺客的终极技能，对目标造成<span class="s">毁灭性致命伤害</span>，冷却时间较长</li>
+    </ul>
+
+    <h2>弓手技能</h2>
+    <p>弓手以<span class="highlight">远程攻击</span>为主，拥有最远的攻击距离和灵活的走位能力，既能持续输出也能控场制约敌人。</p>
+    <ul>
+      <li><span class="highlight">精准射击</span> — 瞄准目标弱点射击，造成<span class="s">高额单体伤害</span>，并降低目标防御</li>
+      <li><span class="highlight">箭雨</span> — 向目标区域射出漫天箭雨，对范围内所有敌人造成持续伤害</li>
+      <li><span class="highlight">逃脱陷阱</span> — 在脚下放置陷阱，触发后<span class="s">定身</span>敌人并解除自身控制状态</li>
+      <li><span class="highlight">穿透箭</span> — 射出穿透力极强的箭矢，可同时命中一条直线上的多个目标</li>
+    </ul>
+
+    <h2>巫师技能</h2>
+    <p>巫师掌握强大的<span class="highlight">元素魔法</span>，能释放大范围的毁灭性法术，是副本和团队战中的核心法术输出。</p>
+    <ul>
+      <li><span class="highlight">火球术</span> — 发射燃烧的火球，对目标及周围区域造成<span class="s">火焰伤害</span>，附带灼烧效果</li>
+      <li><span class="highlight">冰霜风暴</span> — 召唤冰霜风暴，对大范围敌人造成冰属性伤害并<span class="s">冻结</span>目标</li>
+      <li><span class="highlight">飓风术</span> — 释放强力飓风，将范围内敌人击退并造成持续伤害，优秀的控场技能</li>
+      <li><span class="highlight">心灵转换</span> — 将自身魔力转化为生命值或攻击力，是巫师关键的资源管理技能</li>
+    </ul>
+
+    <h2>牧师技能</h2>
+    <p>牧师是团队中不可或缺的<span class="highlight">治疗与辅助</span>职业，能为队友提供强大的续航保障和增益效果，是副本通关的基石。</p>
+    <ul>
+      <li><span class="highlight">群体治愈</span> — 为周围所有队友恢复大量生命值，是团队副本中的核心治疗技能</li>
+      <li><span class="highlight">神圣护盾</span> — 为目标施加护盾，吸收一定量伤害，持续时间内目标免疫致死伤害</li>
+      <li><span class="highlight">祝福术</span> — 为队友施加全面增益，提升攻击力、防御力和移动速度</li>
+      <li><span class="highlight">复活术</span> — 复活已阵亡的队友，恢复部分生命值和魔力值，战斗中至关重要</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>技能获取方式：</strong>大部分基础技能在角色<span class="highlight">达到对应等级时自动解锁</span>，无需额外操作；部分强力技能需要通过收集材料<span class="highlight">制作或交易技能书</span>来学习，技能书可通过副本BOSS掉落或在交易行购买；完成<span class="highlight">转职任务</span>后，将解锁全新的转职技能树，包含该职业进阶路线的专属技能。建议优先升级核心输出/治疗技能，再逐步解锁辅助和控制技能。
+    </div>
+  </div>
+</div>
+</body>
+</html>

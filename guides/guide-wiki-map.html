@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 地图导航</title>
+    <style>
+:root { --l2-bg:#0a0a14; --l2-card:rgba(20,20,40,0.8); --l2-primary:#d4a44a; --l2-primary-light:#e8c878; --l2-border:rgba(212,164,74,0.3); --l2-border-glow:rgba(212,164,74,0.6); --l2-foreground:#f0f0f0; --l2-foreground-muted:#8888aa; --gold:#d4a44a; --gold-light:#e8c878; --text-muted:#8888aa; --l2-radius-md:8px; --l2-radius-xl:16px; }
+body { background:var(--l2-bg); color:var(--l2-foreground); font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif; margin:0; padding:20px; }
+.container { max-width:800px; margin:0 auto; }
+.card { background:var(--l2-card); border:1px solid var(--l2-border); border-radius:var(--l2-radius-xl); padding:32px; position:relative; }
+.orn { position:absolute; width:14px; height:14px; border:1px solid rgba(212,164,74,0.25); pointer-events:none; }
+.orn-tl { top:16px; left:16px; border-right:none; border-bottom:none; }
+.orn-tr { top:16px; right:16px; border-left:none; border-bottom:none; }
+.orn-bl { bottom:16px; left:16px; border-right:none; border-top:none; }
+.orn-br { bottom:16px; right:16px; border-left:none; border-top:none; }
+.back-btn { display:inline-flex; align-items:center; gap:6px; padding:8px 18px; border:1px solid var(--l2-border); color:var(--l2-foreground-muted); font-size:13px; cursor:pointer; background:transparent; border-radius:var(--l2-radius-md); text-decoration:none; margin-bottom:16px; }
+.back-btn:hover { border-color:var(--l2-border-glow); color:var(--l2-primary); }
+.breadcrumb { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--l2-foreground-muted); margin-bottom:16px; }
+.breadcrumb a { color:var(--l2-foreground-muted); text-decoration:none; }
+.breadcrumb a:hover { color:var(--l2-primary); }
+.breadcrumb .current { color:var(--l2-primary); }
+h1 { font-family:var(--l2-font-heading); color:var(--l2-primary-light); font-size:24px; margin-bottom:8px; }
+h2 { color:var(--l2-primary-light); font-size:20px; margin:24px 0 12px; padding-bottom:10px; border-bottom:1px solid var(--l2-border); }
+h3 { color:var(--l2-primary-light); font-size:17px; margin:20px 0 8px; }
+p { color:var(--l2-foreground); font-size:14px; line-height:1.9; margin-bottom:14px; }
+.highlight { color:var(--l2-primary-light); font-weight:500; }
+.tip-box { background:rgba(212,164,74,0.06); border-left:3px solid var(--l2-primary); padding:14px 18px; margin:14px 0; font-size:13px; color:var(--l2-foreground); border-radius:0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin:10px 0 10px 20px; }
+ul li { color:var(--l2-foreground); font-size:13px; line-height:1.9; margin-bottom:4px; }
+.data-table { width:100%; border-collapse:collapse; font-size:13px; margin:14px 0; }
+.data-table th { text-align:left; padding:10px 12px; color:var(--l2-primary); font-size:12px; border-bottom:1px solid var(--l2-border-glow); font-weight:500; }
+.data-table td { padding:10px 12px; border-bottom:1px solid rgba(212,164,74,0.06); color:var(--l2-foreground); }
+.data-table .name { color:var(--l2-primary-light); font-weight:500; }
+.data-table .s { color:var(--l2-primary); font-weight:600; }
+.data-table .a { color:#7eb8d0; }
+.data-table .b { color:var(--l2-foreground-muted); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+
+    <a href="javascript:history.back()" class="back-btn">&larr; 返回</a>
+    <div class="breadcrumb">
+      <a href="#">首页</a>
+      <span>/</span>
+      <a href="#">数据库</a>
+      <span>/</span>
+      <span class="current">地图导航</span>
+    </div>
+
+    <h1>地图导航</h1>
+    <p>《天堂2：盟约》的世界设定在广袤的<span class="highlight">亚丁大陆</span>之上。这片古老的大陆拥有多样的地形地貌——从宁静的新手岛屿到危机四伏的龙之谷，每一片区域都有独特的生态、怪物群落和隐藏的秘密。随着等级的提升，冒险者将逐步解锁新的区域，探索更深层的地图。了解各区域的特点和推荐等级，是安全高效冒险的前提。</p>
+
+    <h2>主要区域</h2>
+    <p>亚丁大陆共划分为八个主要区域，每个区域都有其独特的地理环境和适合的等级范围。冒险者应根据自身实力选择合适的区域进行探索，避免过早进入高等级区域导致不必要的损失。</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>区域名</th>
+          <th>等级范围</th>
+          <th>描述</th>
+          <th>推荐职业</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">说话之岛</td>
+          <td class="s">Lv.1-10</td>
+          <td>新手出生地，风景优美、怪物温和，设有新手引导NPC和教学任务</td>
+          <td>全职业</td>
+        </tr>
+        <tr>
+          <td class="name">精灵森林</td>
+          <td class="s">Lv.10-20</td>
+          <td>被精灵族守护的古老森林，环境幽静，怪物以自然生物为主</td>
+          <td class="a">弓手、巫师</td>
+        </tr>
+        <tr>
+          <td class="name">矮人矿山</td>
+          <td class="s">Lv.15-25</td>
+          <td>矮人族的采矿基地，<span class="s">制作材料丰富</span>，分布大量矿物和锻造材料</td>
+          <td>全职业</td>
+        </tr>
+        <tr>
+          <td class="name">暗影沼泽</td>
+          <td class="s">Lv.25-35</td>
+          <td>笼罩在黑暗雾气中的沼泽地带，<span class="s">高风险高回报</span>，掉落品质较高</td>
+          <td class="a">斗士、骑士</td>
+        </tr>
+        <tr>
+          <td class="name">亚丁城堡</td>
+          <td class="s">Lv.30-40</td>
+          <td>亚丁大陆的政治中心，城堡外围为<span class="s">PVP区域</span>，内部为安全区和交易集市</td>
+          <td>全职业</td>
+        </tr>
+        <tr>
+          <td class="name">燃烧之沼</td>
+          <td class="s">Lv.35-45</td>
+          <td>遍布岩浆和火焰的险恶地形，<span class="s">精英怪密集</span>，适合组队挑战</td>
+          <td class="a">骑士、牧师</td>
+        </tr>
+        <tr>
+          <td class="name">帝国边境</td>
+          <td class="s">Lv.40-50</td>
+          <td>帝国势力与反叛势力交战的前线地带，分布多个<span class="s">高级副本入口</span></td>
+          <td class="a">全职业(组队)</td>
+        </tr>
+        <tr>
+          <td class="name">龙之谷</td>
+          <td class="s">Lv.50+</td>
+          <td>传说中的巨龙栖息地，亚丁大陆<span class="s">终极挑战</span>区域，世界首领刷新地</td>
+          <td class="a">全职业(精英队)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>主要城市与据点</h2>
+    <p>城市和据点是冒险者的重要活动基地，提供装备修理、物品交易、技能学习、邮件收发等核心服务功能。</p>
+    <ul>
+      <li><span class="highlight">说话之岛村庄</span> — 新手玩家的第一个据点，设有基础商店、仓库和技能训练师，完成新手任务后可免费传送至精灵森林</li>
+      <li><span class="highlight">精灵森林驿站</span> — 位于精灵森林中心的补给站，提供装备修理和药水补给，是10-20级玩家的重要中转站</li>
+      <li><span class="highlight">矮人工坊</span> — 矮人矿山中的制作中心，拥有锻造台和附魔设备，是装备制作和升级的核心地点</li>
+      <li><span class="highlight">亚丁城</span> — 亚丁大陆最大的城市，拥有完整的商业区、拍卖行、战盟总部和高级副本入口，30级以上玩家的主要活动中心</li>
+      <li><span class="highlight">边境哨站</span> — 帝国边境的前线据点，提供紧急补给和复活服务，也是高级副本集结点</li>
+      <li><span class="highlight">龙之谷入口营地</span> — 进入龙之谷前的最后一个安全区，设有高级商人和精英装备锻造台</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>地图探索建议：</strong>（1）<span class="highlight">开地图迷雾</span>——首次进入新区域时，地图会被迷雾覆盖，需要亲自探索才能揭示全地图。建议沿主干道逐步探索，避免误入高等级区域。（2）<span class="highlight">传送点解锁</span>——每个区域设有多个传送点，首次到达后自动激活，之后可通过传送系统快速到达已解锁的传送点，大幅节省跑图时间。（3）<span class="highlight">安全区提示</span>——城市和据点内部为安全区，玩家无法进行PVP战斗。在野外PVP区域（如亚丁城堡外围、龙之谷部分区域）需格外警惕其他玩家的攻击，建议开启和平模式或组队行动以确保安全。
+    </div>
+  </div>
+</div>
+</body>
+</html>

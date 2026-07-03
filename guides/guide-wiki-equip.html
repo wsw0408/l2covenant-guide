@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约攻略站 - 装备图鉴</title>
+    <style>
+:root { --l2-bg:#0a0a14; --l2-card:rgba(20,20,40,0.8); --l2-primary:#d4a44a; --l2-primary-light:#e8c878; --l2-border:rgba(212,164,74,0.3); --l2-border-glow:rgba(212,164,74,0.6); --l2-foreground:#f0f0f0; --l2-foreground-muted:#8888aa; --gold:#d4a44a; --gold-light:#e8c878; --text-muted:#8888aa; --l2-radius-md:8px; --l2-radius-xl:16px; }
+body { background:var(--l2-bg); color:var(--l2-foreground); font-family:"PingFang SC","Microsoft YaHei",Arial,sans-serif; margin:0; padding:20px; }
+.container { max-width:800px; margin:0 auto; }
+.card { background:var(--l2-card); border:1px solid var(--l2-border); border-radius:var(--l2-radius-xl); padding:32px; position:relative; }
+.orn { position:absolute; width:14px; height:14px; border:1px solid rgba(212,164,74,0.25); pointer-events:none; }
+.orn-tl { top:16px; left:16px; border-right:none; border-bottom:none; }
+.orn-tr { top:16px; right:16px; border-left:none; border-bottom:none; }
+.orn-bl { bottom:16px; left:16px; border-right:none; border-top:none; }
+.orn-br { bottom:16px; right:16px; border-left:none; border-top:none; }
+.back-btn { display:inline-flex; align-items:center; gap:6px; padding:8px 18px; border:1px solid var(--l2-border); color:var(--l2-foreground-muted); font-size:13px; cursor:pointer; background:transparent; border-radius:var(--l2-radius-md); text-decoration:none; margin-bottom:16px; }
+.back-btn:hover { border-color:var(--l2-border-glow); color:var(--l2-primary); }
+.breadcrumb { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--l2-foreground-muted); margin-bottom:16px; }
+.breadcrumb a { color:var(--l2-foreground-muted); text-decoration:none; }
+.breadcrumb a:hover { color:var(--l2-primary); }
+.breadcrumb .current { color:var(--l2-primary); }
+h1 { font-family:var(--l2-font-heading); color:var(--l2-primary-light); font-size:24px; margin-bottom:8px; }
+h2 { color:var(--l2-primary-light); font-size:20px; margin:24px 0 12px; padding-bottom:10px; border-bottom:1px solid var(--l2-border); }
+h3 { color:var(--l2-primary-light); font-size:17px; margin:20px 0 8px; }
+p { color:var(--l2-foreground); font-size:14px; line-height:1.9; margin-bottom:14px; }
+.highlight { color:var(--l2-primary-light); font-weight:500; }
+.tip-box { background:rgba(212,164,74,0.06); border-left:3px solid var(--l2-primary); padding:14px 18px; margin:14px 0; font-size:13px; color:var(--l2-foreground); border-radius:0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin:10px 0 10px 20px; }
+ul li { color:var(--l2-foreground); font-size:13px; line-height:1.9; margin-bottom:4px; }
+.data-table { width:100%; border-collapse:collapse; font-size:13px; margin:14px 0; }
+.data-table th { text-align:left; padding:10px 12px; color:var(--l2-primary); font-size:12px; border-bottom:1px solid var(--l2-border-glow); font-weight:500; }
+.data-table td { padding:10px 12px; border-bottom:1px solid rgba(212,164,74,0.06); color:var(--l2-foreground); }
+.data-table .name { color:var(--l2-primary-light); font-weight:500; }
+.data-table .s { color:var(--l2-primary); font-weight:600; }
+.data-table .a { color:#7eb8d0; }
+.data-table .b { color:var(--l2-foreground-muted); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+
+    <a href="javascript:history.back()" class="back-btn">&larr; 返回</a>
+    <div class="breadcrumb">
+      <a href="#">首页</a>
+      <span>/</span>
+      <a href="#">数据库</a>
+      <span>/</span>
+      <span class="current">装备图鉴</span>
+    </div>
+
+    <h1>装备图鉴</h1>
+    <p>《天堂2：盟约》的装备系统是角色成长的核心要素之一。游戏中的装备按<span class="highlight">品质</span>分为五个等级：<span class="highlight">普通</span>（白色）、<span class="highlight">优秀</span>（绿色）、<span class="highlight">精良</span>（蓝色）、<span class="highlight">史诗</span>（紫色）和<span class="highlight">传说</span>（橙色）。品质越高的装备不仅基础属性更强，还可能附带额外的稀有词条和套装效果。装备类型涵盖武器、防具和饰品三大类别，每个类别下又有多种细分类型，满足不同职业的战斗需求。</p>
+
+    <h2>武器篇</h2>
+    <p>武器直接决定角色的输出能力，不同职业可使用的武器类型各不相同。选择适合自身职业的武器，并搭配合适的品质和词条，是提升战斗力的关键。</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>名称</th>
+          <th>类型</th>
+          <th>适用职业</th>
+          <th>特点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">单手剑</td>
+          <td class="a">单手武器</td>
+          <td>骑士、战士</td>
+          <td>攻速均衡，<span class="s">高命中</span>，有概率触发击晕效果，适合持续输出</td>
+        </tr>
+        <tr>
+          <td class="name">双斧</td>
+          <td class="a">双手武器</td>
+          <td>斗士</td>
+          <td><span class="s">高物理攻击</span>，攻击范围较大，暴击时伤害倍率极高</td>
+        </tr>
+        <tr>
+          <td class="name">匕首</td>
+          <td class="a">单手武器</td>
+          <td>刺客</td>
+          <td>攻击速度极快，<span class="s">高致命一击</span>率，适合爆发型输出</td>
+        </tr>
+        <tr>
+          <td class="name">弓</td>
+          <td class="a">双手武器</td>
+          <td>弓手</td>
+          <td><span class="s">超远射程</span>，可在安全距离输出，附带减速效果</td>
+        </tr>
+        <tr>
+          <td class="name">法杖</td>
+          <td class="a">双手武器</td>
+          <td>巫师</td>
+          <td><span class="s">魔法增幅</span>，大幅提升魔法攻击力，缩短施法时间</td>
+        </tr>
+        <tr>
+          <td class="name">宝珠</td>
+          <td class="a">单手武器</td>
+          <td>牧师</td>
+          <td>增强<span class="s">治疗量与增益效果</span>，提升辅助能力与续航</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>防具篇</h2>
+    <p>防具为角色提供物理防御与魔法抗性，不同类型的防具适合不同战斗风格。防具分为<span class="highlight">重甲</span>、<span class="highlight">轻甲</span>和<span class="highlight">法袍</span>三大类，每种类型的防具包含5个部位。</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>类型</th>
+          <th>适用职业</th>
+          <th>特点</th>
+          <th>部位</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">重甲</td>
+          <td>骑士、战士</td>
+          <td><span class="s">物理防御极高</span>，降低受到的物理伤害，但会降低移动速度和闪避率</td>
+          <td>头盔、上衣、手套、裤子、鞋子</td>
+        </tr>
+        <tr>
+          <td class="name">轻甲</td>
+          <td>斗士、刺客、弓手</td>
+          <td>攻守兼备，提供<span class="s">暴击率和命中加成</span>，灵活性和生存力平衡</td>
+          <td>头盔、上衣、手套、裤子、鞋子</td>
+        </tr>
+        <tr>
+          <td class="name">法袍</td>
+          <td>巫师、牧师</td>
+          <td><span class="s">魔法防御和魔力恢复</span>加成，提升法术效果和施法速度</td>
+          <td>头盔、上衣、手套、裤子、鞋子</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>饰品篇</h2>
+    <p>饰品是提升角色属性的重要补充渠道，虽然不提供防御属性，但能显著增强攻击、暴击、闪避等核心能力。高品质饰品往往具有稀有词条，是角色实力跃升的关键。</p>
+    <ul>
+      <li><span class="highlight">项链</span> — 主要提供生命值和防御力加成，传说级项链可能附带吸血或免伤效果</li>
+      <li><span class="highlight">戒指</span> — 提供攻击力或魔法攻击加成，套装戒指可激活额外属性加成</li>
+      <li><span class="highlight">耳环</span> — 主要提升暴击率和暴击伤害，刺客和弓手的必备饰品</li>
+      <li><span class="highlight">护身符</span> — 提供特殊抗性和元素防御，对应对特定BOSS时的生存保障</li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>装备获取途径：</strong>装备可通过多种方式获得——<span class="highlight">野外狩猎</span>普通怪物可获得普通和优秀品质装备；<span class="highlight">副本BOSS</span>掉落精良及以上品质装备和稀有材料；<span class="highlight">首领讨伐</span>活动有机会获得史诗和传说装备；<span class="highlight">制作系统</span>可收集材料自行打造目标装备，制作出的装备还有概率触发"变异"获得额外随机词条。建议玩家根据自身等级和战力，合理规划装备获取路线。
+    </div>
+  </div>
+</div>
+</body>
+</html>
