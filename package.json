@@ -1,0 +1,16 @@
+{
+  "name": "twikoo",
+  "version": "1.6.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "twikoo-vercel": "latest"
+  },
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
