@@ -215,7 +215,21 @@
 @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
+    
+    <script>
+    function copyQQGroup() {
+        navigator.clipboard.writeText('543939936').then(function() {
+            var btn = event.target;
+            var orig = btn.textContent;
+            btn.textContent = '已复制！';
+            setTimeout(function() { btn.textContent = orig; }, 2000);
+        }).catch(function() {
+            prompt('请手动复制群号：', '543939936');
+        });
+    }
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.1/dist/index.global.js"></script>
     <script src="https://unpkg.com/lucide@1.8.0/dist/umd/lucide.min.js"></script>
     <style type="text/tailwindcss">
   @theme inline {
@@ -1166,7 +1180,7 @@
                     <p style="color: var(--l2-foreground-muted); font-size: 13px; margin-bottom: 16px;">扫码加群，与同好一起探索亚丁大陆</p>
                     <img src="assets/qq-group-qr.webp" alt="QQ群二维码" style="width: 200px; height: 200px; border-radius: var(--l2-radius-md); border: 2px solid var(--l2-border); margin-bottom: 16px;">
                     <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-                        <a href="https://qm.qq.com/q/e2VWM6rm0u" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 24px; background: var(--l2-primary); color: #0a0a14; font-size: 14px; font-weight: 600; border-radius: var(--l2-radius-md); text-decoration: none;">点击加入 QQ 群</a>
+                        <a href="javascript:void(0)" onclick="copyQQGroup()" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 24px; background: var(--l2-primary); color: #0a0a14; font-size: 14px; font-weight: 600; border-radius: var(--l2-radius-md); text-decoration: none;">复制群号 543939936</a>
                     </div>
                     <p style="color: var(--l2-foreground-muted); font-size: 12px; margin-top: 12px;">提示：若链接无法打开，请手动复制群号在 QQ 中搜索</p>
                 </div>
@@ -1179,7 +1193,7 @@
                     <div class="giscus"></div>
                     <!-- Twikoo Comments -->
                     <div id="twikoo-comments" style="margin-top: 32px;"></div>
-                    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js"></script>
+                    <script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.41/twikoo.all.min.js"></script>
                     <script>
                     twikoo.init({
                         envId: 'l2covenantguide-git-twikoo-deploy-wsw0408s-projects.vercel.app',
@@ -1862,7 +1876,7 @@
             <p style="color:var(--l2-foreground-muted);font-size:13px;margin-bottom:16px;">扫码加群，互助互答</p>
             <img src="assets/qq-group-qr.webp" alt="QQ群二维码" style="width:220px;height:220px;border-radius:var(--l2-radius-md);border:2px solid var(--l2-border);margin-bottom:16px;">
             <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
-                <a href="https://qm.qq.com/q/e2VWM6rm0u" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:10px 24px;background:var(--l2-primary);color:#0a0a14;font-size:14px;font-weight:600;border-radius:var(--l2-radius-md);text-decoration:none;">点击加入 QQ 群</a>
+                <a href="javascript:void(0)" onclick="copyQQGroup()" style="display:inline-flex;align-items:center;gap:6px;padding:10px 24px;background:var(--l2-primary);color:#0a0a14;font-size:14px;font-weight:600;border-radius:var(--l2-radius-md);text-decoration:none;">复制群号 543939936</a>
             </div>
         </div>
     </div>
