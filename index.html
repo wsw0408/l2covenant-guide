@@ -1190,10 +1190,21 @@
                 <h2 class="section-title">社区讨论</h2>
                 <p class="section-subtitle mt-2 mb-12">玩家经验交流、攻略投稿、问题求助，亚丁冒险者互助社区</p>
                 <div class="max-w-3xl mx-auto">
-                    <div class="giscus"></div>
+                    
                     <!-- Twikoo Comments -->
                     <div id="twikoo-comments" style="margin-top: 32px;"></div>
                     <script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.41/twikoo.all.min.js"></script>
+                    <script>
+                    setTimeout(function() {
+                        if (typeof twikoo !== 'undefined') {
+                            twikoo.init({
+                                envId: 'l2covenantguide-git-twikoo-deploy-wsw0408s-projects.vercel.app',
+                                el: '#twikoo-comments',
+                                lang: 'zh-CN',
+                            });
+                        }
+                    }, 500);
+                    </script>
                     <script>
                     twikoo.init({
                         envId: 'l2covenantguide-git-twikoo-deploy-wsw0408s-projects.vercel.app',
