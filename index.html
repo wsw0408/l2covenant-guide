@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>天堂2盟约攻略站</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a14'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-size='22' fill='%23d4a44a'%3Eℒ%3C/text%3E%3C/svg%3E">
+    <meta property="og:title" content="天堂2盟约攻略站 - 亚丁大陆最全面的冒险指南">
+    <meta property="og:description" content="涵盖职业攻略、装备图鉴、副本攻略、血盟PVP、搬砖指南等核心内容，全新手一站式攻略站。">
+    <meta property="og:url" content="https://l2covenantguide.cn/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="天堂2盟约攻略站">
+    <meta property="og:image" content="https://l2covenantguide.cn/assets/hero-bg.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="天堂2盟约攻略站">
+    <meta name="twitter:description" content="亚丁大陆最全面的天堂2盟约冒险指南。">
+
     <style id="theme-vars">
 /* ===== L2 盟约攻略站 — Brand Tokens ===== */
 
@@ -657,6 +668,32 @@
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"WebSite","name":"天堂2盟约攻略站","description":"亚丁大陆最全面的冒险指南","url":"https://l2covenantguide.cn/"}
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type":"Question","name":"QQ和微信互通吗？","acceptedAnswer":{"@type":"Answer","text":"互通的！"}},
+            {"@type":"Question","name":"安卓和苹果互通吗？","acceptedAnswer":{"@type":"Answer","text":"互通的！"}},
+            {"@type":"Question","name":"新手用什么职业比较好？","acceptedAnswer":{"@type":"Answer","text":"推荐双刀和魔珠，操作相对简单，前期练级效率高。"}},
+            {"@type":"Question","name":"负重是什么？怎么提升负重？","acceptedAnswer":{"@type":"Answer","text":"身上携带物品有上限，通过守护石和装备精炼提升。"}},
+            {"@type":"Question","name":"自动回蓝无效了怎么办？","acceptedAnswer":{"@type":"Answer","text":"负重超过了50%。需要清理背包。"}},
+            {"@type":"Question","name":"无法离线挂机怎么办？","acceptedAnswer":{"@type":"Answer","text":"组队情况下无法使用离线挂机，请先退出队伍。"}}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type":"ListItem","position":1,"name":"首页","item":"https://l2covenantguide.cn/"},
+            {"@type":"ListItem","position":2,"name":"攻略专区","item":"https://l2covenantguide.cn/#guides"},
+            {"@type":"ListItem","position":3,"name":"常见问答","item":"https://l2covenantguide.cn/#faq"}
+        ]
+    }
+    </script>
+
     <script>
     var _hmt = _hmt || [];
     (function() {
@@ -690,15 +727,34 @@
             </button>
         </div>
     </nav>
-    <div class="mobile-menu" id="mobileMenu" style="display:none;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,20,0.95);border-bottom:1px solid var(--l2-border);z-index:40;padding:16px 24px;">
-        <a href="javascript:void(0)" onclick="showGuide('newbie')" style="display:block;color:var(--l2-foreground-muted);padding:8px 0;font-size:14px;transition:color 0.2s;">新手启程</a>
-        <a href="#wiki" style="display:block;color:var(--l2-foreground-muted);padding:8px 0;font-size:14px;transition:color 0.2s;">查询数据库</a>
-        <a href="#ranking" style="display:block;color:var(--l2-foreground-muted);padding:8px 0;font-size:14px;transition:color 0.2s;">排行榜</a>
-        <a href="#video" style="display:block;color:var(--l2-foreground-muted);padding:8px 0;font-size:14px;transition:color 0.2s;">视频攻略</a>
+    <div class="mobile-menu" id="mobileMenu" style="display:none;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,20,0.98);border-bottom:1px solid var(--l2-border);z-index:40;padding:16px 24px;max-height:calc(100vh - 64px);overflow-y:auto;">
+        <a href="javascript:void(0)" onclick="showGuide('newbie');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">新手启程</a>
+        <a href="javascript:void(0)" onclick="showGuide('class');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">职业指南</a>
+        <a href="javascript:void(0)" onclick="showGuide('equip');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">装备战力</a>
+        <a href="javascript:void(0)" onclick="showGuide('dungeon');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">副本攻略</a>
+        <a href="javascript:void(0)" onclick="showGuide('gold');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">搬砖指南</a>
+        <a href="javascript:void(0)" onclick="showGuide('faq');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">常见问答</a>
+        <a href="#wiki" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);" onclick="closeMobileMenu()">数据库</a>
+        <a href="#ranking" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);" onclick="closeMobileMenu()">强度榜</a>
+        <a href="#videos" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);" onclick="closeMobileMenu()">视频攻略</a>
+        <a href="#community" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);" onclick="closeMobileMenu()">玩家社区</a>
+        <a href="javascript:void(0)" onclick="openQQModal();closeMobileMenu()" style="display:block;color:var(--l2-primary);padding:10px 0;font-size:15px;font-weight:600;transition:color 0.2s;">QQ群 543939936</a>
     </div>
     <style>
         .mobile-menu.open { display: block !important; }
         .mobile-menu a:hover { color: var(--l2-primary) !important; }
+    
+/* Mobile responsiveness enhancements */
+@media (max-width: 640px) {
+    .guide-card { padding: 20px 16px !important; }
+    .guide-card .icon-wrap { width: 60px !important; height: 60px !important; }
+    .guide-card .card-title { font-size: 16px !important; }
+    .guide-card .card-desc { font-size: 13px !important; }
+    .hero-overlay .l2-h1 { font-size: 32px !important; }
+    .hero-overlay .l2-body { font-size: 14px !important; }
+    .footer-title { font-size: 13px !important; }
+}
+
     </style>
 
     <div id="home-view">
@@ -707,7 +763,7 @@
         <section class="relative flex items-center justify-center min-h-screen overflow-hidden" style="background: var(--l2-bg);">
             <!-- Background image with overlay -->
             <div class="absolute inset-0">
-                <img src="assets/hero-bg.jpg" alt="" class="w-full h-full object-cover" loading="eager">
+                <img src="assets/hero-bg.webp" alt="" class="w-full h-full object-cover" loading="eager">
                 <div class="absolute inset-0" style="background: var(--l2-gradient-hero-overlay);"></div>
             </div>
 
@@ -802,7 +858,7 @@
                     <!-- Newbie Guide -->
                     <a href="javascript:void(0)" class="guide-card card-fade-up delay-1" onclick="showGuide('newbie')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-newbie.jpg" alt="新手入门" loading="lazy">
+                            <img src="assets/icon-newbie.webp" alt="新手入门" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">新手入门</h3>
                         <p class="card-desc line-clamp-2">种族选择、创建角色、前期任务，手把手带你快速上手</p>
@@ -810,7 +866,7 @@
                     <!-- Class Guide -->
                     <a href="javascript:void(0)" class="guide-card card-fade-up delay-2" onclick="showGuide('class')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-class.jpg" alt="职业指南" loading="lazy">
+                            <img src="assets/icon-class.webp" alt="职业指南" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">职业指南</h3>
                         <p class="card-desc line-clamp-2">全职业详解，技能加点、转职路线与进阶玩法</p>
@@ -818,7 +874,7 @@
                     <!-- Equipment Guide -->
                     <a href="javascript:void(0)" class="guide-card card-fade-up delay-3" onclick="showGuide('equip')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-equip.jpg" alt="装备战力" loading="lazy">
+                            <img src="assets/icon-equip.webp" alt="装备战力" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">装备战力</h3>
                         <p class="card-desc line-clamp-2">装备获取、强化升级、宝石镶嵌，战力提升全攻略</p>
@@ -826,7 +882,7 @@
                     <!-- Dungeon Guide -->
                     <a href="javascript:void(0)" class="guide-card card-fade-up delay-4" onclick="showGuide('dungeon')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-dungeon.jpg" alt="副本攻略" loading="lazy">
+                            <img src="assets/icon-dungeon.webp" alt="副本攻略" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">副本攻略</h3>
                         <p class="card-desc line-clamp-2">各副本BOSS打法、队伍配置、掉落物品一览</p>
@@ -834,7 +890,7 @@
                     <!-- PVP Guide -->
                     <a href="javascript:void(0)" class="guide-card card-fade-up delay-5" onclick="showGuide('clan')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-pvp.jpg" alt="血盟PVP" loading="lazy">
+                            <img src="assets/icon-pvp.webp" alt="血盟PVP" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">血盟PVP</h3>
                         <p class="card-desc line-clamp-2">攻城战、血盟战、野外PVP策略与战术分析</p>
@@ -842,7 +898,7 @@
                     <!-- Farm Guide -->
                     <a href="javascript:void(0)" class="guide-card card-fade-up delay-6" onclick="showGuide('gold')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-farm.jpg" alt="搬砖指南" loading="lazy">
+                            <img src="assets/icon-farm.webp" alt="搬砖指南" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">搬砖指南</h3>
                         <p class="card-desc line-clamp-2">高效刷金路线、收益最高的副本与任务推荐</p>
@@ -861,7 +917,7 @@
                     <!-- Knight -->
                     <a href="javascript:void(0)" class="class-card card-fade-up delay-1" onclick="showGuide('knight')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-knight.jpg" alt="骑士" loading="lazy">
+                            <img src="assets/icon-knight.webp" alt="骑士" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">骑士</h3>
                         <p class="card-desc line-clamp-2">坚不可摧的前线堡垒，精通剑盾与防御之道</p>
@@ -869,7 +925,7 @@
                     <!-- Warrior -->
                     <a href="javascript:void(0)" class="class-card card-fade-up delay-2" onclick="showGuide('dual')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-warrior.jpg" alt="斗士" loading="lazy">
+                            <img src="assets/icon-warrior.webp" alt="斗士" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">斗士</h3>
                         <p class="card-desc line-clamp-2">近战输出之王，双斧横扫战场无人能挡</p>
@@ -877,7 +933,7 @@
                     <!-- Assassin -->
                     <a href="javascript:void(0)" class="class-card card-fade-up delay-3" onclick="showGuide('dagger')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-assassin.jpg" alt="突袭者" loading="lazy">
+                            <img src="assets/icon-assassin.webp" alt="突袭者" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">突袭者</h3>
                         <p class="card-desc line-clamp-2">暗影中的致命杀手，一击必杀的暴击艺术</p>
@@ -885,7 +941,7 @@
                     <!-- Archer -->
                     <a href="javascript:void(0)" class="class-card card-fade-up delay-4" onclick="showGuide('bow')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-archer.jpg" alt="弓手" loading="lazy">
+                            <img src="assets/icon-archer.webp" alt="弓手" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">弓手</h3>
                         <p class="card-desc line-clamp-2">百步穿杨的远程射手，箭无虚发的精准打击</p>
@@ -893,7 +949,7 @@
                     <!-- Mage -->
                     <a href="javascript:void(0)" class="class-card card-fade-up delay-5" onclick="showGuide('staff')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-mage.jpg" alt="巫师" loading="lazy">
+                            <img src="assets/icon-mage.webp" alt="巫师" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">巫师</h3>
                         <p class="card-desc line-clamp-2">操控元素之力，毁天灭地的魔法轰炸者</p>
@@ -901,7 +957,7 @@
                     <!-- Priest -->
                     <a href="javascript:void(0)" class="class-card card-fade-up delay-6" onclick="showGuide('orb')">
                         <div class="icon-wrap">
-                            <img src="assets/icon-priest.jpg" alt="牧师" loading="lazy">
+                            <img src="assets/icon-priest.webp" alt="牧师" loading="lazy">
                         </div>
                         <h3 class="card-title truncate">牧师</h3>
                         <p class="card-desc line-clamp-2">圣光守护者，治愈队友与增益辅助的核心</p>
@@ -1101,6 +1157,21 @@
 
         <!-- ===== Community Section ===== -->
         <section id="community" class="py-16 sm:py-24 px-6" style="background: var(--l2-bg-secondary);">
+            <!-- QQ Group Quick Entry -->
+            <div class="max-w-7xl mx-auto mb-12">
+                <div style="background: var(--l2-card); border: 1px solid var(--l2-border); border-radius: var(--l2-radius-xl); padding: 32px; max-width: 600px; margin: 0 auto; text-align: center; position: relative;">
+                    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+                    <h3 style="font-size: 24px; font-weight: 700; color: var(--l2-primary-light); margin-bottom: 8px;">盟友 QQ 群</h3>
+                    <p style="color: var(--l2-foreground-muted); font-size: 14px; margin-bottom: 4px;">群号：<span style="color: var(--l2-primary-light); font-weight: 600; font-size: 20px; letter-spacing: 2px;">543939936</span></p>
+                    <p style="color: var(--l2-foreground-muted); font-size: 13px; margin-bottom: 16px;">扫码加群，与同好一起探索亚丁大陆</p>
+                    <img src="assets/qq-group-qr.webp" alt="QQ群二维码" style="width: 200px; height: 200px; border-radius: var(--l2-radius-md); border: 2px solid var(--l2-border); margin-bottom: 16px;">
+                    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://qm.qq.com/q/e2VWM6rm0u" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 24px; background: var(--l2-primary); color: #0a0a14; font-size: 14px; font-weight: 600; border-radius: var(--l2-radius-md); text-decoration: none;">点击加入 QQ 群</a>
+                    </div>
+                    <p style="color: var(--l2-foreground-muted); font-size: 12px; margin-top: 12px;">提示：若链接无法打开，请手动复制群号在 QQ 中搜索</p>
+                </div>
+            </div>
+
             <div class="max-w-7xl mx-auto">
                 <h2 class="section-title">社区讨论</h2>
                 <p class="section-subtitle mt-2 mb-12">玩家经验交流、攻略投稿、问题求助，亚丁冒险者互助社区</p>
@@ -1206,7 +1277,7 @@
 
                     <a href="#community" class="footer-link">玩家论坛</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="alert('QQ群：请添加微信福利官小盟获取')">QQ群组</a>
+                    <a href="javascript:void(0)" class="footer-link" onclick="openQQModal()">QQ群</a>
 
                     <a href="javascript:void(0)" class="footer-link" onclick="alert('Discord社区即将上线')">Discord</a>
 
@@ -1783,6 +1854,27 @@
 
     })();
 
+    </script>
+
+
+    <!-- QQ Group Modal -->
+    <div id="qqModal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:999;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+        <div style="background:var(--l2-card);border:1px solid var(--l2-border);border-radius:var(--l2-radius-xl);padding:40px;max-width:400px;width:90%;text-align:center;position:relative;">
+            <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+            <button onclick="closeQQModal()" style="position:absolute;top:12px;right:16px;background:none;border:none;color:var(--l2-foreground-muted);cursor:pointer;font-size:20px;" aria-label="关闭">✕</button>
+            <h3 style="font-size:22px;font-weight:700;color:var(--l2-primary-light);margin-bottom:8px;">盟友 QQ 群</h3>
+            <p style="color:var(--l2-foreground-muted);font-size:14px;margin-bottom:4px;">群号：<span style="color:var(--l2-primary-light);font-weight:600;font-size:22px;letter-spacing:2px;">543939936</span></p>
+            <p style="color:var(--l2-foreground-muted);font-size:13px;margin-bottom:16px;">扫码加群，互助互答</p>
+            <img src="assets/qq-group-qr.webp" alt="QQ群二维码" style="width:220px;height:220px;border-radius:var(--l2-radius-md);border:2px solid var(--l2-border);margin-bottom:16px;">
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                <a href="https://qm.qq.com/q/e2VWM6rm0u" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:10px 24px;background:var(--l2-primary);color:#0a0a14;font-size:14px;font-weight:600;border-radius:var(--l2-radius-md);text-decoration:none;">点击加入 QQ 群</a>
+            </div>
+        </div>
+    </div>
+    <script>
+    function openQQModal() { var m = document.getElementById('qqModal'); if (m) m.style.display = 'flex'; }
+    function closeQQModal() { var m = document.getElementById('qqModal'); if (m) m.style.display = 'none'; }
+    document.addEventListener('click', function(e) { var m = document.getElementById('qqModal'); if (e.target === m && m) m.style.display = 'none'; });
     </script>
 
 </body>
