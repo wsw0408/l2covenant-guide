@@ -1688,6 +1688,35 @@
 
     <script>lucide.createIcons();</script>
 
+    
+    <!-- QQ Group Floating Widget -->
+    <div id="qqFloat" style="position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:49;display:flex;flex-direction:column;align-items:center;gap:0;">
+        <div id="qqFloatBtn" onclick="toggleQQFloat()" style="width:44px;height:44px;border-radius:12px 12px 0 0;background:var(--l2-primary);color:#0a0a14;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s;border:none;font-weight:700;font-size:13px;writing-mode:vertical-lr;letter-spacing:2px;box-shadow:0 4px 16px rgba(212,164,74,0.3);">QQ群</div>
+        <div id="qqFloatPanel" style="display:none;width:220px;background:var(--l2-card);border:1px solid var(--l2-border);border-radius:0 0 12px 12px;padding:20px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,0.5);">
+            <p style="font-size:13px;color:var(--l2-primary-light);font-weight:600;margin:0 0 4px 0;">&#x76df;&#x53cb; QQ &#x7fa4;</p>
+            <p style="font-size:12px;color:var(--l2-foreground-muted);margin:0 0 8px 0;">&#x7fa4;&#x53f7;&#xff1a;<span style="color:var(--l2-primary-light);font-weight:600;font-size:15px;letter-spacing:1px;">543939936</span></p>
+            <img src="assets/qq-group-qr.png?v=2" alt="QQ&#x7fa4;" style="width:140px;height:140px;border-radius:8px;border:2px solid var(--l2-border);margin-bottom:10px;">
+            <a href="javascript:void(0)" onclick="copyQQGroup()" style="display:block;padding:8px;background:var(--l2-primary);color:#0a0a14;font-size:13px;font-weight:600;border-radius:8px;text-decoration:none;transition:opacity 0.2s;">&#x590d;&#x5236;&#x7fa4;&#x53f7;</a>
+        </div>
+    </div>
+    <style>
+    #qqFloatBtn:hover { background: var(--l2-primary-light) !important; }
+    @media (max-width: 640px) { #qqFloat { display: none !important; } }
+    </style>
+    <script>
+    function toggleQQFloat() {
+        var panel = document.getElementById('qqFloatPanel');
+        var btn = document.getElementById('qqFloatBtn');
+        if (panel.style.display === 'none' || !panel.style.display) {
+            panel.style.display = 'block';
+            btn.style.borderRadius = '12px 12px 0 0';
+        } else {
+            panel.style.display = 'none';
+            btn.style.borderRadius = '12px';
+        }
+    }
+    </script>
+
     <button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;border:1px solid var(--l2-border);background:rgba(10,10,20,0.85);color:var(--l2-primary);cursor:pointer;opacity:0;pointer-events:none;transition:all 0.3s;z-index:50;display:flex;align-items:center;justify-content:center;">
 
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 15l-6-6-6 6"/></svg>
