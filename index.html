@@ -1203,16 +1203,36 @@
                     <div id="twikoo-comments" style="margin-top: 32px;"></div>
                     <script>
                     (function() {
-                        var s = document.createElement('script');
-                        s.src = 'https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.41/twikoo.all.min.js';
-                        s.onload = function() {
-                            twikoo.init({
-                                envId: 'twikoo-deploy.vercel.app',
-                                el: '#twikoo-comments',
-                                lang: 'zh-CN',
-                            });
-                        };
-                        document.head.appendChild(s);
+                        // Try primary CDN, fallback to secondary
+                        var cdnUrls = [
+                            'https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.41/twikoo.all.min.js',
+                            'https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js',
+                            'https://unpkg.com/twikoo@1.6.41/dist/twikoo.all.min.js'
+                        ];
+                        var idx = 0;
+                        function loadNext() {
+                            if (idx >= cdnUrls.length) {
+                                document.getElementById('twikoo-comments').innerHTML = '<p style="color:var(--l2-foreground-muted);font-size:13px;text-align:center;padding:20px;">评论系统加载失败，请刷新页面重试</p>';
+                                return;
+                            }
+                            var s = document.createElement('script');
+                            s.src = cdnUrls[idx];
+                            s.onload = function() {
+                                if (typeof twikoo !== 'undefined') {
+                                    twikoo.init({
+                                        envId: 'twikoo-deploy.vercel.app',
+                                        el: '#twikoo-comments',
+                                        lang: 'zh-CN',
+                                    });
+                                }
+                            };
+                            s.onerror = function() {
+                                idx++;
+                                loadNext();
+                            };
+                            document.head.appendChild(s);
+                        }
+                        loadNext();
                     })();
                     </script>
                 </div>
