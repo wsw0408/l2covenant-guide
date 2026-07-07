@@ -1201,12 +1201,12 @@
                     
                     <!-- Twikoo Comments -->
                     <div id="                    <!-- Twikoo Comments -->
+                    <div id="                    <!-- Twikoo Comments -->
                     <div id="twikoo-comments" style="margin-top: 32px;"></div>
-                    <!-- Load Twikoo from jsdelivr (UMD build) -->
-                    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.all.min.js"></script>
+                    <!-- Twikoo loaded from local assets (no external CDN dependency) -->
+                    <script src="assets/twikoo.all.min.js"></script>
                     <script>
-                    // Wait for twikoo to be available, then init
-                    (function(){
+                    (function initTwikoo(){
                         var el = document.getElementById('twikoo-comments');
                         if (!el) return;
                         var attempts = 0;
@@ -1219,7 +1219,7 @@
                                     el: '#twikoo-comments',
                                     lang: 'zh-CN'
                                 });
-                            } else if (attempts > 60) {
+                            } else if (attempts > 40) {
                                 clearInterval(timer);
                                 el.innerHTML = '<p style="color:var(--l2-foreground-muted);font-size:13px;text-align:center;padding:40px 20px;">评论系统加载失败，请<a href="javascript:location.reload()" style="color:var(--l2-primary-light);">刷新页面</a>重试</p>';
                             }
