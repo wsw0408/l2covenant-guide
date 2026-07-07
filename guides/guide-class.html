@@ -96,11 +96,11 @@ ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-b
 <div class="container">
     <div class="card" style="padding:32px">
       <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
-      <a href="javascript:void(0)" class="back-btn" onclick="window.top.location.href='../index.html'">&#8592; 返回首页</a>
-      <div class="breadcrumb"><a href="javascript:void(0)" onclick="window.top.location.href='../index.html'">首页</a><span>/</span><a href="javascript:void(0)" onclick="window.top.location.href='../index.html'">攻略专区</a><span>/</span><span class="current">职业指南</span></div>
+      <a href="javascript:void(0)" class="back-btn" onclick="window.top.showHome()">&#8592; 返回首页</a>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="window.top.showHome()">首页</a><span>/</span><a href="javascript:void(0)" onclick="window.top.showHome()">攻略专区</a><span>/</span><span class="current">职业指南</span></div>
       <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-hot">热门</span><span class="tag tag-guide">攻略</span></div>
       <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">职业指南：官方六大职业解析</h1>
-      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：剑与魔法</span><span>2026-07-06</span><span>3.2k 阅读</span></div>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：剑与魔法</span><span>2026-07-08</span><span>3.2k 阅读</span></div>
 
       <h2>一、为什么职业选择如此重要</h2>
       <p>在《天堂2：盟约》中，职业选择几乎决定了你前中期的全部游戏体验。<span class="highlight">选对职业</span>意味着更快的升级速度、更高的副本通过率、更稳定的搬砖收益。</p>
@@ -171,42 +171,42 @@ ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-b
       <h2>八、六职业详细攻略导航</h2>
       <p>点击下方卡片查看各职业的详细养成攻略。</p>
       <div class="grid-3" style="margin-top:16px">
-        <div class="card guide-card anim-reveal" onclick="showGuide('knight')" style="padding:16px">
+        <div class="card guide-card anim-reveal" onclick="window.top.showGuide('knight')" style="padding:16px">
           <div class="guide-card-header" style="margin-bottom:8px">
             <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <div style="flex:1"><h3 style="font-size:15px">骑士职业攻略</h3></div>
           </div>
           <p style="font-size:12px">前排坦核·单手剑骑士</p>
         </div>
-        <div class="card guide-card anim-reveal" onclick="showGuide('dual')" style="padding:16px">
+        <div class="card guide-card anim-reveal" onclick="window.top.showGuide('dual')" style="padding:16px">
           <div class="guide-card-header" style="margin-bottom:8px">
             <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M6 18L18 6M6 6l12 12"/></svg></div>
             <div style="flex:1"><h3 style="font-size:15px">斗士职业攻略</h3></div>
           </div>
           <p style="font-size:12px">T0近战·双刀斗士</p>
         </div>
-        <div class="card guide-card anim-reveal" onclick="showGuide('dagger')" style="padding:16px">
+        <div class="card guide-card anim-reveal" onclick="window.top.showGuide('dagger')" style="padding:16px">
           <div class="guide-card-header" style="margin-bottom:8px">
             <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2L4 22h16L12 2z"/></svg></div>
             <div style="flex:1"><h3 style="font-size:15px">突袭者职业攻略</h3></div>
           </div>
           <p style="font-size:12px">隐身刺客·匕首突袭者</p>
         </div>
-        <div class="card guide-card anim-reveal" onclick="showGuide('bow')" style="padding:16px">
+        <div class="card guide-card anim-reveal" onclick="window.top.showGuide('bow')" style="padding:16px">
           <div class="guide-card-header" style="margin-bottom:8px">
             <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></div>
             <div style="flex:1"><h3 style="font-size:15px">弓手职业攻略</h3></div>
           </div>
           <p style="font-size:12px">远程风筝·弓箭弓手</p>
         </div>
-        <div class="card guide-card anim-reveal" onclick="showGuide('staff')" style="padding:16px">
+        <div class="card guide-card anim-reveal" onclick="window.top.showGuide('staff')" style="padding:16px">
           <div class="guide-card-header" style="margin-bottom:8px">
             <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2l2.4 4.8L20 8l-3.8 3.6L17.6 18 12 15.2 6.4 18l1.4-6.4L4 8l5.6-1.2L12 2z"/></svg></div>
             <div style="flex:1"><h3 style="font-size:15px">巫师职业攻略</h3></div>
           </div>
           <p style="font-size:12px">AOE法师·魔杖巫师</p>
         </div>
-        <div class="card guide-card anim-reveal" onclick="showGuide('orb')" style="padding:16px">
+        <div class="card guide-card anim-reveal" onclick="window.top.showGuide('orb')" style="padding:16px">
           <div class="guide-card-header" style="margin-bottom:8px">
             <div class="guide-card-icon" style="width:36px;height:36px"><svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg></div>
             <div style="flex:1"><h3 style="font-size:15px">牧师职业攻略</h3></div>
