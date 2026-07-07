@@ -829,31 +829,31 @@
                     <div id="announcementList" style="display:flex;transition:transform 0.4s ease;">
 
                         <div class="announcement-slide" style="flex:0 0 100%;display:flex;align-items:center;gap:8px;white-space:nowrap;">
-                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-14</span>
+                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-08</span>
                             <span style="color:var(--l2-foreground-muted);font-size:14px;overflow:hidden;text-overflow:ellipsis;">本周更新：弓箭手/骑士/法师等全部职业攻略已更新至最新版本</span>
                         </div>
                         <div class="announcement-slide" style="flex:0 0 100%;display:flex;align-items:center;gap:8px;white-space:nowrap;">
-                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-13</span>
+                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-07</span>
                             <span style="color:var(--l2-foreground-muted);font-size:14px;overflow:hidden;text-overflow:ellipsis;">血盟攻城战玩法详解：千人同屏激战，战术配合决定胜负</span>
                         </div>
                         <div class="announcement-slide" style="flex:0 0 100%;display:flex;align-items:center;gap:8px;white-space:nowrap;">
-                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-12</span>
-                            <span style="color:var(--l2-foreground-muted);font-size:14px;overflow:hidden;text-overflow:ellipsis;">装备强化指南：秘银重甲套为核心，前期建议优先制作</span>
+                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-06</span>
+                            <span style="color:var(--l2-foreground-muted);font-size:14px;overflow:hidden;text-overflow:ellipsis;">装备强化指南：秘银重甲为核心，前期建议优先制作</span>
                         </div>
                         <div class="announcement-slide" style="flex:0 0 100%;display:flex;align-items:center;gap:8px;white-space:nowrap;">
-                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-11</span>
+                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-05</span>
                             <span style="color:var(--l2-foreground-muted);font-size:14px;overflow:hidden;text-overflow:ellipsis;">离线挂机攻略：日程系统使用技巧与挂机点推荐</span>
                         </div>
                         <div class="announcement-slide" style="flex:0 0 100%;display:flex;align-items:center;gap:8px;white-space:nowrap;">
-                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-10</span>
-                            <span style="color:var(--l2-foreground-muted);font-size:14px;overflow:hidden;text-overflow:ellipsis;">新手必看：0-40级最速升级路线与避坑指南</span>
+                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-04</span>
+                            <span style="color:var(--l2-foreground-muted);font-size:14px;overflow:hidden;text-overflow:ellipsis;">新手必看：1-40级最速升级路线与避坑指南</span>
                         </div>
                         <div class="announcement-slide" style="flex:0 0 100%;display:flex;align-items:center;gap:8px;white-space:nowrap;">
-                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-09</span>
+                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-03</span>
                             <span style="color:var(--l2-foreground-muted);font-size:14px;overflow:hidden;text-overflow:ellipsis;">搬砖新思路：牧师/矮人双职业挂机效率对比实测</span>
                         </div>
                         <div class="announcement-slide" style="flex:0 0 100%;display:flex;align-items:center;gap:8px;white-space:nowrap;">
-                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-08</span>
+                            <span style="color:var(--l2-primary);font-size:12px;flex-shrink:0;">07-02</span>
                             <span style="color:var(--l2-foreground-muted);font-size:14px;overflow:hidden;text-overflow:ellipsis;">攻略站内容全面更新，职业/副本/装备/FAQ一网打尽</span>
                         </div>
                     </div>
@@ -1201,24 +1201,19 @@
                     
                     <!-- Twikoo Comments -->
                     <div id="twikoo-comments" style="margin-top: 32px;"></div>
-                    <script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.41/twikoo.all.min.js"></script>
                     <script>
-                    setTimeout(function() {
-                        if (typeof twikoo !== 'undefined') {
+                    (function() {
+                        var s = document.createElement('script');
+                        s.src = 'https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.41/twikoo.all.min.js';
+                        s.onload = function() {
                             twikoo.init({
                                 envId: 'twikoo-deploy.vercel.app',
                                 el: '#twikoo-comments',
                                 lang: 'zh-CN',
                             });
-                        }
-                    }, 500);
-                    </script>
-                    <script>
-                    twikoo.init({
-                        envId: 'l2covenantguide-git-twikoo-deploy-wsw0408s-projects.vercel.app',
-                        el: '#twikoo-comments',
-                        lang: 'zh-CN',
-                    });
+                        };
+                        document.head.appendChild(s);
+                    })();
                     </script>
                 </div>
             </div>
@@ -1504,6 +1499,10 @@
         if(homeView) homeView.style.display='block';
         if(guideViews) guideViews.style.display='none';
       }
+    }
+
+    function showHome(){
+      showSection('home');
     }
 
     function showSection(section){
