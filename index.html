@@ -1202,7 +1202,7 @@
                     <!-- Twikoo Comments -->
                     <div id="                    <!-- Twikoo Comments -->
                     <div id="                    <!-- Twikoo Comments -->
-                    <div id="twikoo-comments" style="margin-top: 32px;"></div>
+                    <div id="twikoo-comments" style="margin-top: 32px; min-height: 300px;"></div>
                     <script src="assets/twikoo-all-min.js"></script>
                     <script>
                     (function(){
@@ -1213,27 +1213,16 @@
                                 setTimeout(doInit, 300);
                                 return;
                             }
+                            // envId must include https:// to avoid mixed content
                             twikoo.init({
-                                envId: 'l2covenantguide-git-twikoo-deploy-wsw0408s-projects.vercel.app',
+                                envId: 'https://twikoo-deploy.vercel.app',
                                 el: '#twikoo-comments',
                                 lang: 'zh-CN'
                             }).then(function(){
                                 console.log('[Twikoo] init success');
                             }).catch(function(err){
                                 console.log('[Twikoo] init error:', err);
-                                // Retry with simpler domain
-                                setTimeout(function() {
-                                    twikoo.init({
-                                        envId: 'twikoo-deploy.vercel.app',
-                                        el: '#twikoo-comments',
-                                        lang: 'zh-CN'
-                                    }).then(function(){
-                                        console.log('[Twikoo] fallback init success');
-                                    }).catch(function(err2){
-                                        console.log('[Twikoo] fallback also failed:', err2);
-                                        el.innerHTML = '<p style="color:var(--l2-foreground-muted);font-size:13px;text-align:center;padding:40px 20px;">评论系统暂时不可用，请稍后重试</p>';
-                                    });
-                                }, 1000);
+                                el.innerHTML = '<p style="color:var(--l2-foreground-muted);font-size:13px;text-align:center;padding:40px 20px;">评论系统暂时不可用（" + err.message + "），请稍后重试</p>';
                             });
                         }
                         doInit();
