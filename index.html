@@ -1203,27 +1203,40 @@
                     <div id="                    <!-- Twikoo Comments -->
                     <div id="                    <!-- Twikoo Comments -->
                     <div id="twikoo-comments" style="margin-top: 32px;"></div>
-                    <!-- Twikoo loaded from local assets (no external CDN dependency) -->
                     <script src="assets/twikoo-all-min.js"></script>
                     <script>
-                    (function initTwikoo(){
+                    (function(){
                         var el = document.getElementById('twikoo-comments');
                         if (!el) return;
-                        var attempts = 0;
-                        var timer = setInterval(function() {
-                            attempts++;
-                            if (typeof twikoo !== 'undefined') {
-                                clearInterval(timer);
-                                twikoo.init({
-                                    envId: 'twikoo-deploy.vercel.app',
-                                    el: '#twikoo-comments',
-                                    lang: 'zh-CN'
-                                });
-                            } else if (attempts > 40) {
-                                clearInterval(timer);
-                                el.innerHTML = '<p style="color:var(--l2-foreground-muted);font-size:13px;text-align:center;padding:40px 20px;">评论系统加载失败，请<a href="javascript:location.reload()" style="color:var(--l2-primary-light);">刷新页面</a>重试</p>';
+                        function doInit() {
+                            if (typeof twikoo === 'undefined') {
+                                setTimeout(doInit, 300);
+                                return;
                             }
-                        }, 500);
+                            twikoo.init({
+                                envId: 'l2covenantguide-git-twikoo-deploy-wsw0408s-projects.vercel.app',
+                                el: '#twikoo-comments',
+                                lang: 'zh-CN'
+                            }).then(function(){
+                                console.log('[Twikoo] init success');
+                            }).catch(function(err){
+                                console.log('[Twikoo] init error:', err);
+                                // Retry with simpler domain
+                                setTimeout(function() {
+                                    twikoo.init({
+                                        envId: 'twikoo-deploy.vercel.app',
+                                        el: '#twikoo-comments',
+                                        lang: 'zh-CN'
+                                    }).then(function(){
+                                        console.log('[Twikoo] fallback init success');
+                                    }).catch(function(err2){
+                                        console.log('[Twikoo] fallback also failed:', err2);
+                                        el.innerHTML = '<p style="color:var(--l2-foreground-muted);font-size:13px;text-align:center;padding:40px 20px;">评论系统暂时不可用，请稍后重试</p>';
+                                    });
+                                }, 1000);
+                            });
+                        }
+                        doInit();
                     })();
                     </script>
                 </div>
