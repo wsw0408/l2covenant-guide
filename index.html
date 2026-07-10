@@ -730,7 +730,7 @@
                 <span class="text-xl font-bold" style="color: var(--l2-primary); font-family: var(--l2-font-heading);">L2 盟约攻略</span>
             </a>
             <div class="hidden sm:flex items-center gap-6">
-                <a href="javascript:void(0)" class="nav-link" onclick="showGuide('newbie')">新手启程</a>
+                <a href="guides/guide-newbie.html" class="nav-link" >新手启程</a>
                 <a href="#wiki" class="nav-link">查询数据库</a>
                 <a href="#ranking" class="nav-link">排行榜</a>
                 <a href="#video" class="nav-link">视频攻略</a>
@@ -745,12 +745,12 @@
         </div>
     </nav>
     <div class="mobile-menu" id="mobileMenu" style="display:none;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,20,0.98);border-bottom:1px solid var(--l2-border);z-index:40;padding:16px 24px;max-height:calc(100vh - 64px);overflow-y:auto;">
-        <a href="javascript:void(0)" onclick="showGuide('newbie');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">新手启程</a>
-        <a href="javascript:void(0)" onclick="showGuide('class');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">职业指南</a>
-        <a href="javascript:void(0)" onclick="showGuide('equip');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">装备战力</a>
-        <a href="javascript:void(0)" onclick="showGuide('dungeon');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">副本攻略</a>
-        <a href="javascript:void(0)" onclick="showGuide('gold');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">搬砖指南</a>
-        <a href="javascript:void(0)" onclick="showGuide('faq');closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">常见问答</a>
+        <a href="guides/guide-newbie.html" onclick="closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">新手启程</a>
+        <a href="guides/guide-class.html" onclick="closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">职业指南</a>
+        <a href="guides/guide-equip.html" onclick="closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">装备战力</a>
+        <a href="guides/guide-dungeon.html" onclick="closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">副本攻略</a>
+        <a href="guides/guide-gold.html" onclick="closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">搬砖指南</a>
+        <a href="guides/guide-faq.html" onclick="closeMobileMenu()" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);">常见问答</a>
         <a href="#wiki" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);" onclick="closeMobileMenu()">数据库</a>
         <a href="#ranking" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);" onclick="closeMobileMenu()">强度榜</a>
         <a href="#videos" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;transition:color 0.2s;border-bottom:1px solid rgba(255,255,255,0.04);" onclick="closeMobileMenu()">视频攻略</a>
@@ -878,7 +878,7 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Newbie Guide -->
-                    <a href="javascript:void(0)" class="guide-card card-fade-up delay-1" onclick="showGuide('newbie')">
+                    <a href="guides/guide-newbie.html" class="guide-card card-fade-up delay-1" >
                         <div class="icon-wrap">
                             <img src="assets/icon-newbie.webp" alt="新手入门" loading="lazy">
                         </div>
@@ -886,7 +886,7 @@
                         <p class="card-desc line-clamp-2">种族选择、创建角色、前期任务，手把手带你快速上手</p>
                     </a>
                     <!-- Class Guide -->
-                    <a href="javascript:void(0)" class="guide-card card-fade-up delay-2" onclick="showGuide('class')">
+                    <a href="guides/guide-class.html" class="guide-card card-fade-up delay-2" >
                         <div class="icon-wrap">
                             <img src="assets/icon-class.webp" alt="职业指南" loading="lazy">
                         </div>
@@ -894,7 +894,7 @@
                         <p class="card-desc line-clamp-2">全职业详解，技能加点、转职路线与进阶玩法</p>
                     </a>
                     <!-- Equipment Guide -->
-                    <a href="javascript:void(0)" class="guide-card card-fade-up delay-3" onclick="showGuide('equip')">
+                    <a href="guides/guide-equip.html" class="guide-card card-fade-up delay-3" >
                         <div class="icon-wrap">
                             <img src="assets/icon-equip.webp" alt="装备战力" loading="lazy">
                         </div>
@@ -902,7 +902,7 @@
                         <p class="card-desc line-clamp-2">装备获取、强化升级、宝石镶嵌，战力提升全攻略</p>
                     </a>
                     <!-- Dungeon Guide -->
-                    <a href="javascript:void(0)" class="guide-card card-fade-up delay-4" onclick="showGuide('dungeon')">
+                    <a href="guides/guide-dungeon.html" class="guide-card card-fade-up delay-4" >
                         <div class="icon-wrap">
                             <img src="assets/icon-dungeon.webp" alt="副本攻略" loading="lazy">
                         </div>
@@ -910,7 +910,7 @@
                         <p class="card-desc line-clamp-2">各副本BOSS打法、队伍配置、掉落物品一览</p>
                     </a>
                     <!-- PVP Guide -->
-                    <a href="javascript:void(0)" class="guide-card card-fade-up delay-5" onclick="showGuide('clan')">
+                    <a href="guides/guide-clan.html" class="guide-card card-fade-up delay-5" >
                         <div class="icon-wrap">
                             <img src="assets/icon-pvp.webp" alt="血盟PVP" loading="lazy">
                         </div>
@@ -918,7 +918,7 @@
                         <p class="card-desc line-clamp-2">攻城战、血盟战、野外PVP策略与战术分析</p>
                     </a>
                     <!-- Farm Guide -->
-                    <a href="javascript:void(0)" class="guide-card card-fade-up delay-6" onclick="showGuide('gold')">
+                    <a href="guides/guide-gold.html" class="guide-card card-fade-up delay-6" >
                         <div class="icon-wrap">
                             <img src="assets/icon-farm.webp" alt="搬砖指南" loading="lazy">
                         </div>
@@ -937,7 +937,7 @@
 
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
                     <!-- Knight -->
-                    <a href="javascript:void(0)" class="class-card card-fade-up delay-1" onclick="showGuide('knight')">
+                    <a href="guides/guide-knight.html" class="class-card card-fade-up delay-1" >
                         <div class="icon-wrap">
                             <img src="assets/icon-knight.webp" alt="骑士" loading="lazy">
                         </div>
@@ -945,7 +945,7 @@
                         <p class="card-desc line-clamp-2">坚不可摧的前线堡垒，精通剑盾与防御之道</p>
                     </a>
                     <!-- Warrior -->
-                    <a href="javascript:void(0)" class="class-card card-fade-up delay-2" onclick="showGuide('dual')">
+                    <a href="guides/guide-dual.html" class="class-card card-fade-up delay-2" >
                         <div class="icon-wrap">
                             <img src="assets/icon-warrior.webp" alt="斗士" loading="lazy">
                         </div>
@@ -953,7 +953,7 @@
                         <p class="card-desc line-clamp-2">近战输出之王，双斧横扫战场无人能挡</p>
                     </a>
                     <!-- Assassin -->
-                    <a href="javascript:void(0)" class="class-card card-fade-up delay-3" onclick="showGuide('dagger')">
+                    <a href="guides/guide-dagger.html" class="class-card card-fade-up delay-3" >
                         <div class="icon-wrap">
                             <img src="assets/icon-assassin.webp" alt="突袭者" loading="lazy">
                         </div>
@@ -961,7 +961,7 @@
                         <p class="card-desc line-clamp-2">暗影中的致命杀手，一击必杀的暴击艺术</p>
                     </a>
                     <!-- Archer -->
-                    <a href="javascript:void(0)" class="class-card card-fade-up delay-4" onclick="showGuide('bow')">
+                    <a href="guides/guide-bow.html" class="class-card card-fade-up delay-4" >
                         <div class="icon-wrap">
                             <img src="assets/icon-archer.webp" alt="弓手" loading="lazy">
                         </div>
@@ -969,7 +969,7 @@
                         <p class="card-desc line-clamp-2">百步穿杨的远程射手，箭无虚发的精准打击</p>
                     </a>
                     <!-- Mage -->
-                    <a href="javascript:void(0)" class="class-card card-fade-up delay-5" onclick="showGuide('staff')">
+                    <a href="guides/guide-staff.html" class="class-card card-fade-up delay-5" >
                         <div class="icon-wrap">
                             <img src="assets/icon-mage.webp" alt="巫师" loading="lazy">
                         </div>
@@ -977,7 +977,7 @@
                         <p class="card-desc line-clamp-2">操控元素之力，毁天灭地的魔法轰炸者</p>
                     </a>
                     <!-- Priest -->
-                    <a href="javascript:void(0)" class="class-card card-fade-up delay-6" onclick="showGuide('orb')">
+                    <a href="guides/guide-orb.html" class="class-card card-fade-up delay-6" >
                         <div class="icon-wrap">
                             <img src="assets/icon-priest.webp" alt="牧师" loading="lazy">
                         </div>
@@ -995,21 +995,21 @@
                 <p class="section-subtitle mt-2 mb-12">实用工具与常见问题，助你快速融入游戏世界</p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <a href="javascript:void(0)" class="info-card card-fade-up delay-1" onclick="showGuide('day1')">
+                    <a href="guides/guide-day1.html" class="info-card card-fade-up delay-1" >
                         <div class="flex items-center gap-3 mb-3">
                             <i data-lucide="zap" class="w-5 h-5 shrink-0" style="color: var(--l2-primary);"></i>
                             <h3 class="card-title">开局第一天</h3>
                         </div>
                         <p class="card-desc line-clamp-3">从建号到满级的完整路线规划，第一天应该做什么、去哪里、带什么装备，全方位指导你的开局之路。</p>
                     </a>
-                    <a href="javascript:void(0)" class="info-card card-fade-up delay-2" onclick="showGuide('cards')">
+                    <a href="guides/guide-cards.html" class="info-card card-fade-up delay-2" >
                         <div class="flex items-center gap-3 mb-3">
                             <i data-lucide="layers" class="w-5 h-5 shrink-0" style="color: var(--l2-primary);"></i>
                             <h3 class="card-title">卡牌系统</h3>
                         </div>
                         <p class="card-desc line-clamp-3">详解卡牌收集、合成与搭配策略，如何组合出最强的卡组，提升角色属性与战斗能力。</p>
                     </a>
-                    <a href="javascript:void(0)" class="info-card card-fade-up delay-3" onclick="showGuide('faq')">
+                    <a href="guides/guide-faq.html" class="info-card card-fade-up delay-3" >
                         <div class="flex items-center gap-3 mb-3">
                             <i data-lucide="help-circle" class="w-5 h-5 shrink-0" style="color: var(--l2-primary);"></i>
                             <h3 class="card-title">常见问题FAQ</h3>
@@ -1036,19 +1036,19 @@
 
                 <!-- Wiki Buttons -->
                 <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
-                    <a href="javascript:void(0)" class="wiki-btn" onclick="showGuide('wiki-equip')">
+                    <a href="guides/guide-wiki-equip.html" class="wiki-btn" >
                         <i data-lucide="swords" class="w-4 h-4" style="color: var(--l2-primary);"></i>
                         <span>装备图鉴</span>
                     </a>
-                    <a href="javascript:void(0)" class="wiki-btn" onclick="showGuide('wiki-skill')">
+                    <a href="guides/guide-wiki-skill.html" class="wiki-btn" >
                         <i data-lucide="sparkles" class="w-4 h-4" style="color: var(--l2-primary);"></i>
                         <span>技能百科</span>
                     </a>
-                    <a href="javascript:void(0)" class="wiki-btn" onclick="showGuide('wiki-monster')">
+                    <a href="guides/guide-wiki-monster.html" class="wiki-btn" >
                         <i data-lucide="bug" class="w-4 h-4" style="color: var(--l2-primary);"></i>
                         <span>怪物图鉴</span>
                     </a>
-                    <a href="javascript:void(0)" class="wiki-btn" onclick="showGuide('wiki-map')">
+                    <a href="guides/guide-wiki-map.html" class="wiki-btn" >
                         <i data-lucide="map" class="w-4 h-4" style="color: var(--l2-primary);"></i>
                         <span>地图导航</span>
                     </a>
@@ -1256,11 +1256,11 @@
 
                     <h4 class="footer-title">关于本站</h4>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('page-about')">关于我们</a>
+                    <a href="javascript:void(0)" class="footer-link" href="guides/guide-page-about.html">关于我们</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('page-submit')">投稿指南</a>
+                    <a href="javascript:void(0)" class="footer-link" href="guides/guide-page-submit.html">投稿指南</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('page-privacy')">隐私政策</a>
+                    <a href="javascript:void(0)" class="footer-link" href="guides/guide-page-privacy.html">隐私政策</a>
 
                     <p class="text-sm leading-relaxed mt-2" style="color: var(--l2-foreground-muted);">天堂2盟约攻略站，致力于为玩家提供最全面、最准确的亚丁大陆冒险指南。</p>
 
@@ -1272,17 +1272,17 @@
 
                     <h4 class="footer-title">攻略专区</h4>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('newbie')">新手入门</a>
+                    <a href="guides/guide-newbie.html" class="footer-link" >新手入门</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('class')">职业指南</a>
+                    <a href="guides/guide-class.html" class="footer-link" >职业指南</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('equip')">装备战力</a>
+                    <a href="guides/guide-equip.html" class="footer-link" >装备战力</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('dungeon')">副本攻略</a>
+                    <a href="guides/guide-dungeon.html" class="footer-link" >副本攻略</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('clan')">血盟PVP</a>
+                    <a href="guides/guide-clan.html" class="footer-link" >血盟PVP</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('gold')">搬砖指南</a>
+                    <a href="guides/guide-gold.html" class="footer-link" >搬砖指南</a>
 
                 </div>
 
@@ -1292,13 +1292,13 @@
 
                     <h4 class="footer-title">数据库</h4>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('wiki-equip')">装备图鉴</a>
+                    <a href="guides/guide-wiki-equip.html" class="footer-link" >装备图鉴</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('wiki-skill')">技能百科</a>
+                    <a href="guides/guide-wiki-skill.html" class="footer-link" >技能百科</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('wiki-monster')">怪物图鉴</a>
+                    <a href="guides/guide-wiki-monster.html" class="footer-link" >怪物图鉴</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('wiki-map')">地图导航</a>
+                    <a href="guides/guide-wiki-map.html" class="footer-link" >地图导航</a>
 
                     <a href="#ranking" class="footer-link">职业强度榜</a>
 
@@ -1328,7 +1328,7 @@
 
                     <a href="mailto:17839556263@163.com" class="footer-link">意见反馈</a>
 
-                    <a href="javascript:void(0)" class="footer-link" onclick="showGuide('page-submit')">投稿合作</a>
+                    <a href="javascript:void(0)" class="footer-link" href="guides/guide-page-submit.html">投稿合作</a>
 
                     <a href="mailto:17839556263@163.com" class="footer-link">商务联系</a>
 
@@ -1346,9 +1346,9 @@
 
                 <div class="flex items-center gap-4">
 
-                    <a href="javascript:void(0)" class="text-xs" style="color: var(--l2-foreground-muted);" onclick="showGuide('page-privacy')">隐私政策</a>
+                    <a href="javascript:void(0)" class="text-xs" style="color: var(--l2-foreground-muted);" href="guides/guide-page-privacy.html">隐私政策</a>
 
-                    <a href="javascript:void(0)" class="text-xs" style="color: var(--l2-foreground-muted);" onclick="showGuide('page-privacy')">使用条款</a>
+                    <a href="javascript:void(0)" class="text-xs" style="color: var(--l2-foreground-muted);" href="guides/guide-page-privacy.html">使用条款</a>
 
                 </div>
 
@@ -1963,7 +1963,7 @@
 
                 if (found) {
 
-                    showGuide(found.id);
+                    var guideMap={'newbie':'guides/guide-newbie.html','class':'guides/guide-class.html','equip':'guides/guide-equip.html','dungeon':'guides/guide-dungeon.html','clan':'guides/guide-clan.html','gold':'guides/guide-gold.html','faq':'guides/guide-faq.html','knight':'guides/guide-knight.html','dual':'guides/guide-dual.html','dagger':'guides/guide-dagger.html','bow':'guides/guide-bow.html','staff':'guides/guide-staff.html','orb':'guides/guide-orb.html','day1':'guides/guide-day1.html','cards':'guides/guide-cards.html','wiki-equip':'guides/guide-wiki-equip.html','wiki-skill':'guides/guide-wiki-skill.html','wiki-monster':'guides/guide-wiki-monster.html','wiki-map':'guides/guide-wiki-map.html','page-about':'guides/guide-page-about.html','page-submit':'guides/guide-page-submit.html','page-privacy':'guides/guide-page-privacy.html'}; if(guideMap[found.id]) window.location.href=guideMap[found.id];
 
                     input.value = '';
 

@@ -36,10 +36,10 @@ body {
   color: var(--l2-foreground);
   font-family: var(--l2-font-primary);
   margin: 0;
-  padding: 20px;
+  padding: 0;
   min-height: 100vh;
 }
-.container { max-width: 800px; margin: 0 auto; }
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
 .card {
   background: var(--l2-card);
   border: 1px solid var(--l2-border);
@@ -92,14 +92,52 @@ ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-b
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
+<!-- Top Navigation Bar -->
+<nav style="position:sticky;top:0;z-index:50;background:rgba(10,10,20,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--l2-border);box-shadow:0 2px 16px rgba(0,0,0,0.5);">
+    <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;">
+        <a href="../index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="font-size:20px;font-weight:700;color:var(--l2-primary);font-family:var(--l2-font-heading);">L2 盟约攻略</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:20px;" class="desktop-nav">
+            <a href="./guide-newbie.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">新手启程</a>
+            <a href="./guide-class.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">职业指南</a>
+            <a href="./guide-equip.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">装备战力</a>
+            <a href="./guide-dungeon.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">副本攻略</a>
+            <a href="./guide-gold.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">搬砖指南</a>
+            <a href="./guide-faq.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">常见问答</a>
+        </div>
+        <button onclick="toggleMobileMenu()" style="display:none;background:none;border:none;color:var(--l2-foreground-muted);cursor:pointer;font-size:20px;" class="mobile-toggle">&#9776;</button>
+    </div>
+</nav>
+<div id="mobileMenu" style="display:none;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,20,0.98);border-bottom:1px solid var(--l2-border);z-index:40;padding:16px 24px;">
+    <a href="./guide-newbie.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">新手启程</a>
+    <a href="./guide-class.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">职业指南</a>
+    <a href="./guide-equip.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">装备战力</a>
+    <a href="./guide-dungeon.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">副本攻略</a>
+    <a href="./guide-gold.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">搬砖指南</a>
+    <a href="./guide-faq.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">常见问答</a>
+</div>
+<style>
+@media (max-width: 768px) {
+    .desktop-nav { display: none !important; }
+    .mobile-toggle { display: block !important; }
+}
+</style>
+<script>
+function toggleMobileMenu() {
+    var m = document.getElementById('mobileMenu');
+    m.style.display = m.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
 <div class="container">
   <div class="card" style="padding:32px">
     <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
 <div class="container">
     <div class="card" style="padding:32px">
       <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
-      <a href="javascript:void(0)" class="back-btn" onclick="window.top.showHome()">&#8592; 返回首页</a>
-      <div class="breadcrumb"><a href="javascript:void(0)" onclick="window.top.showHome()">首页</a><span>/</span><a href="javascript:void(0)" onclick="window.top.showHome()">攻略专区</a><span>/</span><span class="current">斗士职业攻略</span></div>
+      <a href="javascript:void(0)" class="back-btn" onclick="window.location.href='../index.html'">&#8592; 返回首页</a>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="window.location.href='../index.html'">首页</a><span>/</span><a href="javascript:void(0)" onclick="window.location.href='../index.html'">攻略专区</a><span>/</span><span class="current">斗士职业攻略</span></div>
       <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-hot">T0</span><span class="tag tag-guide">职业</span></div>
       <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">斗士职业攻略：双刀斗士完全指南</h1>
       <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>作者：亚丁旅人</span><span>2026-07-07</span><span>3.1k 阅读</span></div>
