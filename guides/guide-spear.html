@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天堂2盟约长枪职业攻略 | 长枪枪兵完全指南</title>
+    <style id="theme-vars">
+:root {
+  --l2-bg: #0a0a14;
+  --l2-bg-secondary: #0e0e1a;
+  --l2-card: rgba(20, 20, 40, 0.8);
+  --l2-card-hover: rgba(28, 28, 55, 0.9);
+  --l2-primary: #d4a44a;
+  --l2-primary-light: #e8c878;
+  --l2-primary-dark: #a87d30;
+  --l2-accent-red: #8b2252;
+  --l2-accent-purple: #4a2080;
+  --l2-accent-blue: #1e3a5f;
+  --l2-border: rgba(212, 164, 74, 0.3);
+  --l2-border-glow: rgba(212, 164, 74, 0.6);
+  --l2-foreground: #f0f0f0;
+  --l2-foreground-muted: #8888aa;
+  --l2-overlay: rgba(10, 10, 20, 0.7);
+  --gold: #d4a44a;
+  --gold-light: #e8c878;
+  --text-muted: #8888aa;
+  --l2-gradient-gold: linear-gradient(135deg, #d4a44a 0%, #e8c878 50%, #d4a44a 100%);
+  --l2-font-primary: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-font-heading: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  --l2-radius-md: 8px;
+  --l2-radius-xl: 16px;
+  --l2-transition-fast: 0.2s ease;
+}
+body {
+  background: var(--l2-bg);
+  color: var(--l2-foreground);
+  font-family: var(--l2-font-primary);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.container { max-width: 800px; margin: 0 auto; padding: 20px; }
+.card {
+  background: var(--l2-card);
+  border: 1px solid var(--l2-border);
+  border-radius: var(--l2-radius-xl);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.orn { position: absolute; width: 14px; height: 14px; border: 1px solid rgba(212, 164, 74, 0.25); pointer-events: none; }
+.orn-tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+.orn-tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+.orn-bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+.orn-br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+.back-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border: 1px solid var(--l2-border);
+  color: var(--l2-foreground-muted); font-size: 13px;
+  cursor: pointer; background: transparent;
+  border-radius: var(--l2-radius-md); transition: all 0.2s;
+  text-decoration: none; margin-bottom: 16px;
+}
+.back-btn:hover { border-color: var(--l2-border-glow); color: var(--l2-primary); }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--l2-foreground-muted); margin-bottom: 16px; }
+.breadcrumb a { color: var(--l2-foreground-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--l2-primary); }
+.breadcrumb .current { color: var(--l2-primary); }
+h1 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 24px; margin-bottom: 8px; }
+h2 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 22px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--l2-border); }
+h3 { font-family: var(--l2-font-heading); color: var(--l2-primary-light); font-size: 17px; margin: 24px 0 10px; }
+p { color: var(--l2-foreground); font-size: 14px; line-height: 1.9; margin-bottom: 14px; }
+.highlight { color: var(--l2-primary-light); font-weight: 500; }
+.tip-box { background: rgba(212, 164, 74, 0.06); border-left: 3px solid var(--l2-primary); padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+.warn-box { background: rgba(139, 38, 53, 0.08); border-left: 3px solid #8b2252; padding: 14px 18px; margin: 14px 0; font-size: 13px; color: var(--l2-foreground); border-radius: 0 var(--l2-radius-md) var(--l2-radius-md) 0; }
+ul { margin: 10px 0 10px 20px; }
+ul li { color: var(--l2-foreground); font-size: 13px; line-height: 1.9; margin-bottom: 4px; }
+.tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 2px; margin-right: 4px; }
+.tag-hot { background: rgba(212, 164, 74, 0.12); color: var(--l2-primary-light); border: 1px solid rgba(212, 164, 74, 0.2); }
+.tag-new { background: rgba(139, 38, 53, 0.15); color: #e87986; border: 1px solid rgba(139, 38, 53, 0.25); }
+.tag-guide { background: rgba(126, 184, 208, 0.12); color: #a0d4e8; border: 1px solid rgba(126, 184, 208, 0.2); }
+.data-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 14px 0; }
+.data-table th { text-align: left; padding: 10px 12px; color: var(--l2-primary); font-size: 12px; border-bottom: 1px solid var(--l2-border-glow); font-weight: 500; }
+.data-table td { padding: 10px 12px; border-bottom: 1px solid rgba(212, 164, 74, 0.06); color: var(--l2-foreground); }
+.data-table .name { color: var(--l2-primary-light); font-weight: 500; }
+.data-table .s { color: var(--l2-primary); font-weight: 600; }
+.data-table .a { color: #7eb8d0; }
+.data-table .b { color: var(--l2-foreground-muted); }
+.data-table .c { color: #52525b; }
+</style>
+    <meta name="description" content="天堂2盟约长枪（枪兵）职业完全指南，包含职业定位、属性加点、职业卡推荐、技能学习、战斗模式、装备选择及PVE/PVP策略。">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!-- Top Navigation Bar -->
+<nav style="position:sticky;top:0;z-index:50;background:rgba(10,10,20,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--l2-border);box-shadow:0 2px 16px rgba(0,0,0,0.5);">
+    <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px;">
+        <a href="../index.html" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <span style="font-size:20px;font-weight:700;color:var(--l2-primary);font-family:var(--l2-font-heading);">L2 盟约攻略</span>
+        </a>
+        <div style="display:flex;align-items:center;gap:20px;" class="desktop-nav">
+            <a href="./guide-newbie.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">新手启程</a>
+            <a href="./guide-class.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">职业指南</a>
+            <a href="./guide-equip.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">装备战力</a>
+            <a href="./guide-dungeon.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">副本攻略</a>
+            <a href="./guide-gold.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">搬砖指南</a>
+            <a href="./guide-faq.html" style="color:var(--l2-foreground-muted);text-decoration:none;font-size:14px;transition:color 0.2s;padding:6px 0;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">常见问答</a>
+        </div>
+        <button onclick="toggleMobileMenu()" style="display:none;background:none;border:none;color:var(--l2-foreground-muted);cursor:pointer;font-size:20px;" class="mobile-toggle">&#9776;</button>
+    </div>
+</nav>
+<div id="mobileMenu" style="display:none;position:fixed;top:64px;left:0;right:0;background:rgba(10,10,20,0.98);border-bottom:1px solid var(--l2-border);z-index:40;padding:16px 24px;">
+    <a href="./guide-newbie.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">新手启程</a>
+    <a href="./guide-class.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">职业指南</a>
+    <a href="./guide-equip.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">装备战力</a>
+    <a href="./guide-dungeon.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">副本攻略</a>
+    <a href="./guide-gold.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.04);" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">搬砖指南</a>
+    <a href="./guide-faq.html" style="display:block;color:var(--l2-foreground-muted);padding:10px 0;font-size:15px;text-decoration:none;" onmouseover="this.style.color='var(--l2-primary)'" onmouseout="this.style.color='var(--l2-foreground-muted)'">常见问答</a>
+</div>
+<style>
+@media (max-width: 768px) {
+    .desktop-nav { display: none !important; }
+    .mobile-toggle { display: block !important; }
+}
+</style>
+<script>
+function toggleMobileMenu() {
+    var m = document.getElementById('mobileMenu');
+    m.style.display = m.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+<div class="container">
+  <div class="card" style="padding:32px">
+    <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+<div class="container">
+    <div class="card" style="padding:32px">
+      <div class="orn orn-tl"></div><div class="orn orn-tr"></div><div class="orn orn-bl"></div><div class="orn orn-br"></div>
+      <a href="javascript:void(0)" class="back-btn" onclick="window.location.href='../index.html'">&#8592; 返回首页</a>
+      <div class="breadcrumb"><a href="javascript:void(0)" onclick="window.location.href='../index.html'">首页</a><span>/</span><a href="javascript:void(0)" onclick="window.location.href='../index.html'">攻略专区</a><span>/</span><span class="current">长枪职业攻略</span></div>
+      <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap"><span class="tag tag-new">NEW</span><span class="tag tag-guide">职业</span></div>
+      <h1 style="font-family:'Cinzel','Noto Serif SC',serif;color:var(--gold-light);font-size:24px;margin-bottom:8px">长枪职业攻略：长枪枪兵完全指南</h1>
+      <div style="display:flex;gap:16px;color:var(--text-muted);font-size:12px;margin-bottom:24px;flex-wrap:wrap"><span>来源：天堂2盟约官方</span><span>2026-08-10</span><span>官方攻略</span></div>
+
+      <h2>一、核心定位</h2>
+      <p>长枪（枪兵）是7月22日版本新增的<span class="highlight">近战高输出职业</span>，以高爆发、群体伤害和控制能力见长。升级速度快、清群怪效率高，但续航能力较弱、养成难度较高。PVP方面适合<span class="highlight">小规模遭遇战与1v1单挑</span>。</p>
+
+      <table class="data-table">
+        <thead><tr><th>维度</th><th>评价</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td class="name">输出能力</td><td class="s">★★★★★</td><td>高爆发、群伤效率顶级</td></tr>
+          <tr><td class="name">升级速度</td><td class="s">★★★★★</td><td>清群怪快，升级效率极高</td></tr>
+          <tr><td class="name">控制能力</td><td class="a">★★★★</td><td>具备群体控制技能</td></tr>
+          <tr><td class="name">续航能力</td><td class="b">★★</td><td>续航较弱，需注意资源管理</td></tr>
+          <tr><td class="name">养成难度</td><td class="b">★★★</td><td>养成难度较高，需要投入资源</td></tr>
+          <tr><td class="name">PVP能力</td><td class="a">★★★★</td><td>适合小规模遭遇战与单挑</td></tr>
+        </tbody>
+      </table>
+
+      <h2>二、职业卡推荐</h2>
+      <p>长枪职业拥有三张职业卡可选，官方推荐以下搭配：</p>
+      <table class="data-table">
+        <thead><tr><th>推荐度</th><th>职业卡</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td class="s">首选</td><td class="name">亚肯</td><td>官方推荐，搭配灵活</td></tr>
+          <tr><td class="s">首选</td><td class="name">黎欧纳布拉克巴德</td><td>官方推荐，强化输出</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box"><strong style="color:var(--gold)">搭配建议：</strong>长枪拥有三张职业卡可选，搭配灵活。建议根据自身战力和玩法偏好选择合适的职业卡组合。</div>
+
+      <h2>三、属性加点</h2>
+      <p>长枪的属性加点需要根据战力阶段进行调整，前期和后期策略不同：</p>
+      <table class="data-table">
+        <thead><tr><th>战力阶段</th><th>加点方向</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td class="name">战力1.5万以内</td><td class="s">力量（优先）</td><td>前期优先点力量，提升基础输出能力</td></tr>
+          <tr><td class="name">战力超过1.5万</td><td class="a">智慧</td><td>后期转点智慧，强化技能效果与爆发</td></tr>
+        </tbody>
+      </table>
+      <div class="warn-box"><strong style="color:#e87986">注意：</strong>战力1.5万是关键分水岭，超过后应及时将属性点从力量转为智慧，以最大化后期技能收益。</div>
+
+      <h2>四、技能学习优先级</h2>
+      <p>长枪的技能学习需要根据使用场景（刷图/PVP）选择不同的技能路线：</p>
+      <table class="data-table">
+        <thead><tr><th>品级</th><th>技能</th><th>适用场景</th><th>优先级</th></tr></thead>
+        <tbody>
+          <tr><td class="name" style="color:#9b59b6">紫色（稀有）</td><td class="s">怒雷强击</td><td>通用核心</td><td class="s">T0 优先学习</td></tr>
+          <tr><td class="name" style="color:#e91e63">粉色（英雄）- 刷图</td><td class="s">狂暴加护</td><td>日常刷怪、清图</td><td class="s">T1 刷图首选</td></tr>
+          <tr><td class="name" style="color:#e91e63">粉色（英雄）- PVP</td><td class="a">无限连击</td><td>PVP对战、单挑</td><td class="a">T1 PVP首选</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box"><strong style="color:var(--gold)">学习顺序：</strong>紫色技能优先学习<strong class="highlight">怒雷强击</strong>作为核心输出；粉色技能根据主要玩法选择——刷图选<strong class="highlight">狂暴加护</strong>，PVP选<strong class="highlight">无限连击</strong>。</div>
+
+      <h2>五、战斗模式选择</h2>
+      <p>长枪拥有两种战斗模式，适用于不同场景：</p>
+      <table class="data-table">
+        <thead><tr><th>战斗模式</th><th>适用场景</th><th>特点</th></tr></thead>
+        <tbody>
+          <tr><td class="name">先锋模式</td><td class="s">日常刷怪</td><td>稳定清图，适合日常任务和挂机刷怪</td></tr>
+          <tr><td class="name">无双模式</td><td class="a">单排、挑战BOSS</td><td>最大化输出，适合BOSS战和单排挑战</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box"><strong style="color:var(--gold)">模式切换建议：</strong>日常刷怪走<strong class="highlight">先锋模式</strong>稳定清图；挑战BOSS和单排时切换<strong class="highlight">无双模式</strong>最大化输出。</div>
+
+      <h2>六、装备推荐</h2>
+      <p>长枪装备选择以输出词条为核心，重点关注以下属性：</p>
+      <table class="data-table">
+        <thead><tr><th>词条类型</th><th>优先级</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td class="name">攻击</td><td class="s">★★★★★</td><td>核心输出属性，最优先堆叠</td></tr>
+          <tr><td class="name">暴击</td><td class="s">★★★★★</td><td>配合高爆发特性，提升秒伤</td></tr>
+          <tr><td class="name">命中</td><td class="a">★★★★</td><td>确保输出稳定命中</td></tr>
+          <tr><td class="name">攻速</td><td class="a">★★★★</td><td>提升输出频率，加快清怪速度</td></tr>
+        </tbody>
+      </table>
+
+      <h3>装备收藏优先级</h3>
+      <table class="data-table">
+        <thead><tr><th>优先级</th><th>部位</th><th>说明</th></tr></thead>
+        <tbody>
+          <tr><td class="s">第一优先</td><td class="name">武器</td><td>核心输出来源，词条质量最重要</td></tr>
+          <tr><td class="a">第二优先</td><td class="name">防具</td><td>补充防御属性，提升生存</td></tr>
+          <tr><td class="b">第三优先</td><td class="name">饰品</td><td>辅助属性补充</td></tr>
+        </tbody>
+      </table>
+      <div class="tip-box"><strong style="color:var(--gold)">装备建议：</strong>按<strong class="highlight">武器 &gt; 防具 &gt; 饰品</strong>的优先级收藏装备，重点关注攻击、暴击、命中、攻速等词条质量。</div>
+
+      <h2>七、PVE策略</h2>
+      <ul>
+        <li><span class="highlight">日常刷怪：</span>使用先锋模式稳定清图，利用高爆发与群伤优势快速清怪，提升升级效率</li>
+        <li><span class="highlight">挑战BOSS：</span>切换无双模式最大化输出，利用控制技能打断BOSS关键技能</li>
+        <li><span class="highlight">资源管理：</span>续航不足是长枪的主要短板，需注意药水和资源管理，避免长时间战斗中输出断档</li>
+        <li><span class="highlight">组队副本：</span>群体控制能力在组队副本中表现优秀，可配合队友进行AOE输出</li>
+      </ul>
+
+      <h2>八、PVP策略</h2>
+      <ul>
+        <li><span class="highlight">适用场景：</span>适合小规模遭遇战与1v1单挑，利用爆发与控制打先手</li>
+        <li><span class="highlight">先手优势：</span>长枪爆发高，先手控制+爆发可以快速建立优势</li>
+        <li><span class="highlight">弱点应对：</span>长枪容易被远程职业风筝，需配合走位缩短距离，把握技能释放时机</li>
+        <li><span class="highlight">技能搭配：</span>PVP选择无限连击粉色技能，配合控制技能形成连招压制</li>
+      </ul>
+      <div class="warn-box"><strong style="color:#e87986">PVP注意：</strong>长枪在PVP中容易被远程风筝，不要盲目追击。合理利用地形和走位，在控制技能冷却好后再发起进攻。</div>
+
+      <h2>九、玩家反馈与建议</h2>
+      <div class="tip-box">
+        <strong style="color:var(--gold)">社区反馈：</strong>
+        <ul style="margin-top:8px">
+          <li>有玩家反馈"+10火锤刷图体验极佳"，高强化武器能显著提升刷图效率</li>
+          <li>长枪转职武器选择存在争议（如大天使 vs 其他粉色武器），建议根据自身经济和词条选择</li>
+          <li>部分玩家认为长枪在PVP中容易被风筝，需配合走位与技能释放时机</li>
+        </ul>
+      </div>
+
+      <h2>十、总结</h2>
+      <table class="data-table">
+        <thead><tr><th>项目</th><th>推荐</th></tr></thead>
+        <tbody>
+          <tr><td class="name">职业卡</td><td class="s">亚肯、黎欧纳布拉克巴德</td></tr>
+          <tr><td class="name">前期加点（战力&lt;1.5万）</td><td class="s">力量</td></tr>
+          <tr><td class="name">后期加点（战力&gt;1.5万）</td><td class="a">智慧</td></tr>
+          <tr><td class="name">紫色技能</td><td class="s">怒雷强击（优先）</td></tr>
+          <tr><td class="name">粉色技能（刷图）</td><td class="s">狂暴加护</td></tr>
+          <tr><td class="name">粉色技能（PVP）</td><td class="a">无限连击</td></tr>
+          <tr><td class="name">日常模式</td><td class="s">先锋模式</td></tr>
+          <tr><td class="name">BOSS/单排模式</td><td class="a">无双模式</td></tr>
+          <tr><td class="name">装备优先级</td><td class="s">武器 &gt; 防具 &gt; 饰品</td></tr>
+          <tr><td class="name">核心词条</td><td class="s">攻击、暴击、命中、攻速</td></tr>
+        </tbody>
+      </table>
+
+      <p style="color:var(--text-muted);font-size:12px;margin-top:16px;">攻略内容来源：天堂2盟约官方抖音《一分钟攻略--长枪职业全解析》（<a href="https://www.douyin.com/video/7670898598539791652" target="_blank" style="color:var(--l2-primary);text-decoration:none;">视频链接</a>，2026-08-09发布）| 整理时间：2026年8月10日</p>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</body>
+</html>
