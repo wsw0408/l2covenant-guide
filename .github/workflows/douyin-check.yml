@@ -1,0 +1,192 @@
+name: 抖音天堂2盟约攻略视频监控
+
+on:
+  schedule:
+    # 每3天巡检一次（上午10点，UTC时间）
+    - cron: '0 2 */3 * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: '运行模式'
+        required: true
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - manual
+      video_urls:
+        description: '手动模式：抖音视频链接（多个用换行分隔）'
+        required: false
+        default: ''
+      source:
+        description: '手动模式：视频来源账号'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - '天堂2盟约官方抖音'
+          - '张胖子（天堂2盟约）'
+      category:
+        description: '手动模式：指定分类页面（可选）'
+        required: false
+        default: ''
+        type: choice
+        options:
+          - ''
+          - 'guide-newbie.html'
+          - 'guide-day1.html'
+          - 'guide-class.html'
+          - 'guide-knight.html'
+          - 'guide-bow.html'
+          - 'guide-dagger.html'
+          - 'guide-dual.html'
+          - 'guide-staff.html'
+          - 'guide-orb.html'
+          - 'guide-spear.html'
+          - 'guide-equip.html'
+          - 'guide-dungeon.html'
+          - 'guide-gold.html'
+          - 'guide-afk.html'
+          - 'guide-cards.html'
+          - 'guide-faq.html'
+
+jobs:
+  check-douyin:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 手动模式 - 添加指定视频
+        if: github.event.inputs.mode == 'manual' && github.event.inputs.video_urls != ''
+        id: manual_add
+        run: |
+          # 将视频链接写入临时文件
+          echo "${{ github.event.inputs.video_urls }}" > /tmp/video_urls.txt
+          
+          # 构建命令参数
+          CMD_ARGS="--file /tmp/video_urls.txt"
+          
+          if [ -n "${{ github.event.inputs.source }}" ]; then
+            CMD_ARGS="$CMD_ARGS --source '${{ github.event.inputs.source }}'"
+          fi
+          
+          if [ -n "${{ github.event.inputs.category }}" ]; then
+            CMD_ARGS="$CMD_ARGS --category ${{ github.event.inputs.category }}"
+          fi
+          
+          echo "执行命令: python3 scripts/add_douyin_video.py $CMD_ARGS"
+          python3 scripts/add_douyin_video.py $CMD_ARGS || true
+          
+          # 读取报告获取结果
+          if [ -f report.md ]; then
+            echo "report<<EOF" >> $GITHUB_OUTPUT
+            cat report.md >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 自动模式 - 巡检抖音账号新视频
+        if: github.event.inputs.mode == 'auto' || github.event_name == 'schedule'
+        id: auto_check
+        run: |
+          echo "开始自动巡检抖音账号..."
+          python3 scripts/douyin_monitor.py || true
+          
+          # 检查是否有更新
+          if grep -q "成功更新" report.md 2>/dev/null || grep -q "已更新" report.md 2>/dev/null; then
+            echo "has_new=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_new=false" >> $GITHUB_OUTPUT
+          fi
+          
+          # 读取报告
+          if [ -f report.md ]; then
+            echo "report<<EOF" >> $GITHUB_OUTPUT
+            cat report.md >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 检查是否有变更
+        id: check_changes
+        run: |
+          # 检查git状态
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "没有文件变更"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "检测到文件变更:"
+            git diff --stat
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # 添加所有变更的guide页面
+          git add guides/*.html
+          
+          # 获取更新数量用于commit信息
+          if [ -f report.md ]; then
+            COUNT=$(grep -c "✅" report.md 2>/dev/null || echo "若干")
+          else
+            COUNT="若干"
+          fi
+          
+          MODE="${{ github.event.inputs.mode }}"
+          if [ "$MODE" = "manual" ]; then
+            COMMIT_MSG="auto: 手动添加抖音攻略视频"
+          else
+            COMMIT_MSG="auto: 抖音巡检新增攻略内容"
+          fi
+          
+          git commit -m "$COMMIT_MSG"
+          git push origin main
+          echo "已推送变更到 main 分支"
+
+      - name: Create GitHub Issue
+        if: steps.check_changes.outputs.has_changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let report = '';
+            try {
+              report = fs.readFileSync('report.md', 'utf-8');
+            } catch (e) {
+              report = '抖音视频更新完成';
+            }
+            
+            const mode = '${{ github.event.inputs.mode }}' || 'auto';
+            const date = new Date().toLocaleDateString('zh-CN');
+            const title = mode === 'manual' 
+              ? `🎬 手动添加抖音攻略视频（${date}）`
+              : `🎬 抖音巡检发现新攻略视频（${date}）`;
+            
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: report,
+              labels: ['douyin', 'content-update', 'automated']
+            });
+            console.log('已创建 Issue');
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: douyin-check-report
+          path: report.md
+          if-no-files-found: ignore

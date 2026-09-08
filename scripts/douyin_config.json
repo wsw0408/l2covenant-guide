@@ -1,0 +1,52 @@
+{
+  "accounts": [
+    {
+      "name": "天堂2盟约官方抖音",
+      "douyin_id": "91587697219",
+      "sec_uid": "MS4wLjABAAAAANwX284jv9fQZ7fQZ7fQZ7fQZ7fQZ7fQZ7fQZ7fQZ7fQZ7fQZ7fQ",
+      "home_url": "https://www.douyin.com/@天堂2盟约",
+      "search_url": "https://www.douyin.com/search/天堂2盟约官方攻略",
+      "is_official": true,
+      "note": "抖音号91587697219，账号显示名'天堂2：盟约'，sec_uid仍为占位需登录后获取"
+    },
+    {
+      "name": "张胖子（天堂2盟约）",
+      "douyin_id": "dyscy7g5pu3j",
+      "sec_uid": "MS4wLjABAAAAANkP9mUJf8n2ZKfQZ7fQZ7fQZ7fQZ7fQZ7fQZ7fQZ7fQZ7fQZ7fQ",
+      "home_url": "https://www.douyin.com/@dyscy7g5pu3j",
+      "search_url": "https://www.douyin.com/search/张胖子 天堂2盟约",
+      "is_official": false,
+      "note": "抖音号dyscy7g5pu3j，1.3万粉丝，sec_uid仍为占位需登录后获取"
+    }
+  ],
+  "settings": {
+    "days_threshold": 7,
+    "max_videos_per_account": 20,
+    "default_page": "guide-newbie.html"
+  },
+  "category_mapping": {
+    "新手": "guide-newbie.html",
+    "开荒": "guide-newbie.html",
+    "入门": "guide-newbie.html",
+    "首日": "guide-day1.html",
+    "职业": "guide-class.html",
+    "骑士": "guide-knight.html",
+    "弓手": "guide-bow.html",
+    "刺客": "guide-dagger.html",
+    "双刀": "guide-dual.html",
+    "斗士": "guide-dual.html",
+    "法师": "guide-staff.html",
+    "牧师": "guide-orb.html",
+    "神使": "guide-orb.html",
+    "长枪": "guide-spear.html",
+    "装备": "guide-equip.html",
+    "强化": "guide-equip.html",
+    "副本": "guide-dungeon.html",
+    "BOSS": "guide-dungeon.html",
+    "搬砖": "guide-gold.html",
+    "金币": "guide-gold.html",
+    "挂机": "guide-afk.html",
+    "职业卡": "guide-cards.html",
+    "收藏": "guide-cards.html"
+  }
+}
